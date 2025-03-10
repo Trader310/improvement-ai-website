@@ -75,10 +75,10 @@ const HeroSection = () => {
         <div className="lg:w-1/2 lg:pl-12">
           <div className="relative h-[300px] md:h-[400px] w-full flex items-center justify-center">
             <div className="animate-float">
-              <svg width="200" height="200" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-32 h-32 md:w-48 md:h-48">
-                <path d="M200 48L352 136V280L200 368L48 280V136L200 48Z" stroke="#5271FF" strokeWidth="20" strokeLinejoin="round"/>
-                <path d="M200 48V368" stroke="#5271FF" strokeWidth="20" strokeLinejoin="round"/>
-                <path d="M48 136L200 224L352 136" stroke="#5271FF" strokeWidth="20" strokeLinejoin="round"/>
+              <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-32 h-32 md:w-48 md:h-48">
+                <path d="M40 60L100 30L160 60L100 90L40 60Z" stroke="#5271FF" strokeWidth="8" strokeLinejoin="round"/>
+                <path d="M40 60V140L100 170V90L40 60Z" stroke="#5271FF" strokeWidth="8" strokeLinejoin="round"/>
+                <path d="M100 90V170L160 140V60L100 90Z" stroke="#5271FF" strokeWidth="8" strokeLinejoin="round"/>
               </svg>
             </div>
           </div>
