@@ -1,12 +1,71 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from 'react';
+import Header from '@/components/Header';
+import HeroSection from '@/components/HeroSection';
+import ServicesSection from '@/components/ServicesSection';
+import AboutSection from '@/components/AboutSection';
+import BlogSection from '@/components/BlogSection';
+import TeamSection from '@/components/TeamSection';
+import BookingSection from '@/components/BookingSection';
+import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
+import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 const Index = () => {
+  // Intersection Observer for scroll animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    animateElements.forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => {
+      animateElements.forEach((el) => {
+        observer.unobserve(el);
+      });
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-white overflow-x-hidden">
+      <Header />
+      
+      <HeroSection />
+      
+      <AnimateOnScroll>
+        <ServicesSection />
+      </AnimateOnScroll>
+      
+      <AnimateOnScroll>
+        <AboutSection />
+      </AnimateOnScroll>
+      
+      <AnimateOnScroll>
+        <BlogSection />
+      </AnimateOnScroll>
+      
+      <AnimateOnScroll>
+        <TeamSection />
+      </AnimateOnScroll>
+      
+      <AnimateOnScroll>
+        <BookingSection />
+      </AnimateOnScroll>
+      
+      <Footer />
+      <ScrollToTop />
     </div>
   );
 };
