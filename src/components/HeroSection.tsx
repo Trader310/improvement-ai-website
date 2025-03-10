@@ -2,7 +2,6 @@
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
-import { Cuboid } from 'lucide-react';
 
 const HeroSection = () => {
   const scrollToBooking = () => {
@@ -72,11 +71,15 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* 3D Visual Element */}
+        {/* Custom 3D Cube Visual Element */}
         <div className="lg:w-1/2 lg:pl-12">
           <div className="relative h-[300px] md:h-[400px] w-full flex items-center justify-center">
             <div className="animate-float">
-              <Cuboid className="w-32 h-32 md:w-48 md:h-48 text-agency-blue opacity-80" strokeWidth={1.5} />
+              <svg width="200" height="200" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-32 h-32 md:w-48 md:h-48">
+                <path d="M200 48L352 136V280L200 368L48 280V136L200 48Z" stroke="#5271FF" strokeWidth="20" strokeLinejoin="round"/>
+                <path d="M200 48V368" stroke="#5271FF" strokeWidth="20" strokeLinejoin="round"/>
+                <path d="M48 136L200 224L352 136" stroke="#5271FF" strokeWidth="20" strokeLinejoin="round"/>
+              </svg>
             </div>
           </div>
         </div>

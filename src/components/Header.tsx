@@ -35,7 +35,7 @@ const Header = () => {
         'fixed top-0 left-0 w-full z-50 transition-all duration-300 px-4 md:px-8 lg:px-12',
         isScrolled 
           ? 'py-2 bg-agency-blue shadow-md' 
-          : 'py-6 bg-transparent'
+          : 'py-6 bg-agency-blue/50 backdrop-blur-sm'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
