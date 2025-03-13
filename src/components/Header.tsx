@@ -34,14 +34,14 @@ const Header = () => {
       className={cn(
         'fixed top-0 left-0 w-full z-50 transition-all duration-300 px-4 md:px-8 lg:px-12',
         isScrolled 
-          ? 'py-2 bg-[#F1F0FB] shadow-md' 
-          : 'py-6 bg-[#F1F0FB]'
+          ? 'py-2 bg-[#e8f0fe] shadow-md' 
+          : 'py-6 bg-[#e8f0fe]'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <div className="text-agency-blue font-bold text-2xl">
+          <div className="text-[#4096ff] font-bold text-2xl">
             MORNINGSIDE AI
           </div>
         </div>
@@ -50,31 +50,31 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-8">
           <button 
             onClick={() => scrollToSection('home')}
-            className="text-gray-800 font-medium hover:text-agency-blue transition-colors"
+            className="text-gray-800 font-medium hover:text-[#4096ff] transition-colors"
           >
             Home
           </button>
           <button 
             onClick={() => scrollToSection('services')}
-            className="text-gray-800 font-medium hover:text-agency-blue transition-colors"
+            className="text-gray-800 font-medium hover:text-[#4096ff] transition-colors"
           >
             Services
           </button>
           <button 
             onClick={() => scrollToSection('about')}
-            className="text-gray-800 font-medium hover:text-agency-blue transition-colors"
+            className="text-gray-800 font-medium hover:text-[#4096ff] transition-colors"
           >
             About Us
           </button>
           <button 
             onClick={() => scrollToSection('blog')}
-            className="text-gray-800 font-medium hover:text-agency-blue transition-colors"
+            className="text-gray-800 font-medium hover:text-[#4096ff] transition-colors"
           >
             Blog
           </button>
           <button 
             onClick={() => scrollToSection('team')}
-            className="text-gray-800 font-medium hover:text-agency-blue transition-colors"
+            className="text-gray-800 font-medium hover:text-[#4096ff] transition-colors"
           >
             Team
           </button>
@@ -83,14 +83,14 @@ const Header = () => {
         {/* Contact Us Button */}
         <Button 
           onClick={() => scrollToSection('booking')}
-          className="hidden md:block bg-agency-blue text-white hover:bg-agency-light-blue transition-colors rounded-full px-8"
+          className="hidden md:block bg-[#4096ff] text-white hover:bg-agency-light-blue transition-colors rounded-full px-8"
         >
           Contact us
         </Button>
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-agency-blue"
+          className="md:hidden text-[#4096ff]"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
@@ -100,7 +100,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-[#F1F0FB] shadow-lg py-4 px-6 animate-fade-in">
+        <div className="md:hidden absolute top-full left-0 w-full bg-[#e8f0fe] shadow-lg py-4 px-6 animate-fade-in">
           <nav className="flex flex-col space-y-4">
             <button 
               onClick={() => scrollToSection('home')}
@@ -134,7 +134,7 @@ const Header = () => {
             </button>
             <Button 
               onClick={() => scrollToSection('booking')}
-              className="bg-agency-blue text-white hover:bg-agency-light-blue w-full rounded-full"
+              className="bg-[#4096ff] text-white hover:bg-agency-light-blue w-full rounded-full"
             >
               Contact us
             </Button>

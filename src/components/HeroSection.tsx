@@ -21,18 +21,18 @@ const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 md:px-8 overflow-hidden bg-[#F1F0FB]"
+      className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 md:px-8 overflow-hidden bg-[#e8f0fe]"
     >
       {/* Gradient Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F1F0FB] to-white/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#e8f0fe] to-white/90"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
         {/* Text Content */}
         <div className="text-center lg:text-left lg:w-1/2 mb-10 lg:mb-0">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#4096ff] leading-tight">
             Make your work <span className="text-agency-blue">effortless</span> with <span className="text-agency-blue">AI solutions</span>.
           </h1>
           
@@ -68,11 +68,11 @@ const HeroSection = () => {
         <div className="lg:w-1/2 lg:pl-12">
           <div className="relative h-[300px] md:h-[400px] w-full flex items-center justify-center">
             <div className="animate-float">
-              <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-32 h-32 md:w-48 md:h-48">
-                <path d="M40 60L100 30L160 60L100 90L40 60Z" stroke="#5271FF" strokeWidth="8" strokeLinejoin="round"/>
-                <path d="M40 60V140L100 170V90L40 60Z" stroke="#5271FF" strokeWidth="8" strokeLinejoin="round"/>
-                <path d="M100 90V170L160 140V60L100 90Z" stroke="#5271FF" strokeWidth="8" strokeLinejoin="round"/>
-              </svg>
+              <img 
+                src="/lovable-uploads/de3bd735-e835-4c2b-aa0a-e52f7c564ee6.png" 
+                alt="3D Cube" 
+                className="w-40 h-40 md:w-60 md:h-60 object-contain"
+              />
             </div>
           </div>
         </div>
