@@ -1,6 +1,8 @@
+
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
+
 const HeroSection = () => {
   const scrollToBooking = () => {
     const bookingSection = document.getElementById('booking');
@@ -10,6 +12,7 @@ const HeroSection = () => {
       });
     }
   };
+
   const scrollToServices = () => {
     const servicesSection = document.getElementById('services');
     if (servicesSection) {
@@ -18,6 +21,7 @@ const HeroSection = () => {
       });
     }
   };
+
   return <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 md:px-8 overflow-hidden bg-[#e8f0fe]">
       {/* Gradient Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -58,12 +62,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-agency-blue/60 animate-bounce">
-        <div className="w-1 h-10 border-l-2 border-agency-blue/60"></div>
-        <p className="text-sm mt-2">Scroll Down</p>
-      </div>
     </section>;
 };
+
 export default HeroSection;
