@@ -34,14 +34,14 @@ const Header = () => {
       className={cn(
         'fixed top-0 left-0 w-full z-50 transition-all duration-300 px-4 md:px-8 lg:px-12',
         isScrolled 
-          ? 'py-2 bg-agency-blue shadow-md' 
-          : 'py-6 bg-agency-blue/50 backdrop-blur-sm'
+          ? 'py-2 bg-[#F1F0FB] shadow-md' 
+          : 'py-6 bg-[#F1F0FB]'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <div className="text-white font-bold text-2xl">
+          <div className="text-agency-blue font-bold text-2xl">
             MORNINGSIDE AI
           </div>
         </div>
@@ -50,31 +50,31 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-8">
           <button 
             onClick={() => scrollToSection('home')}
-            className="text-white font-medium hover:text-white/80 transition-colors"
+            className="text-gray-800 font-medium hover:text-agency-blue transition-colors"
           >
             Home
           </button>
           <button 
             onClick={() => scrollToSection('services')}
-            className="text-white font-medium hover:text-white/80 transition-colors"
+            className="text-gray-800 font-medium hover:text-agency-blue transition-colors"
           >
             Services
           </button>
           <button 
             onClick={() => scrollToSection('about')}
-            className="text-white font-medium hover:text-white/80 transition-colors"
+            className="text-gray-800 font-medium hover:text-agency-blue transition-colors"
           >
             About Us
           </button>
           <button 
             onClick={() => scrollToSection('blog')}
-            className="text-white font-medium hover:text-white/80 transition-colors"
+            className="text-gray-800 font-medium hover:text-agency-blue transition-colors"
           >
             Blog
           </button>
           <button 
             onClick={() => scrollToSection('team')}
-            className="text-white font-medium hover:text-white/80 transition-colors"
+            className="text-gray-800 font-medium hover:text-agency-blue transition-colors"
           >
             Team
           </button>
@@ -83,14 +83,14 @@ const Header = () => {
         {/* Contact Us Button */}
         <Button 
           onClick={() => scrollToSection('booking')}
-          className="hidden md:block bg-white text-agency-blue hover:bg-white/90 transition-colors rounded-full px-8"
+          className="hidden md:block bg-agency-blue text-white hover:bg-agency-light-blue transition-colors rounded-full px-8"
         >
           Contact us
         </Button>
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-white"
+          className="md:hidden text-agency-blue"
           onClick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
         >
@@ -100,41 +100,41 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-agency-blue shadow-lg py-4 px-6 animate-fade-in">
+        <div className="md:hidden absolute top-full left-0 w-full bg-[#F1F0FB] shadow-lg py-4 px-6 animate-fade-in">
           <nav className="flex flex-col space-y-4">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-white font-medium py-2"
+              className="text-gray-800 font-medium py-2"
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-white font-medium py-2"
+              className="text-gray-800 font-medium py-2"
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-white font-medium py-2"
+              className="text-gray-800 font-medium py-2"
             >
               About Us
             </button>
             <button 
               onClick={() => scrollToSection('blog')}
-              className="text-white font-medium py-2"
+              className="text-gray-800 font-medium py-2"
             >
               Blog
             </button>
             <button 
               onClick={() => scrollToSection('team')}
-              className="text-white font-medium py-2"
+              className="text-gray-800 font-medium py-2"
             >
               Team
             </button>
             <Button 
               onClick={() => scrollToSection('booking')}
-              className="bg-white text-agency-blue hover:bg-white/90 w-full rounded-full"
+              className="bg-agency-blue text-white hover:bg-agency-light-blue w-full rounded-full"
             >
               Contact us
             </Button>

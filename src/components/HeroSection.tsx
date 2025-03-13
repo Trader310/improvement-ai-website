@@ -21,18 +21,11 @@ const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 md:px-8 overflow-hidden bg-agency-blue/5"
+      className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 md:px-8 overflow-hidden bg-[#F1F0FB]"
     >
-      {/* Animated Background */}
+      {/* Gradient Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-agency-blue/10 to-white/50 opacity-80"></div>
-        
-        {/* Animated 3D shapes - simplified for performance */}
-        <div className="absolute w-full h-full">
-          <div className="absolute top-[10%] left-[15%] w-64 h-64 bg-agency-light-blue/20 rounded-lg filter blur-[50px] opacity-20 animate-float"></div>
-          <div className="absolute top-[40%] right-[10%] w-80 h-80 bg-agency-blue/20 rounded-lg filter blur-[60px] opacity-20 animate-float" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute bottom-[15%] left-[30%] w-72 h-72 bg-agency-blue/20 rounded-lg filter blur-[55px] opacity-20 animate-float" style={{ animationDelay: '2s' }}></div>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F1F0FB] to-white/90"></div>
       </div>
 
       {/* Content */}
@@ -71,7 +64,7 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* Custom 3D Cube Visual Element */}
+        {/* 3D Cube Visual Element */}
         <div className="lg:w-1/2 lg:pl-12">
           <div className="relative h-[300px] md:h-[400px] w-full flex items-center justify-center">
             <div className="animate-float">
