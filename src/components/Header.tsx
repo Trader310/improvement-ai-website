@@ -1,10 +1,13 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -12,9 +15,11 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -24,11 +29,15 @@ const Header = () => {
     }
     setMobileMenuOpen(false);
   };
+
   return <header className={cn('fixed top-0 left-0 w-full z-50 transition-all duration-300 px-4 md:px-8 lg:px-12', isScrolled ? 'py-2 bg-[#e8f0fe] shadow-md' : 'py-6 bg-[#e8f0fe]')}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <div className="text-[#4096ff] font-bold text-2xl">IMPROVEMENT AI</div>
+          <div className="font-bold text-2xl">
+            <span className="text-black">IMPROVEMENT</span>
+            <span className="text-[#5271FF]"> AI</span>
+          </div>
         </div>
 
         {/* Desktop Navigation */}
@@ -86,4 +95,5 @@ const Header = () => {
         </div>}
     </header>;
 };
+
 export default Header;
