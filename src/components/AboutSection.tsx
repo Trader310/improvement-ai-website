@@ -42,7 +42,7 @@ const AboutSection = () => {
                   </svg>
                 </div>
                 <div className="ml-3">
-                  <p className="text-sm font-medium text-gray-900">98% Success Rate</p>
+                  <p className="text-sm font-medium text-gray-900">100% Success Rate</p>
                   <p className="text-xs text-gray-500">Client implementations</p>
                 </div>
               </div>
