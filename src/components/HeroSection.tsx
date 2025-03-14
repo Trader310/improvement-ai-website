@@ -38,7 +38,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto lg:mx-0">
-            Leverage cutting-edge AI technology to automate processes, create intelligent agents, and transform your business operations.
+            Leverage AI technology to automate processes and transform your business operations.
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">

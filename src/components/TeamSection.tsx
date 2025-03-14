@@ -1,31 +1,35 @@
 
-import { Linkedin, Twitter, Mail } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-const teamMembers = [
+const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "CEO & AI Strategist",
-    bio: "With over 15 years in tech leadership, Sarah specializes in helping businesses leverage AI for transformation and growth.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    name: "Michael Chen",
-    role: "CTO & AI Engineer",
-    bio: "Michael brings extensive experience in designing and implementing complex AI systems that solve real business challenges.",
+    name: "Michael Roberts",
+    role: "CEO, TechVision Inc.",
+    testimonial: "Working with this team transformed our operations completely. Their AI solutions automated our customer service, resulting in 40% cost reduction and happier customers.",
+    rating: 5,
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
-    name: "Emily Rodriguez",
-    role: "Head of AI Implementation",
-    bio: "Emily excels at bridging the gap between advanced AI technologies and practical business applications with measurable results.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    name: "Sarah Chen",
+    role: "Founder, DataDrive Solutions",
+    testimonial: "Their AI implementation exceeded our expectations. We've seen a 75% increase in productivity since launching our custom AI agents. Truly remarkable results.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   },
   {
-    name: "David Wilson",
-    role: "AI Research Director",
-    bio: "David leads our R&D efforts, staying at the cutting edge of AI advancements to bring innovative solutions to our clients.",
+    name: "James Wilson",
+    role: "Operations Director, Global Retail",
+    testimonial: "The team delivered an AI solution that revolutionized our inventory management. We've reduced waste by 30% and improved customer satisfaction scores dramatically.",
+    rating: 5,
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Elena Rodriguez",
+    role: "CMO, Marketing Innovators",
+    testimonial: "Their AI-powered analytics platform gave us insights we never thought possible. Our campaigns are now 60% more effective with the same budget. I highly recommend them.",
+    rating: 5,
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
   }
 ];
 
@@ -36,61 +40,59 @@ const TeamSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
-            OUR TEAM
+            CLIENT TESTIMONIALS
           </h2>
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Meet the Experts Behind Our Success
+            What Our Clients Say About Us
           </h3>
           <p className="max-w-2xl mx-auto text-gray-600">
-            Our team combines deep technical expertise with business acumen to deliver AI solutions that drive meaningful results.
+            Don't just take our word for it. Here's what business leaders have to say about our AI solutions and the impact on their operations.
           </p>
         </div>
 
-        {/* Team Members Grid */}
+        {/* Testimonials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
+          {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
               className="group relative"
             >
-              {/* Team Member Card */}
+              {/* Testimonial Card */}
               <div className={cn(
                 "bg-white rounded-xl overflow-hidden transition-all duration-300",
                 "border border-gray-200 group-hover:border-agency-blue/30",
                 "group-hover:shadow-xl group-hover:shadow-agency-blue/10"
               )}>
-                {/* Image */}
-                <div className="aspect-square overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
-                  />
+                {/* Rating */}
+                <div className="px-6 pt-6 flex">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  ))}
                 </div>
                 
-                {/* Info */}
+                {/* Testimonial */}
                 <div className="p-6">
-                  <h4 className="text-xl font-semibold text-gray-900 group-hover:text-agency-blue transition-colors">
-                    {member.name}
-                  </h4>
-                  <p className="text-agency-blue font-medium mt-1 mb-3">
-                    {member.role}
-                  </p>
-                  <p className="text-gray-600 text-sm">
-                    {member.bio}
+                  <p className="text-gray-600 text-sm italic mb-6">
+                    "{testimonial.testimonial}"
                   </p>
                   
-                  {/* Social Icons */}
-                  <div className="mt-5 flex items-center space-x-4">
-                    <a href="#" className="text-gray-500 hover:text-agency-blue transition-colors">
-                      <Linkedin size={18} />
-                    </a>
-                    <a href="#" className="text-gray-500 hover:text-agency-blue transition-colors">
-                      <Twitter size={18} />
-                    </a>
-                    <a href="#" className="text-gray-500 hover:text-agency-blue transition-colors">
-                      <Mail size={18} />
-                    </a>
+                  {/* Client Info */}
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
+                      <img 
+                        src={testimonial.image} 
+                        alt={testimonial.name} 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div>
+                      <h4 className="text-base font-semibold text-gray-900">
+                        {testimonial.name}
+                      </h4>
+                      <p className="text-agency-blue text-sm">
+                        {testimonial.role}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
