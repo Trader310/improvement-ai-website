@@ -1,6 +1,9 @@
+
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
+
 const HeroSection = () => {
   const scrollToBooking = () => {
     const bookingSection = document.getElementById('booking');
@@ -10,6 +13,7 @@ const HeroSection = () => {
       });
     }
   };
+  
   const scrollToServices = () => {
     const servicesSection = document.getElementById('services');
     if (servicesSection) {
@@ -18,7 +22,8 @@ const HeroSection = () => {
       });
     }
   };
-  return <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 pb-16 px-4 md:px-8 overflow-hidden bg-[#e8f0fe]">
+  
+  return <section id="home" className="relative min-h-screen flex items-center justify-center pt-32 pb-16 px-4 md:px-8 overflow-hidden bg-[#e8f0fe]">
       {/* Gradient Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#e8f0fe] to-white/90"></div>
@@ -28,8 +33,8 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
         {/* Text Content */}
         <div className="text-center lg:text-left lg:w-1/2 mb-10 lg:mb-0">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-agency-blue leading-tight">
-            Make your work <span className="text-slate-950">effortless</span> with <span className="text-agency-blue">AI solutions</span>.
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5271FF] leading-tight">
+            Make your work <span className="text-slate-950">effortless</span> with <span className="text-[#5271FF]">AI solutions</span>.
           </h1>
           
           <p className="mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto lg:mx-0">
@@ -37,15 +42,19 @@ const HeroSection = () => {
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <Button onClick={scrollToBooking} className={cn("bg-agency-blue text-white hover:bg-agency-light-blue", "rounded-full px-8 py-6 text-lg transition-all duration-300", "group relative overflow-hidden hover:shadow-lg")}>
-              <span className="relative z-10">Let's Talk</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-agency-blue to-agency-light-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            </Button>
+            <Link to="/booking">
+              <Button className={cn("bg-[#5271FF] text-white hover:bg-[#3A5BFF]", "rounded-full px-8 py-6 text-lg transition-all duration-300", "group relative overflow-hidden hover:shadow-lg")}>
+                <span className="relative z-10">Let's Talk</span>
+                <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              </Button>
+            </Link>
             
-            <Button onClick={scrollToServices} variant="outline" className="rounded-full border-agency-blue text-agency-blue hover:bg-agency-blue/10 px-8 py-6 text-lg group">
-              Our Services
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link to="/services">
+              <Button variant="outline" className="rounded-full border-[#5271FF] text-[#5271FF] hover:bg-[#5271FF]/10 px-8 py-6 text-lg group">
+                Our Services
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </div>
         </div>
         
@@ -60,4 +69,5 @@ const HeroSection = () => {
       </div>
     </section>;
 };
+
 export default HeroSection;
