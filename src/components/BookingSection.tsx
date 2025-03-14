@@ -4,6 +4,11 @@ import { Calendar, Clock, Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const BookingSection = () => {
+  // Function to open Calendly in a new tab
+  const openCalendly = () => {
+    window.open('https://calendly.com/dropstrader/improvement-ai-consultation', '_blank');
+  };
+
   return (
     <section id="booking" className="py-20 px-4 md:px-8 bg-white relative overflow-hidden">
       {/* Background Elements */}
@@ -61,6 +66,7 @@ const BookingSection = () => {
             </div>
             
             <Button 
+              onClick={openCalendly}
               className={cn(
                 "bg-agency-blue text-white hover:bg-agency-light-blue",
                 "rounded-full px-8 py-6 text-lg transition-all duration-300",
@@ -72,87 +78,30 @@ const BookingSection = () => {
             </Button>
           </div>
           
-          {/* Mock Calendly Integration */}
+          {/* Calendly Integration */}
           <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
             <div className="text-center mb-6">
-              <h4 className="text-xl font-semibold text-gray-900">Select a Date & Time</h4>
-              <p className="text-gray-600 mt-2">30-minute AI consultation</p>
+              <h4 className="text-xl font-semibold text-gray-900">Schedule Your Consultation</h4>
+              <p className="text-gray-600 mt-2">30-minute AI consultation with our experts</p>
             </div>
             
-            {/* Calendar Mock */}
-            <div className="mb-6">
-              <div className="grid grid-cols-7 gap-1 text-center text-sm mb-2">
-                <div className="text-gray-500">S</div>
-                <div className="text-gray-500">M</div>
-                <div className="text-gray-500">T</div>
-                <div className="text-gray-500">W</div>
-                <div className="text-gray-500">T</div>
-                <div className="text-gray-500">F</div>
-                <div className="text-gray-500">S</div>
-              </div>
-              
-              <div className="grid grid-cols-7 gap-1 text-center">
-                {[...Array(31)].map((_, index) => (
-                  <div 
-                    key={index} 
-                    className={cn(
-                      "py-2 rounded-md text-sm cursor-pointer transition-colors",
-                      index === 15 
-                        ? "bg-agency-blue text-white" 
-                        : "hover:bg-agency-blue/10 text-gray-700"
-                    )}
-                  >
-                    {index + 1}
-                  </div>
-                ))}
+            <div className="flex flex-col space-y-4">
+              <p className="text-gray-700">Click below to access our scheduling system and book a time that works for you:</p>
+              <Button 
+                onClick={openCalendly}
+                className="w-full bg-agency-blue text-white hover:bg-agency-light-blue rounded-md py-3"
+              >
+                Open Calendly Scheduler
+              </Button>
+              <div className="text-sm text-gray-500 mt-4">
+                <p>By scheduling a consultation, you'll get:</p>
+                <ul className="list-disc pl-5 mt-2 space-y-1">
+                  <li>Personalized assessment of your business needs</li>
+                  <li>Expert recommendations for AI implementation</li>
+                  <li>Clear action plan for moving forward</li>
+                </ul>
               </div>
             </div>
-            
-            {/* Time Slots */}
-            <div className="mb-6">
-              <h5 className="text-gray-900 font-medium mb-3">Available Times</h5>
-              <div className="grid grid-cols-3 gap-2">
-                {["9:00 AM", "10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM", "3:00 PM"].map((time, index) => (
-                  <div 
-                    key={index} 
-                    className={cn(
-                      "py-2 text-center text-sm rounded-md cursor-pointer transition-colors",
-                      index === 2 
-                        ? "bg-agency-blue text-white" 
-                        : "border border-gray-200 hover:border-agency-blue text-gray-700"
-                    )}
-                  >
-                    {time}
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            {/* Form Fields */}
-            <div className="space-y-4 mb-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                <input 
-                  type="text" 
-                  className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-agency-blue focus:border-agency-blue" 
-                  placeholder="Your full name" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input 
-                  type="email" 
-                  className="w-full px-4 py-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-agency-blue focus:border-agency-blue" 
-                  placeholder="your@email.com" 
-                />
-              </div>
-            </div>
-            
-            <Button 
-              className="w-full bg-agency-blue text-white hover:bg-agency-light-blue rounded-md py-3"
-            >
-              Confirm Booking
-            </Button>
           </div>
         </div>
       </div>

@@ -22,6 +22,11 @@ const HeroSection = () => {
       });
     }
   };
+
+  // Function to open Calendly in a new tab
+  const openCalendly = () => {
+    window.open('https://calendly.com/dropstrader/improvement-ai-consultation', '_blank');
+  };
   
   return <section id="home" className="relative min-h-screen flex items-center justify-center pt-40 pb-16 px-4 md:px-8 overflow-hidden bg-[#e8f0fe]">
       {/* Gradient Background */}
@@ -42,12 +47,13 @@ const HeroSection = () => {
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <Link to="/booking">
-              <Button className={cn("bg-[#5271FF] text-white hover:bg-[#3A5BFF]", "rounded-full px-8 py-6 text-lg transition-all duration-300", "group relative overflow-hidden hover:shadow-lg")}>
-                <span className="relative z-10">Let's Talk</span>
-                <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-              </Button>
-            </Link>
+            <Button 
+              onClick={openCalendly}
+              className={cn("bg-[#5271FF] text-white hover:bg-[#3A5BFF]", "rounded-full px-8 py-6 text-lg transition-all duration-300", "group relative overflow-hidden hover:shadow-lg")}
+            >
+              <span className="relative z-10">Let's Talk</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            </Button>
             
             <Link to="/services">
               <Button variant="outline" className="rounded-full border-[#5271FF] text-[#5271FF] hover:bg-[#5271FF]/10 px-8 py-6 text-lg group">
