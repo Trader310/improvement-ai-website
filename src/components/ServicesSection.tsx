@@ -2,11 +2,13 @@
 import { useState } from 'react';
 import { Bot, Brain, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 interface ServiceCard {
   icon: React.ReactNode;
   title: string;
   description: string;
+  link: string;
 }
 
 const ServicesSection = () => {
@@ -16,17 +18,20 @@ const ServicesSection = () => {
     {
       icon: <Brain className="w-12 h-12 text-agency-blue" />,
       title: "AI Implementation & Automation",
-      description: "Seamlessly integrate AI into your existing systems to automate repetitive tasks, optimize workflows, and make data-driven decisions with unprecedented speed and accuracy."
+      description: "Seamlessly integrate AI into your existing systems to automate repetitive tasks, optimize workflows, and make data-driven decisions with unprecedented speed and accuracy.",
+      link: "/ai-implementation"
     },
     {
       icon: <Bot className="w-12 h-12 text-agency-blue" />,
       title: "AI Agent Development",
-      description: "Custom AI assistants that understand your business context, engage with customers naturally, and drive measurable improvements in conversions, satisfaction, and revenue."
+      description: "Custom AI assistants that understand your business context, engage with customers naturally, and drive measurable improvements in conversions, satisfaction, and revenue.",
+      link: "/ai-agent"
     },
     {
       icon: <Sparkles className="w-12 h-12 text-agency-blue" />,
       title: "AI Consultation",
-      description: "Strategic guidance from AI experts who evaluate your specific business needs and develop tailored AI solutions that align with your growth objectives and technical requirements."
+      description: "Strategic guidance from AI experts who evaluate your specific business needs and develop tailored AI solutions that align with your growth objectives and technical requirements.",
+      link: "/ai-consultation"
     }
   ];
 
@@ -79,18 +84,20 @@ const ServicesSection = () => {
                 {service.description}
               </p>
               
-              <div 
-                className={cn(
-                  "mt-8 text-agency-blue font-medium flex items-center",
-                  "transition-all duration-300",
-                  hoveredCard === index ? "opacity-100" : "opacity-0"
-                )}
-              >
-                Learn More
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
+              <Link to={service.link}>
+                <div 
+                  className={cn(
+                    "mt-8 text-agency-blue font-medium flex items-center",
+                    "transition-all duration-300",
+                    hoveredCard === index ? "opacity-100" : "opacity-0"
+                  )}
+                >
+                  Learn More
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </Link>
             </div>
           ))}
         </div>
