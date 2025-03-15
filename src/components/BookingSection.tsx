@@ -2,11 +2,18 @@
 import { Button } from './ui/button';
 import { Calendar, Clock, Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import CalendlyEmbed from './CalendlyEmbed';
+import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
+import { Drawer, DrawerContent, DrawerTrigger } from './ui/drawer';
+import { useMediaQuery } from '@/hooks/use-mobile';
 
 const BookingSection = () => {
-  // Function to open Calendly in a new tab
-  const openCalendly = () => {
-    window.open('https://calendly.com/dropstrader/improvement-ai-consultation', '_blank');
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  const calendlyUrl = 'https://calendly.com/dropstrader/improvement-ai-consultation';
+
+  // Function to open Calendly in a new tab (as fallback)
+  const openCalendlyNewTab = () => {
+    window.open(calendlyUrl, '_blank');
   };
 
   return (
@@ -65,43 +72,50 @@ const BookingSection = () => {
               </div>
             </div>
             
-            <Button 
-              onClick={openCalendly}
-              className={cn(
-                "bg-agency-blue text-white hover:bg-agency-light-blue",
-                "rounded-full px-8 py-6 text-lg transition-all duration-300",
-                "group relative overflow-hidden"
-              )}
-            >
-              <span className="relative z-10">Book Your Session</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-agency-blue to-agency-light-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            </Button>
+            {isMobile ? (
+              <Drawer>
+                <DrawerTrigger asChild>
+                  <Button 
+                    className={cn(
+                      "bg-agency-blue text-white hover:bg-agency-light-blue",
+                      "rounded-full px-8 py-6 text-lg transition-all duration-300",
+                      "group relative overflow-hidden"
+                    )}
+                  >
+                    <span className="relative z-10">Book Your Session</span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-agency-blue to-agency-light-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  </Button>
+                </DrawerTrigger>
+                <DrawerContent className="h-[80vh]">
+                  <div className="px-4 pt-4">
+                    <CalendlyEmbed url={calendlyUrl} className="h-[70vh]" />
+                  </div>
+                </DrawerContent>
+              </Drawer>
+            ) : (
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button 
+                    className={cn(
+                      "bg-agency-blue text-white hover:bg-agency-light-blue",
+                      "rounded-full px-8 py-6 text-lg transition-all duration-300",
+                      "group relative overflow-hidden"
+                    )}
+                  >
+                    <span className="relative z-10">Book Your Session</span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-agency-blue to-agency-light-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-3xl h-[80vh]">
+                  <CalendlyEmbed url={calendlyUrl} className="h-[75vh]" />
+                </DialogContent>
+              </Dialog>
+            )}
           </div>
           
           {/* Calendly Integration */}
-          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-            <div className="text-center mb-6">
-              <h4 className="text-xl font-semibold text-gray-900">Schedule Your Consultation</h4>
-              <p className="text-gray-600 mt-2">30-minute AI consultation with our experts</p>
-            </div>
-            
-            <div className="flex flex-col space-y-4">
-              <p className="text-gray-700">Click below to access our scheduling system and book a time that works for you:</p>
-              <Button 
-                onClick={openCalendly}
-                className="w-full bg-agency-blue text-white hover:bg-agency-light-blue rounded-md py-3"
-              >
-                Open Calendly Scheduler
-              </Button>
-              <div className="text-sm text-gray-500 mt-4">
-                <p>By scheduling a consultation, you'll get:</p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
-                  <li>Personalized assessment of your business needs</li>
-                  <li>Expert recommendations for AI implementation</li>
-                  <li>Clear action plan for moving forward</li>
-                </ul>
-              </div>
-            </div>
+          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hidden lg:block">
+            <CalendlyEmbed url={calendlyUrl} />
           </div>
         </div>
       </div>

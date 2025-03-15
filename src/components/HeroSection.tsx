@@ -3,8 +3,15 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
+import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
+import { Drawer, DrawerContent, DrawerTrigger } from './ui/drawer';
+import { useMediaQuery } from '@/hooks/use-mobile';
+import CalendlyEmbed from './CalendlyEmbed';
 
 const HeroSection = () => {
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  const calendlyUrl = 'https://calendly.com/dropstrader/improvement-ai-consultation';
+  
   const scrollToBooking = () => {
     const bookingSection = document.getElementById('booking');
     if (bookingSection) {
@@ -23,9 +30,9 @@ const HeroSection = () => {
     }
   };
 
-  // Function to open Calendly in a new tab
-  const openCalendly = () => {
-    window.open('https://calendly.com/dropstrader/improvement-ai-consultation', '_blank');
+  // Function to open Calendly in a new tab (as fallback)
+  const openCalendlyNewTab = () => {
+    window.open(calendlyUrl, '_blank');
   };
   
   return <section id="home" className="relative min-h-screen flex items-center justify-center pt-40 pb-16 px-4 md:px-8 overflow-hidden bg-[#e8f0fe]">
@@ -47,13 +54,43 @@ const HeroSection = () => {
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            <Button 
-              onClick={openCalendly}
-              className={cn("bg-[#5271FF] text-white hover:bg-[#3A5BFF]", "rounded-full px-8 py-6 text-lg transition-all duration-300", "group relative overflow-hidden hover:shadow-lg")}
-            >
-              <span className="relative z-10">Let's Talk</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-            </Button>
+            {isMobile ? (
+              <Drawer>
+                <DrawerTrigger asChild>
+                  <Button 
+                    className={cn("bg-[#5271FF] text-white hover:bg-[#3A5BFF]", 
+                      "rounded-full px-8 py-6 text-lg transition-all duration-300", 
+                      "group relative overflow-hidden hover:shadow-lg"
+                    )}
+                  >
+                    <span className="relative z-10">Let's Talk</span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  </Button>
+                </DrawerTrigger>
+                <DrawerContent className="h-[80vh]">
+                  <div className="px-4 pt-4">
+                    <CalendlyEmbed url={calendlyUrl} className="h-[70vh]" />
+                  </div>
+                </DrawerContent>
+              </Drawer>
+            ) : (
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button 
+                    className={cn("bg-[#5271FF] text-white hover:bg-[#3A5BFF]", 
+                      "rounded-full px-8 py-6 text-lg transition-all duration-300", 
+                      "group relative overflow-hidden hover:shadow-lg"
+                    )}
+                  >
+                    <span className="relative z-10">Let's Talk</span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-3xl h-[80vh]">
+                  <CalendlyEmbed url={calendlyUrl} className="h-[75vh]" />
+                </DialogContent>
+              </Dialog>
+            )}
             
             <Link to="/services">
               <Button variant="outline" className="rounded-full border-[#5271FF] text-[#5271FF] hover:bg-[#5271FF]/10 px-8 py-6 text-lg group">
