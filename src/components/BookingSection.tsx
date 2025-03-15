@@ -1,5 +1,5 @@
 
-import { Calendar, Clock, Users } from 'lucide-react';
+import { Calendar, Clock, Users, Target, Lightbulb, CheckCircle, MessageSquare } from 'lucide-react';
 import CalendlyEmbed from './CalendlyEmbed';
 import { useMediaQuery } from '@/hooks/use-mobile';
 
@@ -76,6 +76,53 @@ const BookingSection = () => {
                 I'm excited to talk with you!
               </div>
             </div>
+
+            {/* What to Expect - New content to fill empty space */}
+            <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">What to Expect</h3>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-agency-blue/10 flex items-center justify-center flex-shrink-0">
+                    <Target className="w-4 h-4 text-agency-blue" />
+                  </div>
+                  <div className="ml-3">
+                    <h4 className="font-medium text-gray-900">Needs Assessment</h4>
+                    <p className="text-gray-600 text-sm">We'll discuss your business goals and challenges</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-agency-blue/10 flex items-center justify-center flex-shrink-0">
+                    <Lightbulb className="w-4 h-4 text-agency-blue" />
+                  </div>
+                  <div className="ml-3">
+                    <h4 className="font-medium text-gray-900">AI Opportunities</h4>
+                    <p className="text-gray-600 text-sm">Discover specific AI applications for your business</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-agency-blue/10 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="w-4 h-4 text-agency-blue" />
+                  </div>
+                  <div className="ml-3">
+                    <h4 className="font-medium text-gray-900">Action Plan</h4>
+                    <p className="text-gray-600 text-sm">Get a customized roadmap for implementation</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-8 h-8 rounded-full bg-agency-blue/10 flex items-center justify-center flex-shrink-0">
+                    <MessageSquare className="w-4 h-4 text-agency-blue" />
+                  </div>
+                  <div className="ml-3">
+                    <h4 className="font-medium text-gray-900">Q&A Session</h4>
+                    <p className="text-gray-600 text-sm">Get answers to all your AI-related questions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           
           {/* Right Column - Calendly */}
@@ -83,7 +130,7 @@ const BookingSection = () => {
             <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden h-full">
               <CalendlyEmbed 
                 url={calendlyUrl} 
-                className="h-[750px] w-full"
+                className="h-[850px] w-full"
                 prefill={{
                   customAnswers: {
                     'Source': 'Homepage Booking Widget'
