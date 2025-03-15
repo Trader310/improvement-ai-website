@@ -1,12 +1,7 @@
 
-import { Button } from './ui/button';
 import { Calendar, Clock, Users } from 'lucide-react';
-import { cn } from '@/lib/utils';
 import CalendlyEmbed from './CalendlyEmbed';
-import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
-import { Drawer, DrawerContent, DrawerTrigger } from './ui/drawer';
 import { useMediaQuery } from '@/hooks/use-mobile';
-import { Link } from 'react-router-dom';
 
 const BookingSection = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
@@ -29,22 +24,74 @@ const BookingSection = () => {
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Book Your AI Consultation
           </h3>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
             Select a time for your free 30-minute AI consultation with our experts and discover 
             how AI can transform your business.
           </p>
         </div>
         
-        <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
-          <CalendlyEmbed 
-            url={calendlyUrl} 
-            className="min-h-[700px] w-full"
-            prefill={{
-              customAnswers: {
-                'Source': 'Homepage Booking Widget'
-              }
-            }}
-          />
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
+          {/* Left Column - Information */}
+          <div className="lg:col-span-2 space-y-6">
+            {/* Meeting Details */}
+            <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 space-y-5">
+              <div className="flex items-start">
+                <div className="w-10 h-10 rounded-full bg-agency-blue/10 flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-5 h-5 text-agency-blue" />
+                </div>
+                <div className="ml-4">
+                  <h4 className="font-semibold text-gray-900">30 Minutes</h4>
+                  <p className="text-gray-600 text-sm">Focused consultation time</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-10 h-10 rounded-full bg-agency-blue/10 flex items-center justify-center flex-shrink-0">
+                  <Calendar className="w-5 h-5 text-agency-blue" />
+                </div>
+                <div className="ml-4">
+                  <h4 className="font-semibold text-gray-900">Flexible Scheduling</h4>
+                  <p className="text-gray-600 text-sm">Choose any available time slot</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <div className="w-10 h-10 rounded-full bg-agency-blue/10 flex items-center justify-center flex-shrink-0">
+                  <Users className="w-5 h-5 text-agency-blue" />
+                </div>
+                <div className="ml-4">
+                  <h4 className="font-semibold text-gray-900">Expert Consultation</h4>
+                  <p className="text-gray-600 text-sm">Meet with senior AI specialists</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Meeting Goal */}
+            <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Meeting Goal</h3>
+              <p className="text-gray-700">
+                The goal of this call is to discover how AI can help you increase revenue & profit while decreasing your workload & cost.
+              </p>
+              <div className="mt-4 text-agency-blue font-medium">
+                I'm excited to talk with you!
+              </div>
+            </div>
+          </div>
+          
+          {/* Right Column - Calendly */}
+          <div className="lg:col-span-3">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden h-full">
+              <CalendlyEmbed 
+                url={calendlyUrl} 
+                className="h-[750px] w-full"
+                prefill={{
+                  customAnswers: {
+                    'Source': 'Homepage Booking Widget'
+                  }
+                }}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -15,7 +15,7 @@ interface CalendlyEmbedProps {
 
 const CalendlyEmbed = ({ 
   url, 
-  className = "min-h-[630px] w-full", 
+  className = "min-h-[750px] w-full", 
   prefill 
 }: CalendlyEmbedProps) => {
   useEffect(() => {
@@ -58,6 +58,7 @@ const CalendlyEmbed = ({
       <div 
         className="calendly-inline-widget w-full h-full" 
         data-url={getCalendlyUrl()}
+        style={{ minWidth: '320px', height: '100%' }}
       ></div>
     </div>
   );
