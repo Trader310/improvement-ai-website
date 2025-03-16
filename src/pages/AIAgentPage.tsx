@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Bot, ArrowRight, MessageCircle, BarChart3, BrainCircuit, Headphones, ShieldCheck, Zap } from 'lucide-react';
+import { Bot, Zap, ArrowRight, MessageSquare, Users, Brain, ShieldCheck, BarChart, Settings, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 
@@ -16,18 +16,20 @@ const AIAgentPage = () => {
       <section className="pt-32 pb-16 px-4 md:px-8 relative">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-[#e8f0fe] to-white/90"></div>
-          <div className="absolute top-0 left-0 w-1/2 h-1/2 bg-agency-blue/5 rounded-full filter blur-3xl transform -translate-x-1/4 -translate-y-1/4"></div>
-          <div className="absolute bottom-0 right-0 w-1/2 h-1/2 bg-agency-blue/5 rounded-full filter blur-3xl transform translate-x-1/4 translate-y-1/4"></div>
+          <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-agency-blue/5 rounded-full filter blur-3xl transform translate-x-1/4 -translate-y-1/4"></div>
+          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-agency-blue/5 rounded-full filter blur-3xl transform -translate-x-1/4 translate-y-1/4"></div>
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                <span className="text-agency-blue">AI Agent</span> Development
+                Custom <span className="text-agency-blue">AI Agent</span> Development
               </h1>
               <p className="text-xl text-gray-700 mb-8">
-                Custom AI assistants that understand your business context, engage with customers naturally, and drive measurable improvements in conversions, satisfaction, and revenue.
+                Powerful, context-aware AI assistants that understand your business, 
+                engage with customers naturally, and drive measurable improvements
+                in satisfaction, efficiency, and revenue.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link to="/booking">
@@ -48,105 +50,44 @@ const AIAgentPage = () => {
         </div>
       </section>
       
-      {/* What Are AI Agents Section */}
+      {/* Benefits Section */}
       <section className="py-20 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                What Are <span className="text-agency-blue">AI Agents?</span>
-              </h2>
-              <p className="text-lg text-gray-700 mb-6">
-                AI agents are intelligent virtual assistants that can understand natural language, learn from interactions,
-                and perform complex tasks to support your business operations and customer service needs.
-              </p>
-              <p className="text-lg text-gray-700 mb-6">
-                Unlike basic chatbots, our AI agents are custom-built to understand your specific business domain, products,
-                and customer needs. They can handle complex queries, make recommendations, process transactions, and continuously
-                improve through machine learning.
-              </p>
-              <p className="text-lg text-gray-700">
-                Whether you need customer support automation, sales assistance, or internal knowledge management,
-                our AI agents deliver personalized, context-aware interactions that feel natural and add real value.
-              </p>
-            </div>
-            <div className="bg-[#f8faff] p-8 rounded-3xl">
-              <div className="chat-interface bg-white rounded-2xl shadow-md p-6 border border-gray-200">
-                <div className="chat-header flex items-center justify-between mb-6 pb-4 border-b border-gray-100">
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 rounded-full bg-agency-blue/10 flex items-center justify-center">
-                      <Bot className="w-5 h-5 text-agency-blue" />
-                    </div>
-                    <span className="ml-3 font-semibold">AI Sales Assistant</span>
-                  </div>
-                  <span className="text-sm text-gray-400">Online</span>
-                </div>
-                
-                <div className="chat-messages space-y-4">
-                  <div className="message ai-message bg-agency-blue/5 rounded-lg p-3 max-w-[80%]">
-                    <p className="text-gray-800">Hello! I'm your AI sales assistant. How can I help you today?</p>
-                  </div>
-                  
-                  <div className="message user-message bg-gray-100 rounded-lg p-3 max-w-[80%] ml-auto">
-                    <p className="text-gray-800">I'm looking for a solution to automate my customer support.</p>
-                  </div>
-                  
-                  <div className="message ai-message bg-agency-blue/5 rounded-lg p-3 max-w-[80%]">
-                    <p className="text-gray-800">Based on your needs, I'd recommend our AI Customer Support Agent. It can handle common queries, route complex issues to human agents, and is available 24/7.</p>
-                  </div>
-                  
-                  <div className="message user-message bg-gray-100 rounded-lg p-3 max-w-[80%] ml-auto">
-                    <p className="text-gray-800">That sounds perfect! What's the implementation process like?</p>
-                  </div>
-                  
-                  <div className="message ai-message bg-agency-blue/5 rounded-lg p-3 max-w-[80%]">
-                    <p className="text-gray-800">We'll customize the AI to your business, integrate with your systems, and train it on your knowledge base. The process typically takes 2-4 weeks. Would you like to schedule a consultation to discuss details?</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* Benefits Section */}
-      <section className="py-20 px-4 md:px-8 bg-gradient-to-b from-[#f8faff] to-white">
-        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
-            Benefits of <span className="text-agency-blue">AI Agents</span>
+            How <span className="text-agency-blue">AI Agents</span> Transform Your Business
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Headphones className="h-12 w-12 text-agency-blue" />,
-                title: "24/7 Availability",
-                description: "Provide instant responses to customers at any time, reducing wait times and improving satisfaction."
+                icon: <MessageSquare className="h-12 w-12 text-agency-blue" />,
+                title: "24/7 Customer Support",
+                description: "Provide instant, accurate responses to customer inquiries around the clock, improving satisfaction and reducing support costs."
               },
               {
-                icon: <Zap className="h-12 w-12 text-agency-blue" />,
-                title: "Increased Efficiency",
-                description: "Handle thousands of conversations simultaneously, freeing up your human team for complex tasks."
+                icon: <Users className="h-12 w-12 text-agency-blue" />,
+                title: "Personalized Experiences",
+                description: "Create tailored interactions based on customer history, preferences, and behavior patterns to increase engagement and loyalty."
               },
               {
-                icon: <MessageCircle className="h-12 w-12 text-agency-blue" />,
-                title: "Natural Conversations",
-                description: "Engage users in human-like interactions that understand context, nuance, and follow-up questions."
-              },
-              {
-                icon: <BrainCircuit className="h-12 w-12 text-agency-blue" />,
-                title: "Continuous Learning",
-                description: "Our AI agents improve over time, learning from interactions to provide better responses."
-              },
-              {
-                icon: <BarChart3 className="h-12 w-12 text-agency-blue" />,
-                title: "Actionable Insights",
-                description: "Gain valuable data on customer inquiries, pain points, and satisfaction levels."
+                icon: <Brain className="h-12 w-12 text-agency-blue" />,
+                title: "Knowledge Management",
+                description: "Centralize and leverage your business knowledge, enabling consistent and accurate information retrieval across all interactions."
               },
               {
                 icon: <ShieldCheck className="h-12 w-12 text-agency-blue" />,
-                title: "Consistent Experience",
-                description: "Deliver the same high-quality responses across all customer touchpoints."
+                title: "Secure Interactions",
+                description: "Maintain confidentiality with enterprise-grade security protocols while handling sensitive customer information."
+              },
+              {
+                icon: <BarChart className="h-12 w-12 text-agency-blue" />,
+                title: "Data-Driven Insights",
+                description: "Analyze interactions to uncover trends, customer needs, and improvement opportunities that drive business growth."
+              },
+              {
+                icon: <Zap className="h-12 w-12 text-agency-blue" />,
+                title: "Operational Efficiency",
+                description: "Automate routine inquiries and processes, allowing your human team to focus on complex, high-value activities."
               }
             ].map((benefit, index) => (
               <div 
@@ -164,43 +105,163 @@ const AIAgentPage = () => {
         </div>
       </section>
       
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 md:px-8 bg-white">
+      {/* Development Process */}
+      <section className="py-20 px-4 md:px-8 bg-gradient-to-b from-[#f8faff] to-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">
-            AI Agent <span className="text-agency-blue">Use Cases</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            Our AI Agent <span className="text-agency-blue">Development Process</span>
           </h2>
-          <p className="text-lg text-gray-700 text-center mb-16 max-w-3xl mx-auto">
-            Our AI agents can be customized for various business needs across different industries. Here are some popular applications:
-          </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="relative">
+            {/* Timeline Connection */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 bg-agency-blue/20 hidden md:block"></div>
+            
             {[
               {
-                title: "Customer Support Automation",
-                description: "Handle common inquiries, troubleshoot issues, and escalate complex problems to human agents when necessary."
+                step: "01",
+                title: "Requirements Discovery",
+                description: "We analyze your business needs, target audience, and communication goals to define the ideal AI agent capabilities."
               },
               {
-                title: "Sales Assistance",
-                description: "Guide customers through product selection, answer questions, and facilitate purchases with personalized recommendations."
+                step: "02",
+                title: "Knowledge Base Creation",
+                description: "Our team collects and structures your business information, products, services, and processes into a comprehensive knowledge base."
               },
               {
-                title: "Internal Knowledge Management",
-                description: "Help employees quickly find information, answer policy questions, and streamline internal processes."
+                step: "03",
+                title: "Personality Design",
+                description: "We craft a unique agent personality that reflects your brand voice and resonates with your target audience."
               },
               {
-                title: "Lead Generation & Qualification",
-                description: "Engage website visitors, qualify leads, and schedule appointments with your sales team."
+                step: "04",
+                title: "Technical Development",
+                description: "Using advanced LLM technology, we build your custom AI agent with the ability to understand context, remember conversations, and provide relevant responses."
+              },
+              {
+                step: "05",
+                title: "Integration & Testing",
+                description: "We integrate the AI agent with your existing systems and thoroughly test it across various scenarios to ensure optimal performance."
+              },
+              {
+                step: "06",
+                title: "Deployment & Refinement",
+                description: "After launch, we continuously monitor, analyze, and refine your AI agent based on real-world interactions and feedback."
               }
-            ].map((useCase, index) => (
+            ].map((phase, index) => (
               <div 
-                key={index}
-                className="bg-gradient-to-br from-agency-blue/5 to-agency-light-blue/5 p-8 rounded-xl border border-agency-blue/10 hover:shadow-lg transition-all duration-300"
+                key={index} 
+                className={cn(
+                  "relative flex flex-col md:flex-row items-center gap-6 md:gap-12 mb-12",
+                  index % 2 !== 0 ? "md:flex-row-reverse" : ""
+                )}
               >
-                <h3 className="text-xl font-semibold mb-4 text-agency-blue">{useCase.title}</h3>
-                <p className="text-gray-700">{useCase.description}</p>
+                {/* Phase Number */}
+                <div className="z-10 flex-shrink-0 w-16 h-16 rounded-full bg-agency-blue text-white flex items-center justify-center text-2xl font-bold">
+                  {phase.step}
+                </div>
+                
+                {/* Content Box */}
+                <div className={cn(
+                  "flex-grow p-6 bg-white rounded-xl shadow-md border border-gray-100",
+                  "hover:shadow-xl hover:border-agency-blue/30 transition-all duration-300",
+                  "md:w-[calc(50%-2rem)]"
+                )}>
+                  <h3 className="text-xl font-semibold mb-3">{phase.title}</h3>
+                  <p className="text-gray-600">{phase.description}</p>
+                </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Technical Features */}
+      <section className="py-20 px-4 md:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            Advanced <span className="text-agency-blue">Technical Features</span>
+          </h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+              <div className="bg-agency-blue/10 p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Core Capabilities</h3>
+              </div>
+              <div className="p-6 space-y-4">
+                {[
+                  {
+                    icon: <Code className="h-5 w-5 text-agency-blue" />,
+                    title: "Advanced Natural Language Processing",
+                    description: "Our agents understand complex queries, context, and intent for more natural conversations."
+                  },
+                  {
+                    icon: <Settings className="h-5 w-5 text-agency-blue" />,
+                    title: "Multi-Channel Integration",
+                    description: "Seamlessly deploy across websites, messaging apps, email, and voice platforms."
+                  },
+                  {
+                    icon: <Brain className="h-5 w-5 text-agency-blue" />,
+                    title: "Contextual Memory",
+                    description: "Remembers conversation history to provide coherent, continuous interactions."
+                  },
+                  {
+                    icon: <ShieldCheck className="h-5 w-5 text-agency-blue" />,
+                    title: "Enterprise Security",
+                    description: "End-to-end encryption and compliance with industry standards for data protection."
+                  }
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-agency-blue/10 flex items-center justify-center">
+                      {feature.icon}
+                    </div>
+                    <div className="ml-4">
+                      <h4 className="font-semibold text-gray-900">{feature.title}</h4>
+                      <p className="text-gray-600 text-sm">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+              <div className="bg-agency-blue/10 p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">System Integration</h3>
+              </div>
+              <div className="p-6 space-y-4">
+                {[
+                  {
+                    icon: <Bot className="h-5 w-5 text-agency-blue" />,
+                    title: "API Connectivity",
+                    description: "Connect to your CRM, ERP, and other business systems for comprehensive functionality."
+                  },
+                  {
+                    icon: <Users className="h-5 w-5 text-agency-blue" />,
+                    title: "Authentication Systems",
+                    description: "Secure user verification and seamless handover to human agents when needed."
+                  },
+                  {
+                    icon: <BarChart className="h-5 w-5 text-agency-blue" />,
+                    title: "Analytics Dashboard",
+                    description: "Monitor performance, user satisfaction, and conversion metrics in real-time."
+                  },
+                  {
+                    icon: <MessageSquare className="h-5 w-5 text-agency-blue" />,
+                    title: "Human-in-the-Loop Capability",
+                    description: "Smooth escalation process when human expertise is required for complex situations."
+                  }
+                ].map((feature, index) => (
+                  <div key={index} className="flex items-start">
+                    <div className="mt-1 flex-shrink-0 w-8 h-8 rounded-full bg-agency-blue/10 flex items-center justify-center">
+                      {feature.icon}
+                    </div>
+                    <div className="ml-4">
+                      <h4 className="font-semibold text-gray-900">{feature.title}</h4>
+                      <p className="text-gray-600 text-sm">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -214,11 +275,10 @@ const AIAgentPage = () => {
           
           <div className="relative z-10 text-white text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Implement AI Agents in Your Business?
+              Ready to Deploy Your Custom AI Agent?
             </h2>
             <p className="text-white/90 text-lg mb-8">
-              Schedule a free consultation with our AI agent development experts to discuss your specific needs
-              and how our tailored solutions can help you achieve your business goals.
+              Schedule a free consultation with our AI specialists to discuss your specific business needs and how our custom AI agents can transform your customer interactions.
             </p>
             <Link to="/booking">
               <Button className="bg-white text-agency-blue hover:bg-gray-100 rounded-full px-8 py-6 text-lg">
