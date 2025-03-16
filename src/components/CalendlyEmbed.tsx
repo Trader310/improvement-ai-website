@@ -25,12 +25,23 @@ const CalendlyEmbed = ({
     script.async = true;
     document.body.appendChild(script);
 
+    // Add CSS to hide Calendly's internal scrollbar
+    const style = document.createElement('style');
+    style.textContent = `
+      .calendly-inline-widget iframe {
+        height: 100% !important;
+        overflow: hidden !important;
+      }
+    `;
+    document.head.appendChild(style);
+
     // Clean up on unmount
     return () => {
       try {
         document.body.removeChild(script);
+        document.head.removeChild(style);
       } catch (e) {
-        console.warn('Calendly script already removed');
+        console.warn('Calendly script or style already removed');
       }
     };
   }, []);
