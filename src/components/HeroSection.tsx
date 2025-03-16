@@ -67,9 +67,9 @@ const HeroSection = () => {
                     <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   </Button>
                 </DrawerTrigger>
-                <DrawerContent className="h-[80vh]">
+                <DrawerContent className="h-[90vh]">
                   <div className="px-4 pt-4">
-                    <CalendlyEmbed url={calendlyUrl} className="h-[70vh]" />
+                    <CalendlyEmbed url={calendlyUrl} className="h-[85vh]" />
                   </div>
                 </DrawerContent>
               </Drawer>
@@ -86,8 +86,8 @@ const HeroSection = () => {
                     <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="max-w-3xl h-[80vh]">
-                  <CalendlyEmbed url={calendlyUrl} className="h-[75vh]" />
+                <DialogContent className="max-w-4xl h-[90vh]">
+                  <CalendlyEmbed url={calendlyUrl} className="h-[85vh]" />
                 </DialogContent>
               </Dialog>
             )}

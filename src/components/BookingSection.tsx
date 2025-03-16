@@ -130,7 +130,7 @@ const BookingSection = () => {
             <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden h-full">
               <CalendlyEmbed 
                 url={calendlyUrl} 
-                className="h-[850px] w-full"
+                className="h-[950px] w-full"
                 prefill={{
                   customAnswers: {
                     'Source': 'Homepage Booking Widget'
