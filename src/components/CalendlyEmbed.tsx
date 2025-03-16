@@ -77,13 +77,11 @@ const CalendlyEmbed = ({
   };
 
   return (
-    <div className={className}>
-      <div 
-        className="calendly-inline-widget w-full h-full" 
-        data-url={getCalendlyUrl()}
-        style={{ minWidth: '320px', height: '100%', overflow: 'hidden' }}
-      ></div>
-    </div>
+    <div 
+      className={`calendly-inline-widget ${className}`} 
+      data-url={getCalendlyUrl()}
+      style={{ minWidth: '320px', height: '100%', overflow: 'hidden' }}
+    ></div>
   );
 };
 

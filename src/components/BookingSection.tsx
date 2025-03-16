@@ -127,17 +127,15 @@ const BookingSection = () => {
           
           {/* Right Column - Calendly */}
           <div className="lg:col-span-3">
-            <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden h-full">
-              <CalendlyEmbed 
-                url={calendlyUrl} 
-                className="h-[950px] w-full"
-                prefill={{
-                  customAnswers: {
-                    'Source': 'Homepage Booking Widget'
-                  }
-                }}
-              />
-            </div>
+            <CalendlyEmbed 
+              url={calendlyUrl} 
+              className="h-[950px] w-full rounded-xl shadow-lg border border-gray-200"
+              prefill={{
+                customAnswers: {
+                  'Source': 'Homepage Booking Widget'
+                }
+              }}
+            />
           </div>
         </div>
       </div>

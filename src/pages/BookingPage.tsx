@@ -74,17 +74,15 @@ const BookingPage = () => {
             
             {/* Right Column - Calendly */}
             <div className="lg:col-span-3">
-              <div className="bg-white rounded-xl shadow-lg border border-gray-200 h-full overflow-hidden">
-                <CalendlyEmbed 
-                  url={calendlyUrl} 
-                  className="min-h-[950px] w-full"
-                  prefill={{
-                    customAnswers: {
-                      'Source': 'Website Direct Booking'
-                    }
-                  }}
-                />
-              </div>
+              <CalendlyEmbed 
+                url={calendlyUrl} 
+                className="min-h-[950px] w-full rounded-xl shadow-lg border border-gray-200"
+                prefill={{
+                  customAnswers: {
+                    'Source': 'Website Direct Booking'
+                  }
+                }}
+              />
             </div>
           </div>
         </div>
