@@ -1,3 +1,4 @@
+
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
@@ -6,9 +7,11 @@ import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
 import { Drawer, DrawerContent, DrawerTrigger } from './ui/drawer';
 import { useMediaQuery } from '@/hooks/use-mobile';
 import CalendlyEmbed from './CalendlyEmbed';
+
 const HeroSection = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
   const calendlyUrl = 'https://calendly.com/dropstrader/improvement-ai-consultation';
+  
   const scrollToBooking = () => {
     const bookingSection = document.getElementById('booking');
     if (bookingSection) {
@@ -17,6 +20,7 @@ const HeroSection = () => {
       });
     }
   };
+  
   const scrollToServices = () => {
     const servicesSection = document.getElementById('services');
     if (servicesSection) {
@@ -30,6 +34,7 @@ const HeroSection = () => {
   const openCalendlyNewTab = () => {
     window.open(calendlyUrl, '_blank');
   };
+  
   return <section id="home" className="relative min-h-screen flex items-center justify-center pt-40 pb-16 px-4 md:px-8 overflow-hidden bg-[#e8f0fe]">
       {/* Gradient Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -41,7 +46,7 @@ const HeroSection = () => {
         {/* Text Content */}
         <div className="text-center lg:text-left lg:w-1/2 mb-10 lg:mb-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5271FF] leading-tight font-montserrat">
-            Make your work <span className="text-slate-950">effortless</span> with <span className="text-[#5271FF]">AI solutions</span>.
+            Make your work <span className="text-slate-950">effortless</span> with <span className="text-[#5271FF]">AI solutions</span>
           </h1>
           
           <p className="mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto lg:mx-0">
@@ -82,15 +87,20 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* 3D Cube Visual Element */}
+        {/* 3D Cube Visual Element - Enhanced Animation */}
         <div className="lg:w-1/2 lg:pl-12">
           <div className="relative h-[300px] md:h-[400px] w-full flex items-center justify-center">
-            <div className="animate-float">
-              <img alt="3D Cube" className="w-40 h-40 md:w-60 md:h-60 object-contain" src="/lovable-uploads/524a60a0-baf2-4edc-82d9-38a9931b1112.png" />
+            <div className="animate-float transform-gpu hover:scale-110 transition-transform duration-300 shadow-xl">
+              <img 
+                alt="3D Cube" 
+                className="w-44 h-44 md:w-64 md:h-64 object-contain drop-shadow-2xl" 
+                src="/lovable-uploads/524a60a0-baf2-4edc-82d9-38a9931b1112.png" 
+              />
             </div>
           </div>
         </div>
       </div>
     </section>;
 };
+
 export default HeroSection;
