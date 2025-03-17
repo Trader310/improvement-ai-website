@@ -1,4 +1,3 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
@@ -7,11 +6,9 @@ import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
 import { Drawer, DrawerContent, DrawerTrigger } from './ui/drawer';
 import { useMediaQuery } from '@/hooks/use-mobile';
 import CalendlyEmbed from './CalendlyEmbed';
-
 const HeroSection = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
   const calendlyUrl = 'https://calendly.com/dropstrader/improvement-ai-consultation';
-  
   const scrollToBooking = () => {
     const bookingSection = document.getElementById('booking');
     if (bookingSection) {
@@ -20,7 +17,6 @@ const HeroSection = () => {
       });
     }
   };
-  
   const scrollToServices = () => {
     const servicesSection = document.getElementById('services');
     if (servicesSection) {
@@ -34,7 +30,6 @@ const HeroSection = () => {
   const openCalendlyNewTab = () => {
     window.open(calendlyUrl, '_blank');
   };
-  
   return <section id="home" className="relative min-h-screen flex items-center justify-center pt-40 pb-16 px-4 md:px-8 overflow-hidden bg-[#e8f0fe]">
       {/* Gradient Background */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -46,7 +41,8 @@ const HeroSection = () => {
         {/* Text Content */}
         <div className="text-center lg:text-left lg:w-1/2 mb-10 lg:mb-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5271FF] leading-tight font-montserrat">
-            Make your work <span className="text-slate-950">effortless</span> with <span className="text-[#5271FF]">AI solutions</span>.
+            Make your work <span className="text-slate-950">
+AI solutions</span> with <span className="text-[#5271FF]">AI solutions</span>.
           </h1>
           
           <p className="mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto lg:mx-0">
@@ -54,15 +50,9 @@ const HeroSection = () => {
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-            {isMobile ? (
-              <Drawer>
+            {isMobile ? <Drawer>
                 <DrawerTrigger asChild>
-                  <Button 
-                    className={cn("bg-[#5271FF] text-white hover:bg-[#3A5BFF]", 
-                      "rounded-full px-8 py-6 text-lg transition-all duration-300", 
-                      "group relative overflow-hidden hover:shadow-lg"
-                    )}
-                  >
+                  <Button className={cn("bg-[#5271FF] text-white hover:bg-[#3A5BFF]", "rounded-full px-8 py-6 text-lg transition-all duration-300", "group relative overflow-hidden hover:shadow-lg")}>
                     <span className="relative z-10">Let's Talk</span>
                     <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   </Button>
@@ -72,16 +62,9 @@ const HeroSection = () => {
                     <CalendlyEmbed url={calendlyUrl} className="h-[85vh]" />
                   </div>
                 </DrawerContent>
-              </Drawer>
-            ) : (
-              <Dialog>
+              </Drawer> : <Dialog>
                 <DialogTrigger asChild>
-                  <Button 
-                    className={cn("bg-[#5271FF] text-white hover:bg-[#3A5BFF]", 
-                      "rounded-full px-8 py-6 text-lg transition-all duration-300", 
-                      "group relative overflow-hidden hover:shadow-lg"
-                    )}
-                  >
+                  <Button className={cn("bg-[#5271FF] text-white hover:bg-[#3A5BFF]", "rounded-full px-8 py-6 text-lg transition-all duration-300", "group relative overflow-hidden hover:shadow-lg")}>
                     <span className="relative z-10">Let's Talk</span>
                     <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   </Button>
@@ -89,8 +72,7 @@ const HeroSection = () => {
                 <DialogContent className="max-w-4xl h-[90vh]">
                   <CalendlyEmbed url={calendlyUrl} className="h-[85vh]" />
                 </DialogContent>
-              </Dialog>
-            )}
+              </Dialog>}
             
             <Link to="/services">
               <Button variant="outline" className="rounded-full border-[#5271FF] text-[#5271FF] hover:bg-[#5271FF]/10 px-8 py-6 text-lg group">
@@ -112,5 +94,4 @@ const HeroSection = () => {
       </div>
     </section>;
 };
-
 export default HeroSection;
