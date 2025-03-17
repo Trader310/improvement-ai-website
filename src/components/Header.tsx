@@ -42,7 +42,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <div className="font-bold text-2xl">
+          <div className="font-bold text-2xl font-montserrat">
             <span className="text-black">IMPROVEMENT</span>
             <span className="text-[#5271FF]"> AI</span>
           </div>
@@ -69,7 +69,7 @@ const Header = () => {
 
         {/* Contact Us Button */}
         <Link to="/booking">
-          <Button className="hidden md:block bg-[#5271FF] text-white hover:bg-[#3A5BFF] transition-colors rounded-full px-8">
+          <Button className="hidden md:block bg-[#5271FF] text-white hover:bg-[#3A5BFF] transition-colors rounded-full px-8 font-montserrat">
             Contact us
           </Button>
         </Link>
@@ -99,7 +99,7 @@ const Header = () => {
               Team
             </Link>
             <Link to="/booking">
-              <Button className="bg-[#5271FF] text-white hover:bg-[#3A5BFF] w-full rounded-full">
+              <Button className="bg-[#5271FF] text-white hover:bg-[#3A5BFF] w-full rounded-full font-montserrat">
                 Contact us
               </Button>
             </Link>

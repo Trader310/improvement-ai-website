@@ -125,7 +125,8 @@ export default {
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
-				display: ['Manrope', 'sans-serif']
+				display: ['Manrope', 'sans-serif'],
+				montserrat: ['Montserrat', 'sans-serif']
 			}
 		}
 	},
