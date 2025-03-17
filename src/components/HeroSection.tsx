@@ -41,8 +41,7 @@ const HeroSection = () => {
         {/* Text Content */}
         <div className="text-center lg:text-left lg:w-1/2 mb-10 lg:mb-0">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5271FF] leading-tight font-montserrat">
-            Make your work <span className="text-slate-950">
-AI solutions</span> with <span className="text-[#5271FF]">AI solutions</span>.
+            Make your work <span className="text-slate-950">effortless</span> with <span className="text-[#5271FF]">AI solutions</span>.
           </h1>
           
           <p className="mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto lg:mx-0">
