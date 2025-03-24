@@ -87,13 +87,13 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* 3D Cube Visual Element - Enhanced Animation */}
+        {/* 3D Cube Visual Element - Original Animation */}
         <div className="lg:w-1/2 lg:pl-12">
           <div className="relative h-[300px] md:h-[400px] w-full flex items-center justify-center">
-            <div className="animate-float transform-gpu hover:scale-110 transition-transform duration-300 shadow-xl">
+            <div className="animate-float">
               <img 
                 alt="3D Cube" 
-                className="w-44 h-44 md:w-64 md:h-64 object-contain drop-shadow-2xl" 
+                className="w-40 h-40 md:w-60 md:h-60 object-contain" 
                 src="/lovable-uploads/524a60a0-baf2-4edc-82d9-38a9931b1112.png" 
               />
             </div>

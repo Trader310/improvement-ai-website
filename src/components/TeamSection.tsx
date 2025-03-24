@@ -4,32 +4,28 @@ import { cn } from '@/lib/utils';
 
 const testimonials = [
   {
-    name: "Michael Roberts",
-    role: "CEO, TechVision Inc.",
+    name: "Michael",
+    role: "CEO",
     testimonial: "Working with this team transformed our operations completely. Their AI solutions automated our customer service, resulting in 40% cost reduction and happier customers.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    rating: 5
   },
   {
-    name: "Sarah Chen",
-    role: "Founder, DataDrive Solutions",
+    name: "Sarah",
+    role: "Founder",
     testimonial: "Their AI implementation exceeded our expectations. We've seen a 75% increase in productivity since launching our custom AI agents. Truly remarkable results.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    rating: 5
   },
   {
-    name: "James Wilson",
-    role: "Operations Director, Global Retail",
+    name: "James",
+    role: "Operations Director",
     testimonial: "The team delivered an AI solution that revolutionized our inventory management. We've reduced waste by 30% and improved customer satisfaction scores dramatically.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    rating: 5
   },
   {
-    name: "Elena Rodriguez",
-    role: "CMO, Marketing Innovators",
+    name: "Elena",
+    role: "CMO",
     testimonial: "Their AI-powered analytics platform gave us insights we never thought possible. Our campaigns are now 60% more effective with the same budget. I highly recommend them.",
-    rating: 5,
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    rating: 5
   }
 ];
 
@@ -76,15 +72,8 @@ const TeamSection = () => {
                     "{testimonial.testimonial}"
                   </p>
                   
-                  {/* Client Info */}
+                  {/* Client Info - Simplified */}
                   <div className="flex items-center">
-                    <div className="w-12 h-12 rounded-full overflow-hidden mr-4">
-                      <img 
-                        src={testimonial.image} 
-                        alt={testimonial.name} 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
                     <div>
                       <h4 className="text-base font-semibold text-gray-900">
                         {testimonial.name}
