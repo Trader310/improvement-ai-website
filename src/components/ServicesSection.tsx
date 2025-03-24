@@ -19,19 +19,19 @@ const ServicesSection = () => {
       icon: <Brain className="w-12 h-12 text-agency-blue" />,
       title: "AI Implementation & Automation",
       description: "Seamlessly integrate AI into your existing systems to automate repetitive tasks, optimize workflows, and make data-driven decisions with unprecedented speed and accuracy.",
-      link: "/ai-implementation"
+      link: "/booking"
     },
     {
       icon: <Bot className="w-12 h-12 text-agency-blue" />,
       title: "AI Agent Development",
       description: "Custom AI assistants that understand your business context, engage with customers naturally, and drive measurable improvements in conversions, satisfaction, and revenue.",
-      link: "/ai-agent"
+      link: "/booking"
     },
     {
       icon: <Sparkles className="w-12 h-12 text-agency-blue" />,
       title: "AI Consultation",
       description: "Strategic guidance from AI experts who evaluate your specific business needs and develop tailored AI solutions that align with your growth objectives and technical requirements.",
-      link: "/ai-consultation"
+      link: "/booking"
     }
   ];
 

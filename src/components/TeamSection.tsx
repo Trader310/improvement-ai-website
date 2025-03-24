@@ -51,11 +51,11 @@ const TeamSection = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index} 
-              className="group relative"
+              className="group relative h-full"
             >
               {/* Testimonial Card */}
               <div className={cn(
-                "bg-white rounded-xl overflow-hidden transition-all duration-300",
+                "bg-white rounded-xl overflow-hidden transition-all duration-300 h-full flex flex-col",
                 "border border-gray-200 group-hover:border-agency-blue/30",
                 "group-hover:shadow-xl group-hover:shadow-agency-blue/10"
               )}>
@@ -67,13 +67,13 @@ const TeamSection = () => {
                 </div>
                 
                 {/* Testimonial */}
-                <div className="p-6">
-                  <p className="text-gray-600 text-sm italic mb-6">
+                <div className="p-6 flex-grow flex flex-col">
+                  <p className="text-gray-600 text-sm italic mb-6 flex-grow">
                     "{testimonial.testimonial}"
                   </p>
                   
                   {/* Client Info - Simplified */}
-                  <div className="flex items-center">
+                  <div className="flex items-center mt-auto">
                     <div>
                       <h4 className="text-base font-semibold text-gray-900">
                         {testimonial.name}
