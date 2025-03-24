@@ -6,25 +6,25 @@ const testimonials = [
   {
     name: "Michael",
     role: "CEO",
-    testimonial: "Working with this team transformed our operations completely. Their AI solutions automated our customer service, resulting in 40% cost reduction and happier customers.",
+    testimonial: "Partnering with this agency was a game changer. Their AI lead reactivation system brought in leads we thought were long gone—over 30% re-engaged in just a month.",
     rating: 5
   },
   {
     name: "Sarah",
     role: "Founder",
-    testimonial: "Their AI implementation exceeded our expectations. We've seen a 75% increase in productivity since launching our custom AI agents. Truly remarkable results.",
+    testimonial: "Their AI consultation was incredibly valuable. They quickly identified automation opportunities, and the custom AI agent they built now handles 70% of our inbound inquiries.",
     rating: 5
   },
   {
     name: "James",
     role: "Operations Director",
-    testimonial: "The team delivered an AI solution that revolutionized our inventory management. We've reduced waste by 30% and improved customer satisfaction scores dramatically.",
+    testimonial: "We needed a smarter way to qualify leads, and their AI agent nailed it. It filters and prioritizes prospects automatically, saving our sales team hours every day.",
     rating: 5
   },
   {
     name: "Elena",
     role: "CMO",
-    testimonial: "Their AI-powered analytics platform gave us insights we never thought possible. Our campaigns are now 60% more effective with the same budget. I highly recommend them.",
+    testimonial: "Impressive from start to finish. Their AI automation streamlined our internal workflows and boosted productivity—everything now runs smoother and faster than ever before.",
     rating: 5
   }
 ];
