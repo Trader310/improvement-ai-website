@@ -9,7 +9,7 @@ const ServicesSection = () => {
     {
       id: 1,
       title: "AI Implementation & Automation",
-      description: "Seamlessly integrate artificial intelligence into your existing systems to automate repetitive tasks and enhance efficiency.",
+      description: "Seamlessly integrate artificial intelligence into your existing systems to automate repetitive tasks and enhance operational efficiency.",
       link: "/ai-implementation",
       imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
     },
@@ -25,7 +25,7 @@ const ServicesSection = () => {
       title: "AI Consultation",
       description: "Strategic guidance from AI experts who evaluate your specific business needs and provide tailored implementation roadmaps.",
       link: "/ai-consultation",
-      imageUrl: "https://images.unsplash.com/photo-1560439514-4e9645039924?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      imageUrl: "public/lovable-uploads/26d71bb6-8a8b-4fc6-916d-3ee823f182a9.png"
     }
   ];
 
@@ -41,7 +41,8 @@ const ServicesSection = () => {
             Our Services
           </h3>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            We provide comprehensive AI solutions designed to transform your business operations and drive meaningful results. Our expert team delivers customized strategies that align with your specific goals.
+            We provide comprehensive AI solutions designed to transform your business operations and drive 
+            meaningful results. Our expert team delivers customized strategies for your needs.
           </p>
         </div>
 
@@ -68,7 +69,7 @@ const ServicesSection = () => {
                 <Link to={service.link}>
                   <Button 
                     variant="outline" 
-                    className="border-white text-white bg-black/30 hover:bg-white hover:text-black w-full justify-between font-semibold font-poppins"
+                    className="border-white text-white bg-black/30 hover:bg-white hover:text-black w-full justify-between font-bold font-poppins"
                   >
                     Get Started
                     <ArrowRight className="ml-2 w-5 h-5" />
