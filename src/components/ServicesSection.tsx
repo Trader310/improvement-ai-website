@@ -8,10 +8,10 @@ const ServicesSection = () => {
   const services = [
     {
       id: 1,
-      title: "Implementation & Automation",
+      title: "AI Implementation & Automation",
       description: "Seamlessly integrate artificial intelligence into your existing systems to automate repetitive tasks and enhance efficiency.",
       link: "/ai-implementation",
-      imageUrl: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ const ServicesSection = () => {
       title: "AI Consultation",
       description: "Strategic guidance from AI experts who evaluate your specific business needs and provide tailored implementation roadmaps.",
       link: "/ai-consultation",
-      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
     }
   ];
 
@@ -68,7 +68,7 @@ const ServicesSection = () => {
                 <Link to={service.link}>
                   <Button 
                     variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black w-full justify-between font-semibold"
+                    className="border-white text-white bg-black/30 hover:bg-white hover:text-black w-full justify-between font-semibold"
                   >
                     Get Started
                     <ArrowRight className="ml-2 w-5 h-5" />
