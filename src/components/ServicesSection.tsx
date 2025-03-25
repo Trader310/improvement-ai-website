@@ -25,7 +25,7 @@ const ServicesSection = () => {
       title: "AI Consultation",
       description: "Strategic guidance from AI experts who evaluate your specific business needs and provide tailored implementation roadmaps.",
       link: "/ai-consultation",
-      imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1560439514-4e9645039924?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
     }
   ];
 
@@ -40,9 +40,9 @@ const ServicesSection = () => {
           <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
             Our Services
           </h3>
-          <div className="inline-block px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">
-            {services.length} services
-          </div>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            We provide comprehensive AI solutions designed to transform your business operations and drive meaningful results. Our expert team delivers customized strategies that align with your specific goals.
+          </p>
         </div>
 
         {/* Services Cards Grid */}
@@ -63,12 +63,12 @@ const ServicesSection = () => {
               
               {/* Content */}
               <div className="absolute inset-0 flex flex-col justify-end p-8 text-white">
-                <h4 className="text-2xl font-bold mb-3">{service.title}</h4>
-                <p className="text-white/80 mb-6 line-clamp-2 h-[48px]">{service.description}</p>
+                <h4 className="text-2xl font-bold mb-3 font-poppins">{service.title}</h4>
+                <p className="text-white/80 mb-6 line-clamp-2 h-[48px] font-poppins">{service.description}</p>
                 <Link to={service.link}>
                   <Button 
                     variant="outline" 
-                    className="border-white text-white bg-black/30 hover:bg-white hover:text-black w-full justify-between font-semibold"
+                    className="border-white text-white bg-black/30 hover:bg-white hover:text-black w-full justify-between font-semibold font-poppins"
                   >
                     Get Started
                     <ArrowRight className="ml-2 w-5 h-5" />
