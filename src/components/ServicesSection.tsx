@@ -8,24 +8,24 @@ const ServicesSection = () => {
   const services = [
     {
       id: 1,
-      title: "AI Implementation & Automation",
-      description: "Seamlessly integrate AI into your existing systems to automate repetitive tasks.",
+      title: "Implementation & Automation",
+      description: "Seamlessly integrate artificial intelligence into your existing systems to automate repetitive tasks and enhance efficiency.",
       link: "/ai-implementation",
-      imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
     },
     {
       id: 2,
       title: "AI Agent Development",
-      description: "Custom AI assistants that understand your business context and engage with customers naturally.",
+      description: "Custom AI assistants that understand your business context and engage with customers naturally through intuitive interfaces.",
       link: "/ai-agent",
       imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
     },
     {
       id: 3,
       title: "AI Consultation",
-      description: "Strategic guidance from AI experts who evaluate your specific business needs.",
+      description: "Strategic guidance from AI experts who evaluate your specific business needs and provide tailored implementation roadmaps.",
       link: "/ai-consultation",
-      imageUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
     }
   ];
 
@@ -64,11 +64,11 @@ const ServicesSection = () => {
               {/* Content */}
               <div className="absolute inset-0 flex flex-col justify-end p-8 text-white">
                 <h4 className="text-2xl font-bold mb-3">{service.title}</h4>
-                <p className="text-white/80 mb-6">{service.description}</p>
+                <p className="text-white/80 mb-6 line-clamp-2 h-[48px]">{service.description}</p>
                 <Link to={service.link}>
                   <Button 
                     variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-black w-full justify-between"
+                    className="border-white text-white hover:bg-white hover:text-black w-full justify-between font-semibold"
                   >
                     Get Started
                     <ArrowRight className="ml-2 w-5 h-5" />
