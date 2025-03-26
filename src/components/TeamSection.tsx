@@ -35,10 +35,10 @@ const TeamSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
+          <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4 font-poppins">
             CLIENT TESTIMONIALS
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-poppins">
             What Our Clients Say About Us
           </h3>
           <p className="max-w-2xl mx-auto text-gray-600">
@@ -75,7 +75,7 @@ const TeamSection = () => {
                   {/* Client Info - Simplified */}
                   <div className="flex items-center mt-auto">
                     <div>
-                      <h4 className="text-base font-semibold text-gray-900">
+                      <h4 className="text-base font-semibold text-gray-900 font-poppins">
                         {testimonial.name}
                       </h4>
                       <p className="text-agency-blue text-sm">

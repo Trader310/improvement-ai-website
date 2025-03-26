@@ -25,19 +25,19 @@ const ServicesSection = () => {
       title: "AI Consultation",
       description: "Strategic guidance from AI experts who evaluate your specific business needs and provide tailored implementation roadmaps.",
       link: "/ai-consultation",
-      imageUrl: "public/lovable-uploads/26d71bb6-8a8b-4fc6-916d-3ee823f182a9.png"
+      imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
     }
   ];
 
   return (
-    <section id="services" className="py-20 px-4 md:px-8 bg-white">
+    <section id="services" className="py-20 px-4 md:px-8 bg-white mb-16">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
             OUR SERVICES
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-poppins">
             Our Services
           </h3>
           <p className="text-gray-600 max-w-3xl mx-auto">
@@ -64,12 +64,12 @@ const ServicesSection = () => {
               
               {/* Content */}
               <div className="absolute inset-0 flex flex-col justify-end p-8 text-white">
-                <h4 className="text-2xl font-bold mb-3 font-poppins">{service.title}</h4>
+                <h4 className="text-2xl font-medium mb-3 font-poppins">{service.title}</h4>
                 <p className="text-white/80 mb-6 line-clamp-2 h-[48px] font-poppins">{service.description}</p>
                 <Link to={service.link}>
                   <Button 
                     variant="outline" 
-                    className="border-white text-white bg-black/30 hover:bg-white hover:text-black w-full justify-between font-bold font-poppins"
+                    className="border-white text-white bg-black/30 hover:bg-white hover:text-black w-full justify-between font-normal font-poppins"
                   >
                     Get Started
                     <ArrowRight className="ml-2 w-5 h-5" />
