@@ -39,7 +39,7 @@ const BlogSection = () => {
           <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
             OUR BLOG
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h3 className="text-3xl md:text-4xl font-medium text-gray-900 mb-6 font-poppins">
             Latest Insights on AI and Automation
           </h3>
           <p className="max-w-2xl mx-auto text-gray-600">
@@ -75,13 +75,13 @@ const BlogSection = () => {
               {/* Content */}
               <div className="p-6">
                 <p className="text-sm text-gray-500 mb-2">{post.date}</p>
-                <h4 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-agency-blue transition-colors">
+                <h4 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-agency-blue transition-colors font-poppins">
                   {post.title}
                 </h4>
                 <p className="text-gray-600 mb-5">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center text-agency-blue font-medium">
+                <div className="flex items-center text-agency-blue font-medium font-poppins">
                   Read More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
@@ -93,7 +93,7 @@ const BlogSection = () => {
         <div className="text-center mt-12">
           <Button 
             variant="outline" 
-            className="rounded-full border-agency-blue text-agency-blue hover:bg-agency-blue hover:text-white px-8 py-6 text-lg"
+            className="rounded-full border-agency-blue text-agency-blue hover:bg-agency-blue hover:text-white px-8 py-6 text-lg font-poppins"
           >
             View All Articles
             <ArrowRight className="ml-2 w-5 h-5" />

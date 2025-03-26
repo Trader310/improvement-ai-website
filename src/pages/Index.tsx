@@ -12,18 +12,25 @@ import ScrollToTop from '@/components/ScrollToTop';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
 
 const Index = () => {
-  // Intersection Observer for scroll animations
+  // Enhanced Intersection Observer for smooth scroll animations
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate');
-            observer.unobserve(entry.target);
+            
+            // For staggered child animations
+            const children = entry.target.querySelectorAll('.stagger-item');
+            children.forEach((child, index) => {
+              setTimeout(() => {
+                child.classList.add('animate');
+              }, 150 * index);
+            });
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.15, rootMargin: "0px 0px -100px 0px" }
     );
 
     const animateElements = document.querySelectorAll('.animate-on-scroll');
@@ -44,23 +51,23 @@ const Index = () => {
       
       <HeroSection />
       
-      <AnimateOnScroll>
+      <AnimateOnScroll animation="slide-in-bottom" delay={100}>
         <ServicesSection />
       </AnimateOnScroll>
       
-      <AnimateOnScroll>
+      <AnimateOnScroll animation="slide-in-bottom" delay={100}>
         <AboutSection />
       </AnimateOnScroll>
       
-      <AnimateOnScroll>
+      <AnimateOnScroll animation="slide-in-bottom" delay={100}>
         <BlogSection />
       </AnimateOnScroll>
       
-      <AnimateOnScroll>
+      <AnimateOnScroll animation="slide-in-bottom" delay={100}>
         <TeamSection />
       </AnimateOnScroll>
       
-      <AnimateOnScroll>
+      <AnimateOnScroll animation="slide-in-bottom" delay={100}>
         <BookingSection />
       </AnimateOnScroll>
       

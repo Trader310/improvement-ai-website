@@ -21,7 +21,7 @@ const BookingSection = () => {
           <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
             GET STARTED
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h3 className="text-3xl md:text-4xl font-medium text-gray-900 mb-6 font-poppins">
             Book Your AI Consultation
           </h3>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
@@ -40,7 +40,7 @@ const BookingSection = () => {
                   <Clock className="w-5 h-5 text-agency-blue" />
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-semibold text-gray-900">30 Minutes</h4>
+                  <h4 className="font-medium text-gray-900 font-poppins">30 Minutes</h4>
                   <p className="text-gray-600 text-sm">Focused consultation time</p>
                 </div>
               </div>
@@ -50,7 +50,7 @@ const BookingSection = () => {
                   <Calendar className="w-5 h-5 text-agency-blue" />
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-semibold text-gray-900">Flexible Scheduling</h4>
+                  <h4 className="font-medium text-gray-900 font-poppins">Flexible Scheduling</h4>
                   <p className="text-gray-600 text-sm">Choose any available time slot</p>
                 </div>
               </div>
@@ -60,7 +60,7 @@ const BookingSection = () => {
                   <Users className="w-5 h-5 text-agency-blue" />
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-semibold text-gray-900">Expert Consultation</h4>
+                  <h4 className="font-medium text-gray-900 font-poppins">Expert Consultation</h4>
                   <p className="text-gray-600 text-sm">Meet with senior AI specialists</p>
                 </div>
               </div>
@@ -68,7 +68,7 @@ const BookingSection = () => {
             
             {/* Meeting Goal */}
             <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Meeting Goal</h3>
+              <h3 className="text-xl font-medium text-gray-900 mb-3 font-poppins">Meeting Goal</h3>
               <p className="text-gray-700">
                 The goal of this call is to discover how AI can help you increase revenue & profit while decreasing your workload & cost.
               </p>
@@ -79,7 +79,7 @@ const BookingSection = () => {
 
             {/* What to Expect - New content to fill empty space */}
             <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">What to Expect</h3>
+              <h3 className="text-xl font-medium text-gray-900 mb-4 font-poppins">What to Expect</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -87,7 +87,7 @@ const BookingSection = () => {
                     <Target className="w-4 h-4 text-agency-blue" />
                   </div>
                   <div className="ml-3">
-                    <h4 className="font-medium text-gray-900">Needs Assessment</h4>
+                    <h4 className="font-medium text-gray-900 font-poppins">Needs Assessment</h4>
                     <p className="text-gray-600 text-sm">We'll discuss your business goals and challenges</p>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ const BookingSection = () => {
                     <Lightbulb className="w-4 h-4 text-agency-blue" />
                   </div>
                   <div className="ml-3">
-                    <h4 className="font-medium text-gray-900">AI Opportunities</h4>
+                    <h4 className="font-medium text-gray-900 font-poppins">AI Opportunities</h4>
                     <p className="text-gray-600 text-sm">Discover specific AI applications for your business</p>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ const BookingSection = () => {
                     <CheckCircle className="w-4 h-4 text-agency-blue" />
                   </div>
                   <div className="ml-3">
-                    <h4 className="font-medium text-gray-900">Action Plan</h4>
+                    <h4 className="font-medium text-gray-900 font-poppins">Action Plan</h4>
                     <p className="text-gray-600 text-sm">Get a customized roadmap for implementation</p>
                   </div>
                 </div>
@@ -117,7 +117,7 @@ const BookingSection = () => {
                     <MessageSquare className="w-4 h-4 text-agency-blue" />
                   </div>
                   <div className="ml-3">
-                    <h4 className="font-medium text-gray-900">Q&A Session</h4>
+                    <h4 className="font-medium text-gray-900 font-poppins">Q&A Session</h4>
                     <p className="text-gray-600 text-sm">Get answers to all your AI-related questions</p>
                   </div>
                 </div>

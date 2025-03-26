@@ -59,13 +59,37 @@
   
   .animate-on-scroll {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.23, 1, 0.32, 1), 
+                transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   }
   
   .animate-on-scroll.animate {
     opacity: 1;
     transform: translateY(0);
+  }
+  
+  .stagger-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .stagger-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
@@ -85,4 +109,8 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #3A5BFF;
+}
+
+html {
+  scroll-behavior: smooth;
 }
