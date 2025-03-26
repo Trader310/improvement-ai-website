@@ -25,12 +25,12 @@ const ServicesSection = () => {
       title: "AI Consultation",
       description: "Strategic guidance from AI experts who evaluate your specific business needs and provide tailored implementation roadmaps.",
       link: "/ai-consultation",
-      imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      imageUrl: "/lovable-uploads/ee40b53e-ddae-4e5e-a20f-04d954d600f8.png"
     }
   ];
 
   return (
-    <section id="services" className="py-20 px-4 md:px-8 bg-white mb-60">
+    <section id="services" className="py-20 px-4 md:px-8 bg-white mb-20">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">

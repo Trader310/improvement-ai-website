@@ -17,7 +17,7 @@ const blogPosts = [
     title: "Implementing AI in Your Business: A Step-by-Step Guide",
     excerpt: "Learn the practical steps to successfully integrate AI solutions into your existing business processes.",
     category: "Implementation",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
   },
   {
     id: 3,
