@@ -59,9 +59,9 @@ const HeroSection = () => {
           <h1 
             className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-montserrat transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
           >
-            <span className="bg-gradient-to-r from-[#5271FF] to-white bg-clip-text text-transparent">Make your work </span>
+            <span className="text-[#5271FF]">Make your work </span>
             <span className="text-slate-950">effortless</span>
-            <span className="bg-gradient-to-r from-[#5271FF] to-white bg-clip-text text-transparent"> with AI solutions</span>
+            <span className="text-[#5271FF]"> with AI solutions</span>
           </h1>
           
           <p className={`mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto lg:mx-0 transition-all duration-1000 delay-300 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
@@ -102,15 +102,22 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* 3D Cube Visual Element - Original Animation */}
+        {/* AI Network Symbol with Animation */}
         <div className={`lg:w-1/2 lg:pl-12 transition-all duration-1000 delay-700 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="relative h-[300px] md:h-[400px] w-full flex items-center justify-center">
-            <div className="animate-float">
-              <img 
-                alt="3D Cube" 
-                className="w-40 h-40 md:w-60 md:h-60 object-contain" 
-                src="/lovable-uploads/524a60a0-baf2-4edc-82d9-38a9931b1112.png" 
-              />
+            <div className="relative animate-float">
+              <div className="ai-network-symbol w-48 h-48 md:w-72 md:h-72 relative animate-pulse-light">
+                <img 
+                  src="/lovable-uploads/3aacfb23-1909-419b-a885-241efc47dd2d.png" 
+                  alt="AI Network Symbol" 
+                  className="w-full h-full object-contain"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-1/4 h-1/4 rounded-full bg-[#5271FF]/10 animate-ping" style={{ animationDuration: '3s' }}></div>
+                </div>
+              </div>
+              <div className="absolute -inset-4 rounded-full border-2 border-[#5271FF]/20 animate-spin" style={{ animationDuration: '15s' }}></div>
+              <div className="absolute -inset-8 rounded-full border border-[#5271FF]/10 animate-spin" style={{ animationDuration: '20s', animationDirection: 'reverse' }}></div>
             </div>
           </div>
         </div>
