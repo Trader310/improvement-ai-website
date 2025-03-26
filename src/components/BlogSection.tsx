@@ -2,29 +2,27 @@
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 const blogPosts = [
   {
     id: 1,
     title: "How AI is Revolutionizing Customer Service",
     excerpt: "Discover how AI-powered chatbots and virtual assistants are transforming customer experiences and operational efficiency.",
-    date: "June 15, 2023",
     category: "AI Trends",
-    imageUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
   },
   {
     id: 2,
     title: "Implementing AI in Your Business: A Step-by-Step Guide",
     excerpt: "Learn the practical steps to successfully integrate AI solutions into your existing business processes.",
-    date: "July 22, 2023",
     category: "Implementation",
-    imageUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
   },
   {
     id: 3,
     title: "The Future of AI Agents in Business Growth",
     excerpt: "Explore how AI agents are becoming essential tools for business expansion and revenue generation.",
-    date: "August 10, 2023",
     category: "AI Agents",
     imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
   }
@@ -74,7 +72,6 @@ const BlogSection = () => {
               
               {/* Content */}
               <div className="p-6">
-                <p className="text-sm text-gray-500 mb-2">{post.date}</p>
                 <h4 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-agency-blue transition-colors font-poppins">
                   {post.title}
                 </h4>
@@ -91,13 +88,15 @@ const BlogSection = () => {
         
         {/* View All Button */}
         <div className="text-center mt-12">
-          <Button 
-            variant="outline" 
-            className="rounded-full border-agency-blue text-agency-blue hover:bg-agency-blue hover:text-white px-8 py-6 text-lg font-poppins"
-          >
-            View All Articles
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+          <Link to="/blog">
+            <Button 
+              variant="outline" 
+              className="rounded-full border-agency-blue text-agency-blue hover:bg-agency-blue hover:text-white px-8 py-6 text-lg font-poppins"
+            >
+              View All Articles
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

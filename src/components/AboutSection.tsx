@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 px-4 md:px-8 bg-gray-50 relative overflow-hidden">
+    <section id="about" className="pt-0 pb-20 px-4 md:px-8 bg-gray-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-agency-blue/5 rounded-bl-[100px]"></div>
