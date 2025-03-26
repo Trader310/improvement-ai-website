@@ -7,10 +7,21 @@ import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
 import { Drawer, DrawerContent, DrawerTrigger } from './ui/drawer';
 import { useMediaQuery } from '@/hooks/use-mobile';
 import CalendlyEmbed from './CalendlyEmbed';
+import { useEffect, useState } from 'react';
 
 const HeroSection = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
   const calendlyUrl = 'https://calendly.com/dropstrader/improvement-ai-consultation';
+  const [isVisible, setIsVisible] = useState(false);
+  
+  useEffect(() => {
+    // Add a short delay to ensure the animation is noticeable
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 300);
+    
+    return () => clearTimeout(timer);
+  }, []);
   
   const scrollToBooking = () => {
     const bookingSection = document.getElementById('booking');
@@ -45,15 +56,19 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
         {/* Text Content */}
         <div className="text-center lg:text-left lg:w-1/2 mb-10 lg:mb-0">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#5271FF] leading-[3.5] tracking-wide font-montserrat">
-            Make your work <span className="text-slate-950">effortless</span> with <span className="text-[#5271FF]">AI solutions</span>
+          <h1 
+            className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-montserrat transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+          >
+            <span className="bg-gradient-to-r from-[#5271FF] to-white bg-clip-text text-transparent">Make your work </span>
+            <span className="text-slate-950">effortless</span>
+            <span className="bg-gradient-to-r from-[#5271FF] to-white bg-clip-text text-transparent"> with AI solutions</span>
           </h1>
           
-          <p className="mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto lg:mx-0">
+          <p className={`mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto lg:mx-0 transition-all duration-1000 delay-300 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             Leverage AI technology to automate processes and transform your business operations.
           </p>
           
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+          <div className={`mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 transition-all duration-1000 delay-500 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             {isMobile ? <Drawer>
                 <DrawerTrigger asChild>
                   <Button className={cn("bg-[#5271FF] text-white hover:bg-[#3A5BFF]", "rounded-full px-8 py-6 text-lg transition-all duration-300", "group relative overflow-hidden hover:shadow-lg")}>
@@ -88,7 +103,7 @@ const HeroSection = () => {
         </div>
         
         {/* 3D Cube Visual Element - Original Animation */}
-        <div className="lg:w-1/2 lg:pl-12">
+        <div className={`lg:w-1/2 lg:pl-12 transition-all duration-1000 delay-700 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="relative h-[300px] md:h-[400px] w-full flex items-center justify-center">
             <div className="animate-float">
               <img 
