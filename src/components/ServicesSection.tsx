@@ -8,14 +8,14 @@ const ServicesSection = () => {
   const services = [
     {
       id: 1,
-      title: "AI Implementation & Automation",
+      title: "AI Automation & Implementation",
       description: "Seamlessly integrate artificial intelligence into your existing systems to automate repetitive tasks and enhance operational efficiency.",
       link: "/ai-implementation",
       imageUrl: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
     },
     {
       id: 2,
-      title: "AI Agent Development",
+      title: "AI System Development",
       description: "Custom AI assistants that understand your business context and engage with customers naturally through intuitive interfaces.",
       link: "/ai-agent",
       imageUrl: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
@@ -25,24 +25,24 @@ const ServicesSection = () => {
       title: "AI Consultation",
       description: "Strategic guidance from AI experts who evaluate your specific business needs and provide tailored implementation roadmaps.",
       link: "/ai-consultation",
-      imageUrl: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
     }
   ];
 
   return (
-    <section id="services" className="py-20 px-4 md:px-8 bg-white mb-16">
+    <section id="services" className="py-20 px-4 md:px-8 bg-white mb-32">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
             OUR SERVICES
           </h2>
-          <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 font-poppins">
+          <h3 className="text-3xl md:text-4xl font-medium text-gray-900 mb-6 font-poppins">
             Our Services
           </h3>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            We provide comprehensive AI solutions designed to transform your business operations and drive 
-            meaningful results. Our expert team delivers customized strategies for your needs.
+            We provide comprehensive AI solutions designed to transform your business operations
+            and drive meaningful results with customized strategies for your needs.
           </p>
         </div>
 

@@ -27,7 +27,7 @@ const AboutSection = () => {
                       <path d="M15 13L12 16L9 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
-                  <h4 className="text-xl font-semibold mb-2">AI Innovation Visualization</h4>
+                  <h4 className="text-xl font-medium mb-2 font-poppins">AI Innovation Visualization</h4>
                   <p className="text-white/70">Interactive demonstration available during consultation</p>
                 </div>
               </div>
@@ -70,7 +70,7 @@ const AboutSection = () => {
             <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
               ABOUT US
             </h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h3 className="text-3xl md:text-4xl font-medium text-gray-900 mb-6 font-poppins">
               Leading the Future of Business with AI Innovation
             </h3>
             
@@ -93,7 +93,7 @@ const AboutSection = () => {
                   </svg>
                 </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Expert Team</h4>
+                  <h4 className="text-lg font-medium text-gray-900 mb-1 font-poppins">Expert Team</h4>
                   <p className="text-gray-600">Our specialists combine deep AI expertise with business acumen</p>
                 </div>
               </div>
@@ -105,7 +105,7 @@ const AboutSection = () => {
                   </svg>
                 </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900 mb-1">Proven Results</h4>
+                  <h4 className="text-lg font-medium text-gray-900 mb-1 font-poppins">Proven Results</h4>
                   <p className="text-gray-600">Our AI solutions deliver measurable ROI and business impact</p>
                 </div>
               </div>
@@ -116,7 +116,7 @@ const AboutSection = () => {
                 className={cn(
                   "bg-agency-blue text-white hover:bg-agency-light-blue",
                   "rounded-full px-8 py-6 text-lg transition-all duration-300",
-                  "group relative overflow-hidden"
+                  "group relative overflow-hidden font-poppins"
                 )}
               >
                 <span className="relative z-10">Learn More</span>
