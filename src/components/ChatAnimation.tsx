@@ -43,14 +43,15 @@ const ChatAnimation = () => {
           transform: 'translateY(20px)' // Start slightly below
         });
         
-        // Animate all bubbles
+        // Animate all bubbles with proper vertical offset to avoid popup overlap
         return updated.map((bubble, idx) => {
           const isLatest = idx === updated.length - 1;
+          // Added more vertical offset (30px instead of 5px) to prevent overlap with floating cards
           return {
             ...bubble,
             isActive: isLatest,
             opacity: isLatest ? 1 : Math.max(0.4, 1 - idx * 0.2),
-            transform: `translateY(${isLatest ? 0 : -idx * 5}px)`
+            transform: `translateY(${isLatest ? 0 : -(idx * 30)}px)`
           };
         });
       });
@@ -71,7 +72,8 @@ const ChatAnimation = () => {
   
   return (
     <div className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden">
-      <div className="flex flex-col-reverse w-full max-w-[90%] space-y-reverse space-y-3">
+      {/* Added pt-20 to move entire chat area down and prevent overlap with floating cards */}
+      <div className="flex flex-col-reverse w-full max-w-[90%] space-y-reverse space-y-3 pt-20">
         {chatBubbles.map((bubble, index) => {
           const isLatest = index === chatBubbles.length - 1;
           

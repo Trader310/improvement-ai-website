@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 
 const QuantumIcon = () => {
@@ -24,35 +23,36 @@ const QuantumIcon = () => {
   useEffect(() => {
     const createNodes = () => {
       const nodes = [];
-      const nodeCount = 12; // Increased node count for more complex visuals
+      // More nodes for more symmetric appearance
+      const nodeCount = 16;
       
-      // Create primary orbital nodes
+      // Create primary orbital nodes - perfectly symmetric
       for (let i = 0; i < nodeCount; i++) {
         const angle = (i / nodeCount) * Math.PI * 2;
         nodes.push({
           x: 0, // Will be set during animation
           y: 0, // Will be set during animation
-          size: 2 + Math.random() * 2,
-          baseSize: 2 + Math.random() * 2,
+          size: 2.5, // More consistent size
+          baseSize: 2.5,
           angle: angle,
-          speed: 0.0002 + Math.random() * 0.0003,
-          opacity: 0.1 + Math.random() * 0.3, // Start with low opacity
-          color: Math.random() > 0.7 ? '#00FFFF' : (Math.random() > 0.5 ? '#4A90E2' : '#87CEFA')
+          speed: 0.0002, // Consistent speed for symmetry
+          opacity: 0.1 + Math.random() * 0.3,
+          color: i % 2 === 0 ? '#4A90E2' : '#87CEFA' // Alternating colors for pattern
         });
       }
       
-      // Add some secondary nodes for complexity
-      for (let i = 0; i < nodeCount/2; i++) {
-        const angle = (i / (nodeCount/2)) * Math.PI * 2;
+      // Secondary nodes - smaller orbit
+      for (let i = 0; i < nodeCount; i++) {
+        const angle = (i / nodeCount) * Math.PI * 2;
         nodes.push({
           x: 0, 
           y: 0, 
-          size: 1.5 + Math.random() * 1.5,
-          baseSize: 1.5 + Math.random() * 1.5,
-          angle: angle + Math.PI/nodeCount, // Offset for interesting pattern
-          speed: 0.00015 + Math.random() * 0.0002, // Slightly slower
-          opacity: 0.1 + Math.random() * 0.2, // Start with very low opacity
-          color: Math.random() > 0.6 ? '#00FFFF' : (Math.random() > 0.4 ? '#4A90E2' : '#87CEFA')
+          size: 1.8,
+          baseSize: 1.8,
+          angle: angle + (Math.PI / nodeCount), // Offset for pattern
+          speed: 0.00025, // Slightly faster for interest
+          opacity: 0.1 + Math.random() * 0.2,
+          color: i % 2 === 0 ? '#00FFFF' : '#4A90E2' // Alternating colors
         });
       }
       
@@ -61,7 +61,7 @@ const QuantumIcon = () => {
     
     createNodes();
     
-    // Phase transitions
+    // Phase transitions with clean timing
     const initialPhaseTimeout = setTimeout(() => {
       setPhase(1); // Move to Emergence phase after 2 seconds
       
@@ -120,10 +120,10 @@ const QuantumIcon = () => {
     const animate = () => {
       const elapsedMs = Date.now() - startTimeRef.current;
       const elapsedSeconds = elapsedMs / 1000;
-      const progress = Math.min(1, elapsedMs / 7000); // 7-second full animation cycle
       
-      const iconSize = Math.min(container.clientWidth, container.clientHeight) * 0.7; // Slightly larger icon
-      const orbitRadius = iconSize * 0.65;
+      // Increased size for more prominence
+      const iconSize = Math.min(container.clientWidth, container.clientHeight) * 0.85;
+      const orbitRadius = iconSize * 0.7;
       
       // Phase-based animation adjustments
       const phaseProgress = phase === 0 
@@ -134,12 +134,16 @@ const QuantumIcon = () => {
       
       // Update nodes position and properties based on phase
       nodesRef.current.forEach((node, index) => {
-        // Orbit movement with phase-based adjustments
+        // Smooth orbit movement
         node.angle += node.speed * elapsedMs * (phase > 0 ? 1 + phase * 0.2 : 0.5);
         
-        // Calculate radius with slight variation for each node
-        const nodeRadius = orbitRadius * (0.8 + Math.sin(elapsedSeconds * 0.5 + index) * 0.1);
+        // First half of nodes in outer orbit, second half in inner orbit for symmetry
+        const isInnerOrbit = index >= nodesRef.current.length / 2;
+        const orbitRatio = isInnerOrbit ? 0.6 : 1;
         
+        const nodeRadius = orbitRadius * orbitRatio;
+        
+        // Perfect circular orbits for symmetry
         node.x = centerX + Math.cos(node.angle) * nodeRadius;
         node.y = centerY + Math.sin(node.angle) * nodeRadius;
         
@@ -149,16 +153,16 @@ const QuantumIcon = () => {
         } else if (phase === 1) {
           node.opacity = 0.5 + phaseProgress * 0.3; // Continue increasing opacity
         } else {
-          // In active phase, pulse opacity slightly for visual interest
-          node.opacity = 0.7 + Math.sin(elapsedSeconds * 2 + index) * 0.3;
+          // In active phase, all nodes keep consistent opacity for professionalism
+          node.opacity = 0.8;
         }
         
         // Phase-based size
         const phaseSizeFactor = phase === 0 
           ? 0.5 + phaseProgress * 0.5 
           : phase === 1 
-            ? 1 + phaseProgress * 0.5
-            : 1.1 + Math.sin(elapsedSeconds * 1.5 + index) * 0.4; // Pulsing in active phase
+            ? 1 + phaseProgress * 0.3
+            : 1.1; // Consistent in active phase for professional look
         
         node.size = node.baseSize * phaseSizeFactor;
         
@@ -198,7 +202,7 @@ const QuantumIcon = () => {
   const getPhaseStyles = () => {
     if (phase === 0) {
       return {
-        filter: 'blur(2px)',
+        filter: 'blur(1px)',
         transform: 'scale(0.95)',
       };
     } else if (phase === 1) {
@@ -238,11 +242,11 @@ const QuantumIcon = () => {
           ...getPhaseStyles()
         }}
       >
-        {/* Central Icon */}
+        {/* Central Icon - Larger size */}
         <img 
           src="/lovable-uploads/38dfd200-7160-4854-95d0-b41e484d5580.png" 
           alt="Quantum Intelligence"
-          className="w-[240px] h-[240px] md:w-[320px] md:h-[320px] object-contain z-10 relative"
+          className="w-[280px] h-[280px] md:w-[380px] md:h-[380px] object-contain z-10 relative"
           style={{
             filter: `drop-shadow(0 0 ${phase * 3}px rgba(74, 144, 226, 0.6))`,
             transition: 'filter 2s ease-in-out'
@@ -268,17 +272,6 @@ const QuantumIcon = () => {
             transform: 'scale(1.3)',
             opacity: phase > 0 ? 0.3 + phase * 0.2 : 0,
             transition: 'opacity 1.5s ease-out'
-          }}
-        ></div>
-        
-        {/* Wireframe effect - more visible in initial phase */}
-        <div 
-          className="absolute inset-0 border-2 rounded-full z-5" 
-          style={{ 
-            borderColor: '#4A90E2',
-            opacity: 0.4 - phase * 0.1,
-            transform: `scale(${0.9 + phase * 0.1})`,
-            transition: 'all 1.5s ease-out'
           }}
         ></div>
         
@@ -311,13 +304,15 @@ const QuantumIcon = () => {
           }}
         >
           {loaded && (() => {
-            // Get center coordinates
-            const center = getCenterCoordinates();
+            // Get center coordinates from the current container size
+            const center = {
+              x: containerRef.current ? containerRef.current.clientWidth / 2 : 0,
+              y: containerRef.current ? containerRef.current.clientHeight / 2 : 0
+            };
             
             return nodesRef.current.map((node, i) => {
               // Connect each node to the center and to adjacent nodes
               const nextNode = nodesRef.current[(i + 1) % nodesRef.current.length];
-              const nextNextNode = nodesRef.current[(i + 2) % nodesRef.current.length];
               
               // Calculate opacity based on phase and node properties
               const lineOpacity = Math.min(1, (node.opacity + nextNode.opacity) / 2);
@@ -352,22 +347,6 @@ const QuantumIcon = () => {
                     strokeDasharray={phase < 1 ? "3,3" : phase < 2 ? "3,2" : ""}
                     style={{ opacity: lineOpacity }}
                   />
-                  
-                  {/* Extra connections in later phases */}
-                  {phase > 1 && Math.random() > 0.6 && (
-                    <line 
-                      x1={node.x} 
-                      y1={node.y} 
-                      x2={nextNextNode.x} 
-                      y2={nextNextNode.y} 
-                      stroke={node.color} 
-                      strokeWidth="0.4"
-                      strokeDasharray="2,4"
-                      style={{ 
-                        opacity: lineOpacity * 0.7,
-                      }}
-                    />
-                  )}
                 </g>
               );
             });
@@ -385,7 +364,7 @@ const QuantumIcon = () => {
               height: `${10 + phase * 8}px`,
               background: 'radial-gradient(circle, #00FFFF 0%, #4A90E2 70%, transparent 100%)',
               boxShadow: `0 0 ${10 + phase * 15}px 5px rgba(0, 255, 255, 0.7)`,
-              opacity: phase === 1 ? 0.3 + loaded * 0.3 : 0.6 + Math.sin(Date.now() / 1000) * 0.2,
+              opacity: phase === 1 ? 0.3 + (loaded ? 0.3 : 0) : 0.6 + Math.sin(Date.now() / 1000) * 0.2,
               transform: 'translate(-50%, -50%)',
               transition: 'all 1s ease-out'
             }}
