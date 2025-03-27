@@ -1,5 +1,5 @@
 
-import { Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Company Info */}
+          {/* Company Info - Updated layout and description */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
               <img 
@@ -18,26 +18,13 @@ const Footer = () => {
               <div className="text-2xl font-bold">IMPROVEMENT AI</div>
             </div>
             <p className="text-white/80 mb-6 max-w-xs">
-              We provide the highest quality AI solutions to help businesses optimize their operations, 
-              improve efficiency, and unlock their full potential through innovative technology.
+              We deliver premium AI solutions to optimize operations, 
+              boost efficiency, and unlock business potential through 
+              innovative technology.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Linkedin size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Instagram size={18} />
-              </a>
-            </div>
           </div>
           
-          {/* Services - Reduced to only 3 services */}
+          {/* Services */}
           <div className="lg:col-span-1">
             <h3 className="text-lg font-semibold mb-6">Our Services</h3>
             <ul className="space-y-3">
@@ -53,7 +40,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Contact Info - Removed location */}
+          {/* Contact Info */}
           <div className="lg:col-span-1">
             <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-4">
@@ -74,7 +61,7 @@ const Footer = () => {
         </div>
       </div>
       
-      {/* Bottom Footer - Updated copyright */}
+      {/* Bottom Footer */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm mb-4 md:mb-0">
