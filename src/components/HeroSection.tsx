@@ -8,7 +8,6 @@ import { Drawer, DrawerContent, DrawerTrigger } from './ui/drawer';
 import { useMediaQuery } from '@/hooks/use-mobile';
 import CalendlyEmbed from './CalendlyEmbed';
 import { useEffect, useState } from 'react';
-import QuantumIcon from './QuantumIcon';
 
 const HeroSection = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
@@ -48,15 +47,15 @@ const HeroSection = () => {
   };
   
   return <section id="home" className="relative min-h-screen flex items-center justify-center pt-40 pb-16 px-4 md:px-8 overflow-hidden bg-[#e8f0fe]">
-      {/* Gradient Background */}
+      {/* Gradient Background - Adjusted to not include buttons */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#e8f0fe] to-white/90"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#e8f0fe] to-white/90" style={{ height: '80%' }}></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
         {/* Text Content */}
-        <div className="text-center lg:text-left lg:w-1/2 mb-10 lg:mb-0">
+        <div className="text-center lg:text-left w-full mb-10 lg:mb-0">
           <h1 
             className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-montserrat transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
           >
@@ -100,13 +99,6 @@ const HeroSection = () => {
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-          </div>
-        </div>
-        
-        {/* Quantum Icon Animation - Adjusted for larger size */}
-        <div className={`lg:w-1/2 lg:pl-10 transition-all duration-1000 delay-700 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="relative h-[400px] md:h-[500px] w-full flex items-center justify-center">
-            <QuantumIcon />
           </div>
         </div>
       </div>

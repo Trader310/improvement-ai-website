@@ -67,9 +67,12 @@ const Index = () => {
         </AnimateOnScroll>
       </div>
       
-      <AnimateOnScroll animation="slide-in-bottom" delay={100}>
-        <AboutSection />
-      </AnimateOnScroll>
+      {/* Removed extra spacing by moving AboutSection up */}
+      <div className="mt-0">
+        <AnimateOnScroll animation="slide-in-bottom" delay={100}>
+          <AboutSection />
+        </AnimateOnScroll>
+      </div>
       
       <AnimateOnScroll animation="slide-in-bottom" delay={100}>
         <BlogSection />
