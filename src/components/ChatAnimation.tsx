@@ -1,50 +1,72 @@
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 interface ChatBubble {
   id: number;
   isActive: boolean;
-  fromLeft: boolean; // To determine which side the message comes from
+  fromLeft: boolean;
+  contentType: 'lines' | 'dots';
+  opacity: number;
+  transform: string;
 }
 
 const ChatAnimation = () => {
   const [chatBubbles, setChatBubbles] = useState<ChatBubble[]>([]);
   const maxBubbles = 5;
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
   
   useEffect(() => {
-    // Initial delay before starting the animation
-    const initialDelay = setTimeout(() => {
-      // Start the animation cycle
-      const intervalId = setInterval(() => {
-        setChatBubbles(prev => {
-          // Create a new array to avoid mutation
-          const updated = [...prev];
-          
-          // Determine the side for the new bubble (alternate sides)
-          const lastFromLeft = updated.length > 0 ? updated[updated.length - 1].fromLeft : false;
-          const newFromLeft = !lastFromLeft; // Alternate from previous
-          
-          // Add a new bubble if we haven't reached the maximum
-          if (updated.length < maxBubbles) {
-            updated.push({ id: Date.now(), isActive: true, fromLeft: newFromLeft });
-          } else {
-            // Remove the oldest bubble and add a new one
-            updated.shift();
-            updated.push({ id: Date.now(), isActive: true, fromLeft: newFromLeft });
-          }
-          
-          // Make sure only the latest bubble is active
-          return updated.map((bubble, index) => ({
-            ...bubble,
-            isActive: index === updated.length - 1
-          }));
+    const createNewBubble = () => {
+      setChatBubbles(prev => {
+        // Create a new array to avoid mutation
+        const updated = [...prev];
+        
+        // Determine the side for the new bubble (alternate sides)
+        const lastFromLeft = updated.length > 0 ? updated[updated.length - 1].fromLeft : false;
+        const newFromLeft = !lastFromLeft; // Alternate from previous
+        
+        // Determine content type (alternate between lines and dots)
+        const contentType = newFromLeft ? 'lines' : 'dots';
+        
+        // Remove oldest bubble if we've reached max
+        if (updated.length >= maxBubbles) {
+          updated.shift();
+        }
+        
+        // Add a new bubble
+        updated.push({
+          id: Date.now(),
+          isActive: true,
+          fromLeft: newFromLeft,
+          contentType,
+          opacity: 0, // Start with opacity 0
+          transform: 'translateY(20px)' // Start slightly below
         });
-      }, 2000); // Add a new bubble every 2 seconds
-      
-      return () => clearInterval(intervalId);
+        
+        // Animate all bubbles
+        return updated.map((bubble, idx) => {
+          const isLatest = idx === updated.length - 1;
+          return {
+            ...bubble,
+            isActive: isLatest,
+            opacity: isLatest ? 1 : Math.max(0.4, 1 - idx * 0.2),
+            transform: `translateY(${isLatest ? 0 : -idx * 5}px)`
+          };
+        });
+      });
+    };
+    
+    // Initial delay before starting
+    const startDelay = setTimeout(() => {
+      // Start the animation cycle
+      intervalRef.current = setInterval(createNewBubble, 2000);
+      createNewBubble(); // Create first bubble immediately
     }, 500);
     
-    return () => clearTimeout(initialDelay);
+    return () => {
+      clearTimeout(startDelay);
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
   }, []);
   
   return (
@@ -52,46 +74,42 @@ const ChatAnimation = () => {
       <div className="flex flex-col-reverse w-full max-w-[90%] space-y-reverse space-y-3">
         {chatBubbles.map((bubble, index) => {
           const isLatest = index === chatBubbles.length - 1;
-          const opacity = isLatest ? "100" : `${80 - index * 15}`;
-          const blurAmount = isLatest ? "0" : `${index}`;
           
           return (
             <div
               key={bubble.id}
               className={`
-                chat-bubble rounded-lg p-4 w-4/5 h-14
+                chat-bubble rounded-lg p-4 w-4/5 min-h-[60px]
                 ${isLatest ? 'bg-[#5271FF]' : 'bg-[#E8F0FE]'}
                 ${bubble.fromLeft ? 'self-start rounded-tl-none' : 'self-end rounded-tr-none'}
                 ${isLatest ? 'animate-pulse-subtle' : ''}
-                transition-all duration-500 ease-out
-                opacity-${opacity}
-                backdrop-blur-[${blurAmount}px]
-                transform translate-y-0
-                animate-slide-up
                 flex items-center
               `}
               style={{
-                animationDelay: `${index * 0.1}s`,
+                opacity: bubble.opacity,
+                transform: bubble.transform,
                 boxShadow: isLatest ? '0 4px 12px rgba(82, 113, 255, 0.2)' : 'none',
                 filter: isLatest ? 'none' : `blur(${index * 0.5}px)`,
-                opacity: isLatest ? 1 : 1 - (index * 0.2),
-                transform: `translateY(${-index * 10}px)`,
+                transition: 'all 0.8s cubic-bezier(0.23, 1, 0.32, 1)',
               }}
             >
-              {/* Add visual elements inside the message bubbles */}
-              <div className="flex space-x-2 h-full items-center">
-                {bubble.fromLeft ? (
-                  // Left side message content (wavy lines)
-                  <div className="flex flex-col justify-center space-y-1 w-full">
-                    <div className={`h-1.5 rounded-full ${isLatest ? 'bg-white/80' : 'bg-gray-300/80'} w-2/3`}></div>
-                    <div className={`h-1.5 rounded-full ${isLatest ? 'bg-white/60' : 'bg-gray-300/60'} w-1/2`}></div>
+              {/* Content elements inside the message bubbles */}
+              <div className="flex space-x-2 h-full items-center w-full">
+                {bubble.contentType === 'lines' ? (
+                  // Lines content
+                  <div className="flex flex-col justify-center space-y-2 w-full">
+                    <div className={`h-2 rounded-full ${isLatest ? 'bg-white/80' : 'bg-gray-300/80'} w-2/3`}></div>
+                    <div className={`h-2 rounded-full ${isLatest ? 'bg-white/60' : 'bg-gray-300/60'} w-1/2`}></div>
                   </div>
                 ) : (
-                  // Right side message content (dots)
-                  <div className="flex justify-end space-x-1 w-full">
-                    <div className={`h-2 w-2 rounded-full ${isLatest ? 'bg-white' : 'bg-gray-300'} animate-pulse`} style={{ animationDuration: '1.5s' }}></div>
-                    <div className={`h-2 w-2 rounded-full ${isLatest ? 'bg-white' : 'bg-gray-300'} animate-pulse`} style={{ animationDuration: '1.8s' }}></div>
-                    <div className={`h-2 w-2 rounded-full ${isLatest ? 'bg-white' : 'bg-gray-300'} animate-pulse`} style={{ animationDuration: '2.1s' }}></div>
+                  // Dots content
+                  <div className="flex justify-end space-x-2.5 w-full">
+                    <div className={`h-2.5 w-2.5 rounded-full ${isLatest ? 'bg-white' : 'bg-gray-300'} animate-pulse`} 
+                      style={{ animationDuration: '1.2s', animationDelay: '0.1s' }}></div>
+                    <div className={`h-2.5 w-2.5 rounded-full ${isLatest ? 'bg-white' : 'bg-gray-300'} animate-pulse`} 
+                      style={{ animationDuration: '1.2s', animationDelay: '0.3s' }}></div>
+                    <div className={`h-2.5 w-2.5 rounded-full ${isLatest ? 'bg-white' : 'bg-gray-300'} animate-pulse`} 
+                      style={{ animationDuration: '1.2s', animationDelay: '0.5s' }}></div>
                   </div>
                 )}
               </div>
@@ -100,9 +118,10 @@ const ChatAnimation = () => {
         })}
       </div>
       
-      {/* Subtle background effect */}
-      <div className="absolute inset-0 flex items-center justify-center opacity-10">
-        <div className="w-32 h-32 rounded-full bg-[#5271FF]/20 animate-pulse" style={{ animationDuration: '3s' }}></div>
+      {/* Subtle background glow effect */}
+      <div className="absolute inset-0 flex items-center justify-center opacity-5 pointer-events-none">
+        <div className="w-40 h-40 rounded-full bg-[#5271FF]/30 animate-pulse" 
+          style={{ animationDuration: '4s', filter: 'blur(20px)' }}></div>
       </div>
     </div>
   );

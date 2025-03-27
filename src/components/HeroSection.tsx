@@ -8,6 +8,7 @@ import { Drawer, DrawerContent, DrawerTrigger } from './ui/drawer';
 import { useMediaQuery } from '@/hooks/use-mobile';
 import CalendlyEmbed from './CalendlyEmbed';
 import { useEffect, useState } from 'react';
+import QuantumIcon from './QuantumIcon';
 
 const HeroSection = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
@@ -102,23 +103,10 @@ const HeroSection = () => {
           </div>
         </div>
         
-        {/* AI Network Symbol with Animation */}
+        {/* Quantum Icon Animation */}
         <div className={`lg:w-1/2 lg:pl-12 transition-all duration-1000 delay-700 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="relative h-[300px] md:h-[400px] w-full flex items-center justify-center">
-            <div className="relative animate-float">
-              <div className="ai-network-symbol w-48 h-48 md:w-72 md:h-72 relative animate-pulse-light">
-                <img 
-                  src="/lovable-uploads/3aacfb23-1909-419b-a885-241efc47dd2d.png" 
-                  alt="AI Network Symbol" 
-                  className="w-full h-full object-contain"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-1/4 h-1/4 rounded-full bg-[#5271FF]/10 animate-ping" style={{ animationDuration: '3s' }}></div>
-                </div>
-              </div>
-              <div className="absolute -inset-4 rounded-full border-2 border-[#5271FF]/20 animate-spin" style={{ animationDuration: '15s' }}></div>
-              <div className="absolute -inset-8 rounded-full border border-[#5271FF]/10 animate-spin" style={{ animationDuration: '20s', animationDirection: 'reverse' }}></div>
-            </div>
+            <QuantumIcon />
           </div>
         </div>
       </div>
