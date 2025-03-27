@@ -1,7 +1,7 @@
-
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
+import ChatAnimation from './ChatAnimation';
 
 const AboutSection = () => {
   return (
@@ -14,26 +14,16 @@ const AboutSection = () => {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Image Section */}
+          {/* Image Section - Replaced with Chat Animation */}
           <div className="order-2 lg:order-1 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-agency-blue/20 to-agency-blue/5 mix-blend-overlay"></div>
-              <div className="aspect-video bg-gradient-to-br from-agency-blue to-agency-dark-blue rounded-2xl flex items-center justify-center">
-                <div className="text-white/90 text-center p-6">
-                  <div className="mb-4 inline-block">
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5" />
-                      <path d="M12 8V16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M15 13L12 16L9 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <h4 className="text-xl font-medium mb-2 font-poppins">AI Innovation Visualization</h4>
-                  <p className="text-white/70">Interactive demonstration available during consultation</p>
-                </div>
+              <div className="aspect-video bg-white rounded-2xl flex items-center justify-center">
+                <ChatAnimation />
               </div>
             </div>
             
-            {/* Floating Card Elements */}
+            {/* Floating Card Elements - Kept as requested */}
             <div className="absolute -top-6 -left-6 p-4 rounded-lg bg-white shadow-lg animate-float hidden md:block">
               <div className="flex items-center">
                 <div className="w-10 h-10 rounded-full bg-agency-blue/20 flex items-center justify-center">

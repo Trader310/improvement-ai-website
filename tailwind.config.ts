@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -103,6 +102,15 @@ export default {
 					'0%': { transform: 'translateY(20px)', opacity: '0' },
 					'100%': { transform: 'translateY(0)', opacity: '1' }
 				},
+				'slide-up': {
+					'0%': { transform: 'translateY(20px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				'pulse-subtle': {
+					'0%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.03)' },
+					'100%': { transform: 'scale(1)' }
+				},
 				'fade-in': {
 					'0%': { opacity: '0' },
 					'100%': { opacity: '1' }
@@ -110,6 +118,10 @@ export default {
 				'scale-in': {
 					'0%': { transform: 'scale(0.95)', opacity: '0' },
 					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'fade-out': {
+					'0%': { opacity: '1' },
+					'100%': { opacity: '0' }
 				}
 			},
 			animation: {
@@ -120,8 +132,9 @@ export default {
 				'slide-in-right': 'slide-in-right 0.6s ease-out',
 				'slide-in-left': 'slide-in-left 0.6s ease-out',
 				'slide-in-bottom': 'slide-in-bottom 0.6s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out',
-				'scale-in': 'scale-in 0.5s ease-out'
+				'slide-up': 'slide-up 0.5s ease-out forwards',
+				'pulse-subtle': 'pulse-subtle 0.5s ease-in-out',
+				'fade-out': 'fade-out 0.5s ease-out forwards'
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
