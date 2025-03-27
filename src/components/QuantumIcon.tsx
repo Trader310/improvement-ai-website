@@ -158,38 +158,44 @@ const QuantumIcon = () => {
           className="absolute inset-0 w-full h-full z-5 opacity-70"
           style={{ opacity: loaded ? 0.7 : 0 }}
         >
-          {loaded && nodesRef.current.map((_, i) => {
-            // Connect each node to the center
-            const node = nodesRef.current[i];
-            const nextNode = nodesRef.current[(i + 1) % nodesRef.current.length];
-            return (
-              <g key={i}>
-                {/* Line to center */}
-                <line 
-                  x1={node.x} 
-                  y1={node.y} 
-                  x2={centerX} 
-                  y2={centerY} 
-                  stroke="#4A90E2" 
-                  strokeWidth="1" 
-                  strokeDasharray="4,4"
-                  className="animate-pulse"
-                  style={{ animationDuration: '3s' }}
-                />
-                
-                {/* Line to adjacent node */}
-                <line 
-                  x1={node.x} 
-                  y1={node.y} 
-                  x2={nextNode.x} 
-                  y2={nextNode.y} 
-                  stroke="#87CEFA" 
-                  strokeWidth="0.5"
-                  strokeDasharray="3,3"
-                />
-              </g>
-            );
-          })}
+          {loaded && (() => {
+            // Define centerX and centerY here for use in the JSX
+            const centerX = containerRef.current ? containerRef.current.clientWidth / 2 : 0;
+            const centerY = containerRef.current ? containerRef.current.clientHeight / 2 : 0;
+            
+            return nodesRef.current.map((_, i) => {
+              // Connect each node to the center
+              const node = nodesRef.current[i];
+              const nextNode = nodesRef.current[(i + 1) % nodesRef.current.length];
+              return (
+                <g key={i}>
+                  {/* Line to center */}
+                  <line 
+                    x1={node.x} 
+                    y1={node.y} 
+                    x2={centerX} 
+                    y2={centerY} 
+                    stroke="#4A90E2" 
+                    strokeWidth="1" 
+                    strokeDasharray="4,4"
+                    className="animate-pulse"
+                    style={{ animationDuration: '3s' }}
+                  />
+                  
+                  {/* Line to adjacent node */}
+                  <line 
+                    x1={node.x} 
+                    y1={node.y} 
+                    x2={nextNode.x} 
+                    y2={nextNode.y} 
+                    stroke="#87CEFA" 
+                    strokeWidth="0.5"
+                    strokeDasharray="3,3"
+                  />
+                </g>
+              );
+            });
+          })()}
         </svg>
       </div>
     </div>
