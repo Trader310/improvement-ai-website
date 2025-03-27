@@ -14,6 +14,9 @@ import BookingPage from "./pages/BookingPage";
 import AIImplementationPage from "./pages/AIImplementationPage";
 import AIAgentPage from "./pages/AIAgentPage";
 import AIConsultationPage from "./pages/AIConsultationPage";
+import BlogPost1 from "./pages/BlogPost1";
+import BlogPost2 from "./pages/BlogPost2";
+import BlogPost3 from "./pages/BlogPost3";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +36,12 @@ const App = () => (
           <Route path="/ai-implementation" element={<AIImplementationPage />} />
           <Route path="/ai-agent" element={<AIAgentPage />} />
           <Route path="/ai-consultation" element={<AIConsultationPage />} />
+          
+          {/* Blog Post Routes */}
+          <Route path="/blog/automation-tools" element={<BlogPost1 />} />
+          <Route path="/blog/ai-agents" element={<BlogPost2 />} />
+          <Route path="/blog/intelligent-growth" element={<BlogPost3 />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -49,7 +49,7 @@ const Index = () => {
     <div className="min-h-screen overflow-x-hidden">
       <Header />
       
-      <div className="bg-white">
+      <div className="bg-[#e8f0fe]">
         <HeroSection />
       </div>
       
@@ -59,7 +59,7 @@ const Index = () => {
         </AnimateOnScroll>
       </div>
       
-      <div className="mt-0">
+      <div className="mt-16">
         <AnimateOnScroll animation="slide-in-bottom" delay={100}>
           <AboutSection />
         </AnimateOnScroll>

@@ -15,12 +15,11 @@ const Footer = () => {
                 alt="Improvement AI"
                 className="w-12 h-12 mr-3"
               />
-              <div className="text-2xl font-bold">IMPROVEMENT AI</div>
+              <div className="font-bold text-2xl -mt-1">IMPROVEMENT AI</div>
             </div>
-            <p className="text-white/80 mb-6 max-w-xs pl-0">
-              We deliver premium AI solutions to optimize operations, 
-              boost efficiency, and unlock business potential through 
-              innovative technology.
+            <p className="text-white/80 mb-6 max-w-xs ml-0">
+              We deliver AI solutions to optimize operations, 
+              boost efficiency and unlock business potential.
             </p>
           </div>
           

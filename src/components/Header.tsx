@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
@@ -33,7 +34,7 @@ const Header = () => {
   };
 
   const headerBgClass = isHomePage 
-    ? (isScrolled ? 'bg-white shadow-md' : 'bg-white')
+    ? (isScrolled ? 'bg-[#e8f0fe] shadow-md' : 'bg-[#e8f0fe]')
     : (isScrolled ? 'bg-white shadow-md' : 'bg-white');
 
   return <header className={cn('fixed top-0 left-0 w-full z-50 transition-all duration-300 px-4 md:px-8 lg:px-12', isScrolled ? 'py-2' : 'py-6', headerBgClass)}>
@@ -76,7 +77,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && <div className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-4 px-6 animate-fade-in`}>
+      {mobileMenuOpen && <div className={`md:hidden absolute top-full left-0 w-full ${isHomePage ? 'bg-[#e8f0fe]' : 'bg-white'} shadow-lg py-4 px-6 animate-fade-in`}>
           <nav className="flex flex-col space-y-4">
             <Link to="/" className="text-gray-800 font-medium py-2 font-poppins">
               Home
