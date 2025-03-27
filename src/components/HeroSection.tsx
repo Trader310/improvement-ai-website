@@ -105,7 +105,7 @@ const HeroSection = () => {
         
         {/* Quantum Icon Animation */}
         <div className={`lg:w-1/2 lg:pl-12 transition-all duration-1000 delay-700 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="relative h-[300px] md:h-[400px] w-full flex items-center justify-center">
+          <div className="relative h-[350px] md:h-[450px] w-full flex items-center justify-center">
             <QuantumIcon />
           </div>
         </div>
