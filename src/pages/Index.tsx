@@ -1,3 +1,4 @@
+
 import { useEffect } from 'react';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
@@ -48,15 +49,26 @@ const Index = () => {
     <div className="min-h-screen overflow-x-hidden">
       <Header />
       
-      <div className="bg-white">
+      <div className="bg-gradient-to-b from-[#e8f0fe] via-[#f0f7ff] to-white">
         <HeroSection />
+      
+        {/* The smooth gradient transition div - creates a natural color fade */}
+        <div 
+          className="h-40 bg-gradient-to-b from-white/0 via-[#f0f7ff] to-white"
+          style={{ 
+            marginTop: '-10rem', 
+            position: 'relative', 
+            zIndex: 10 
+          }}
+        />
       
         <AnimateOnScroll animation="slide-in-bottom" delay={100}>
           <ServicesSection />
         </AnimateOnScroll>
       </div>
       
-      <div className="mt-20">
+      {/* Removed extra spacing by moving AboutSection up */}
+      <div className="mt-0">
         <AnimateOnScroll animation="slide-in-bottom" delay={100}>
           <AboutSection />
         </AnimateOnScroll>
