@@ -10,21 +10,21 @@ const blogPosts = [
     title: "How AI is Revolutionizing Customer Service",
     excerpt: "Discover how AI-powered chatbots and virtual assistants are transforming customer experiences and operational efficiency.",
     category: "AI Trends",
-    imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
   },
   {
     id: 2,
     title: "Implementing AI in Your Business: A Step-by-Step Guide",
     excerpt: "Learn the practical steps to successfully integrate AI solutions into your existing business processes.",
     category: "Implementation",
-    imageUrl: "https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
   },
   {
     id: 3,
     title: "The Future of AI Agents in Business Growth",
     excerpt: "Explore how AI agents are becoming essential tools for business expansion and revenue generation.",
     category: "AI Agents",
-    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
+    imageUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
   }
 ];
 

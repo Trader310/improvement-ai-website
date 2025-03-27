@@ -30,7 +30,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 px-4 md:px-8 bg-white mb-20">
+    <section id="services" className="py-20 px-4 md:px-8 bg-[#F5F9FF] mb-20">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
