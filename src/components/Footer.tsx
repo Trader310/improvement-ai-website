@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Company Info - Updated layout and description */}
           <div className="lg:col-span-1">
-            <div className="flex items-center mb-6">
+            <div className="flex items-start mb-6">
               <img 
                 src="/lovable-uploads/38dfd200-7160-4854-95d0-b41e484d5580.png" 
                 alt="Improvement AI"
@@ -17,7 +17,7 @@ const Footer = () => {
               />
               <div className="text-2xl font-bold">IMPROVEMENT AI</div>
             </div>
-            <p className="text-white/80 mb-6 max-w-xs">
+            <p className="text-white/80 mb-6 max-w-xs pl-0">
               We deliver premium AI solutions to optimize operations, 
               boost efficiency, and unlock business potential through 
               innovative technology.

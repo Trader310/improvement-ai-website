@@ -49,7 +49,7 @@ const Index = () => {
     <div className="min-h-screen overflow-x-hidden">
       <Header />
       
-      <div className="bg-[#e8f0fe]">
+      <div className="bg-white">
         <HeroSection />
       </div>
       

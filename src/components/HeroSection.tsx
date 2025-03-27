@@ -1,4 +1,3 @@
-
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
@@ -15,7 +14,6 @@ const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   
   useEffect(() => {
-    // Add a short delay to ensure the animation is noticeable
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 300);
@@ -41,20 +39,12 @@ const HeroSection = () => {
     }
   };
 
-  // Function to open Calendly in a new tab (as fallback)
   const openCalendlyNewTab = () => {
     window.open(calendlyUrl, '_blank');
   };
   
-  return <section id="home" className="relative min-h-screen flex items-center justify-center pt-40 pb-16 px-4 md:px-8 overflow-hidden bg-[#e8f0fe]">
-      {/* Gradient Background - Adjusted to not include buttons */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#e8f0fe] to-white/90" style={{ height: '80%' }}></div>
-      </div>
-
-      {/* Content */}
+  return <section id="home" className="relative min-h-screen flex items-center justify-center pt-40 pb-16 px-4 md:px-8 overflow-hidden bg-white">
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
-        {/* Text Content */}
         <div className="text-center lg:text-left w-full mb-10 lg:mb-0">
           <h1 
             className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-montserrat transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
