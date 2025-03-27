@@ -48,7 +48,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation - Removed Team section */}
         <nav className="hidden md:flex items-center space-x-8">
           <Link to="/" className="text-gray-800 font-medium hover:text-[#5271FF] transition-colors font-poppins">
             Home
@@ -61,9 +61,6 @@ const Header = () => {
           </Link>
           <Link to="/blog" className="text-gray-800 font-medium hover:text-[#5271FF] transition-colors font-poppins">
             Blog
-          </Link>
-          <Link to="/team" className="text-gray-800 font-medium hover:text-[#5271FF] transition-colors font-poppins">
-            Team
           </Link>
         </nav>
 
@@ -80,7 +77,7 @@ const Header = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Removed Team section */}
       {mobileMenuOpen && <div className={`md:hidden absolute top-full left-0 w-full ${isHomePage ? 'bg-[#e8f0fe]' : 'bg-white'} shadow-lg py-4 px-6 animate-fade-in`}>
           <nav className="flex flex-col space-y-4">
             <Link to="/" className="text-gray-800 font-medium py-2 font-poppins">
@@ -94,9 +91,6 @@ const Header = () => {
             </Link>
             <Link to="/blog" className="text-gray-800 font-medium py-2 font-poppins">
               Blog
-            </Link>
-            <Link to="/team" className="text-gray-800 font-medium py-2 font-poppins">
-              Team
             </Link>
             <Link to="/booking">
               <Button className="bg-[#5271FF] text-white hover:bg-[#3A5BFF] w-full rounded-full font-poppins">

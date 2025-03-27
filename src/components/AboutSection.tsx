@@ -1,11 +1,13 @@
+
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
 import ChatAnimation from './ChatAnimation';
+import TeamSection from './TeamSection';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="pt-0 pb-20 px-4 md:px-8 bg-gray-50 relative overflow-hidden">
+    <section id="about" className="pt-20 pb-20 px-4 md:px-8 bg-gray-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-agency-blue/5 rounded-bl-[100px]"></div>
@@ -13,8 +15,8 @@ const AboutSection = () => {
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Image Section - Replaced with Chat Animation */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+          {/* Image Section - With Chat Animation */}
           <div className="order-2 lg:order-1 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <div className="absolute inset-0 bg-gradient-to-br from-agency-blue/20 to-agency-blue/5 mix-blend-overlay"></div>
@@ -23,7 +25,7 @@ const AboutSection = () => {
               </div>
             </div>
             
-            {/* Floating Card Elements - Kept as requested */}
+            {/* Floating Card Elements */}
             <div className="absolute -top-6 -left-6 p-4 rounded-lg bg-white shadow-lg animate-float hidden md:block">
               <div className="flex items-center">
                 <div className="w-10 h-10 rounded-full bg-agency-blue/20 flex items-center justify-center">
@@ -115,6 +117,9 @@ const AboutSection = () => {
             </Link>
           </div>
         </div>
+        
+        {/* Added Client Testimonials Section */}
+        <TeamSection />
       </div>
     </section>
   );

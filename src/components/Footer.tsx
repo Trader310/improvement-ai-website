@@ -1,5 +1,5 @@
 
-import { Facebook, Instagram, Linkedin, Mail, Phone, Twitter } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -7,37 +7,26 @@ const Footer = () => {
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Company Info */}
+          {/* Company Info - Updated logo alignment */}
           <div className="lg:col-span-1">
-            <div className="flex items-center mb-6">
-              <img 
-                src="/lovable-uploads/38dfd200-7160-4854-95d0-b41e484d5580.png" 
-                alt="Improvement AI"
-                className="w-12 h-12 mr-3"
-              />
-              <div className="text-2xl font-bold">IMPROVEMENT AI</div>
+            <div className="flex flex-col items-start mb-6">
+              <div className="flex items-center mb-4">
+                <img 
+                  src="/lovable-uploads/38dfd200-7160-4854-95d0-b41e484d5580.png" 
+                  alt="Improvement AI"
+                  className="w-12 h-12 mr-3"
+                />
+                <div className="text-2xl font-bold">IMPROVEMENT AI</div>
+              </div>
+              <p className="text-white/80 mb-6 max-w-xs">
+                We provide the highest quality AI solutions to help businesses optimize their operations, 
+                improve efficiency, and unlock their full potential through innovative technology.
+              </p>
             </div>
-            <p className="text-white/80 mb-6 max-w-xs">
-              We provide the highest quality AI solutions to help businesses optimize their operations, 
-              improve efficiency, and unlock their full potential through innovative technology.
-            </p>
-            <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Twitter size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Linkedin size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Facebook size={18} />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                <Instagram size={18} />
-              </a>
-            </div>
+            {/* Removed social media icons */}
           </div>
           
-          {/* Services - Reduced to only 3 services */}
+          {/* Services - Only 3 services */}
           <div className="lg:col-span-1">
             <h3 className="text-lg font-semibold mb-6">Our Services</h3>
             <ul className="space-y-3">
@@ -53,7 +42,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          {/* Contact Info - Removed location */}
+          {/* Contact Info - Only mail and phone */}
           <div className="lg:col-span-1">
             <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-4">
@@ -74,7 +63,7 @@ const Footer = () => {
         </div>
       </div>
       
-      {/* Bottom Footer - Updated copyright */}
+      {/* Bottom Footer - Updated copyright to 2025 */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-6 flex flex-col md:flex-row justify-between items-center">
           <p className="text-white/60 text-sm mb-4 md:mb-0">
