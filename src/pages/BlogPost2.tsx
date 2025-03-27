@@ -1,9 +1,8 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Calendar } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const BlogPost2 = () => {
@@ -19,10 +18,6 @@ const BlogPost2 = () => {
               <span className="bg-[#5271FF]/10 text-[#5271FF] px-3 py-1 rounded-full text-sm font-medium">
                 AI Agents
               </span>
-              <div className="flex items-center text-gray-500 ml-4 text-sm">
-                <Calendar className="w-4 h-4 mr-1" />
-                <time dateTime="2023-08-22">August 22, 2023</time>
-              </div>
             </div>
             
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight font-poppins">
@@ -108,9 +103,12 @@ const BlogPost2 = () => {
             Ready to implement AI agents in your business?
           </h3>
           <Link to="/booking">
-            <Button className="bg-[#5271FF] text-white hover:bg-[#3A5BFF] rounded-full px-8 py-6 text-lg">
+            <Button 
+              variant="outline" 
+              className="bg-white text-[#5271FF] hover:bg-[#5271FF]/5 border-[#5271FF] rounded-full px-8 py-6 text-lg group hover:scale-105 transition-all duration-300 animate-pulse-subtle"
+            >
               Book a Consultation
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
         </div>

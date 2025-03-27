@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const blogPosts = [
   {
     id: 1,
-    title: "Unlocking Business Potential: The Revolution of AI Automation Tools",
+    title: "Unlocking Business Potential: The Revolution of AI Automation",
     excerpt: "Discover how AI-powered automation tools are transforming business operations and creating new opportunities for growth and innovation.",
     category: "AI Automation",
     imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",

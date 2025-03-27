@@ -7,19 +7,12 @@ const Footer = () => {
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Company Info - Updated layout and description */}
+          {/* Company Info - Updated layout without logo */}
           <div className="lg:col-span-1">
-            <div className="flex items-start mb-6">
-              <img 
-                src="/lovable-uploads/38dfd200-7160-4854-95d0-b41e484d5580.png" 
-                alt="Improvement AI"
-                className="w-12 h-12 mr-3"
-              />
-              <div className="font-bold text-2xl -mt-1">IMPROVEMENT AI</div>
-            </div>
-            <p className="text-white/80 mb-6 max-w-xs ml-0">
-              We deliver AI solutions to optimize operations, 
-              boost efficiency and unlock business potential.
+            <h2 className="font-bold text-2xl mb-4 font-poppins">IMPROVEMENT AI</h2>
+            <p className="text-white/80 mb-6 max-w-xs">
+              We deliver AI solutions to optimize operations 
+              and unlock business potential.
             </p>
           </div>
           
