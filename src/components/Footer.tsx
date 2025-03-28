@@ -1,4 +1,3 @@
-
 import { Mail, Phone } from 'lucide-react';
 
 const Footer = () => {
@@ -11,10 +10,9 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <h2 className="font-bold text-2xl mb-4 font-poppins">IMPROVEMENT AI</h2>
             <p className="text-white/80 mb-6 max-w-xs">
-              We deliver comprehensive AI solutions to optimize operations, 
-              automate workflow processes, and unlock your business's full potential. 
-              Our team of experts is dedicated to transforming your business 
-              with cutting-edge artificial intelligence technology.
+              We deliver AI solutions to optimize operations and unlock your business's 
+              full potential. Our experts transform businesses with cutting-edge 
+              artificial intelligence technology.
             </p>
           </div>
           

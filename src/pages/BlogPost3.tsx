@@ -21,7 +21,7 @@ const BlogPost3 = () => {
               </span>
             </div>
             
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight font-poppins">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 mb-6 leading-tight font-poppins">
               Intelligent Growth: AI Solutions That Empower Every Business
             </h1>
             
@@ -134,7 +134,7 @@ const BlogPost3 = () => {
           <Link to="/booking">
             <Button 
               variant="outline" 
-              className="bg-white text-[#5271FF] hover:bg-[#5271FF]/5 border-[#5271FF] rounded-full px-8 py-6 text-lg group hover:scale-110 transition-all duration-300 animate-bounce"
+              className="bg-white text-[#5271FF] hover:bg-[#5271FF]/5 border-[#5271FF] rounded-full px-8 py-6 text-lg group hover:scale-110 transition-all duration-300 animate-pulse"
             >
               Book a Consultation
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />

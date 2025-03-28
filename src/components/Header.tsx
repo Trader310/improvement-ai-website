@@ -39,13 +39,13 @@ const Header = () => {
 
   return <header className={cn('fixed top-0 left-0 w-full z-50 transition-all duration-300 px-4 md:px-8 lg:px-12', isScrolled ? 'py-2' : 'py-6', headerBgClass)}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Logo */}
-        <div className="flex items-center">
+        {/* Logo with Link */}
+        <Link to="/" className="flex items-center">
           <div className="font-bold text-2xl font-poppins">
             <span className="text-black">IMPROVEMENT</span>
             <span className="text-[#5271FF]"> AI</span>
           </div>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">

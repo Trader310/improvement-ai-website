@@ -18,7 +18,7 @@ const BlogPage = () => {
           <div className="max-w-6xl mx-auto rounded-2xl overflow-hidden">
             <div className="bg-gradient-to-r from-agency-blue/80 via-agency-blue to-agency-dark-blue p-8 md:p-16 text-center text-white">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 font-poppins">Launch Your AI Revolution Today</h2>
-              <p className="text-xl max-w-2xl mx-auto mb-8">
+              <p className="text-xl max-w-2xl mx-auto mb-8 font-poppins">
                 Unlock the Future of Business with Our Cutting-Edge AI Innovations
               </p>
               <Link to="/booking">
@@ -26,7 +26,7 @@ const BlogPage = () => {
                   variant="outline"
                   className="bg-white text-blue-600 hover:bg-blue-50 border-none rounded-full px-8 py-6 text-lg group hover:scale-105 transition-all duration-300 animate-bounce animate-pulse-subtle font-poppins"
                 >
-                  Let's Connect Now!
+                  Let's Connect
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
