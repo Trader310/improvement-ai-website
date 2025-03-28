@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -129,7 +128,7 @@ const BlogPost3 = () => {
           </div>
         </article>
         
-        {/* Call to Action - Updated with subtle pulse animation */}
+        {/* Call to Action - Updated with the same animation as "Let's Connect" button */}
         <div className="max-w-3xl mx-auto mt-16 text-center">
           <Link to="/booking">
             <Button 

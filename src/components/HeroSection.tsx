@@ -11,11 +11,61 @@ const HeroSection = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
   const calendlyUrl = 'https://calendly.com/dropstrader/improvement-ai-consultation';
   const [isVisible, setIsVisible] = useState(false);
+  const [typedText1, setTypedText1] = useState("");
+  const [typedText2, setTypedText2] = useState("");
+  const [typedText3, setTypedText3] = useState("");
+  const [typingComplete, setTypingComplete] = useState(false);
   
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 300);
+    
+    // Text typing animation for the three parts of the header
+    const text1 = "Make your work ";
+    const text2 = "effortless";
+    const text3 = " with AI solutions";
+    
+    let i = 0, j = 0, k = 0;
+    
+    // First part typing
+    const typeText1 = () => {
+      if (i < text1.length) {
+        setTypedText1(prev => prev + text1.charAt(i));
+        i++;
+        setTimeout(typeText1, 80);
+      } else {
+        // Start second part after first completes
+        setTimeout(typeText2, 100);
+      }
+    };
+    
+    // Second part typing
+    const typeText2 = () => {
+      if (j < text2.length) {
+        setTypedText2(prev => prev + text2.charAt(j));
+        j++;
+        setTimeout(typeText2, 80);
+      } else {
+        // Start third part after second completes
+        setTimeout(typeText3, 100);
+      }
+    };
+    
+    // Third part typing
+    const typeText3 = () => {
+      if (k < text3.length) {
+        setTypedText3(prev => prev + text3.charAt(k));
+        k++;
+        setTimeout(typeText3, 80);
+      } else {
+        // Mark typing as complete
+        setTypingComplete(true);
+      }
+    };
+    
+    // Start the sequence
+    setTimeout(typeText1, 800);
     
     return () => clearTimeout(timer);
   }, []);
@@ -29,19 +79,17 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center">
         <div className="w-full mb-10">
-          <h1 
-            className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-montserrat transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-          >
-            <span className="text-[#5271FF]">Make your work </span>
-            <span className="text-slate-950">effortless</span>
-            <span className="text-[#5271FF]"> with AI solutions</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-montserrat">
+            <span className="text-[#5271FF] inline-block min-h-[1.5em]">{typedText1}</span>
+            <span className="text-slate-950 inline-block min-h-[1.5em]">{typedText2}</span>
+            <span className="text-[#5271FF] inline-block min-h-[1.5em]">{typedText3}</span>
           </h1>
           
-          <p className={`mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto transition-all duration-1000 delay-300 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <p className={`mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto transition-all duration-1000 delay-300 ease-out transform ${typingComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             Leverage AI technology to automate processes and transform your business operations.
           </p>
           
-          <div className={`mt-10 flex justify-center transition-all duration-1000 delay-500 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className={`mt-10 flex justify-center transition-all duration-1000 delay-500 ease-out transform ${typingComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             {isMobile ? <Drawer>
                 <DrawerTrigger asChild>
                   <Button className={cn(
