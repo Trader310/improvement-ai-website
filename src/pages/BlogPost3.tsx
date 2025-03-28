@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -37,7 +38,7 @@ const BlogPost3 = () => {
               Every business leader has heard the AI buzz, but few truly understand its potential to drive meaningful change. The most successful companies aren't those with the most advanced technology, but those who strategically leverage AI to solve specific business problems.
             </p>
             
-            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 font-poppins">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-6 font-poppins">
               Transforming Customer Engagement
             </h2>
             
@@ -56,7 +57,7 @@ const BlogPost3 = () => {
               <li>Operates 24/7 without fatigue</li>
             </ul>
             
-            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 font-poppins">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-6 font-poppins">
               Unleashing Data Intelligence
             </h2>
             
@@ -74,7 +75,7 @@ const BlogPost3 = () => {
               The most powerful aspect of AI isn't its ability to process information – it's its capacity to uncover insights that humans might miss entirely.
             </p>
             
-            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 font-poppins">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-6 font-poppins">
               Marketing Reimagined
             </h2>
             
@@ -82,7 +83,7 @@ const BlogPost3 = () => {
               Content creation and marketing strategies have been revolutionized by AI tools. Platforms like Jasper.ai and Copy.ai are not replacing marketers – they're giving them superpowers. These intelligent systems can generate compelling copy, analyze market trends, and create personalized marketing strategies that speak directly to target audiences.
             </p>
             
-            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 font-poppins">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-6 font-poppins">
               The Human-AI Partnership
             </h2>
             
@@ -90,7 +91,7 @@ const BlogPost3 = () => {
               The true magic happens when human creativity meets artificial intelligence. This isn't about replacement – it's about augmentation. AI handles repetitive tasks, processes complex data, and provides insights, while humans focus on strategy, creativity, and complex problem-solving.
             </p>
             
-            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 font-poppins">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-6 font-poppins">
               Practical Implementation
             </h2>
             
@@ -130,16 +131,13 @@ const BlogPost3 = () => {
         
         {/* Call to Action */}
         <div className="max-w-3xl mx-auto mt-16 text-center">
-          <h3 className="text-2xl font-bold mb-6 font-poppins">
-            Ready to leverage AI for your business growth?
-          </h3>
           <Link to="/booking">
             <Button 
               variant="outline" 
-              className="bg-white text-[#5271FF] hover:bg-[#5271FF]/5 border-[#5271FF] rounded-full px-8 py-6 text-lg group hover:scale-105 transition-all duration-300 animate-pulse-subtle"
+              className="bg-white text-[#5271FF] hover:bg-[#5271FF]/5 border-[#5271FF] rounded-full px-8 py-6 text-lg group hover:scale-110 transition-all duration-300 animate-bounce"
             >
               Book a Consultation
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </Button>
           </Link>
         </div>

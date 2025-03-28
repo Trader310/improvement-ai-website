@@ -38,7 +38,7 @@ const BlogPost1 = () => {
               Imagine a world where repetitive tasks disappear, where your business processes flow seamlessly like a well-oiled machine, and where you can focus on what truly matters - innovation and strategy. This isn't a distant dream; it's the reality of modern business automation.
             </p>
             
-            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 font-poppins">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-6 font-poppins">
               The Rise of No-Code Automation Platforms
             </h2>
             
@@ -54,7 +54,7 @@ const BlogPost1 = () => {
               Make.com takes this a step further with its incredibly visual workflow builder. Picture a canvas where you can literally drag and drop connections between different apps, creating intricate automation sequences that would have seemed like science fiction just a few years ago. From routing customer inquiries to generating reports, the possibilities are endless.
             </p>
             
-            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 font-poppins">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-6 font-poppins">
               Real-World Automation in Action
             </h2>
             
@@ -74,7 +74,7 @@ const BlogPost1 = () => {
               All of this happens automatically, without a single manual intervention. The team can focus on strategy, relationship-building, and creative work instead of getting bogged down in administrative tasks.
             </p>
             
-            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 font-poppins">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-6 font-poppins">
               Beyond Simple Automation: AI-Powered Intelligence
             </h2>
             
@@ -82,7 +82,7 @@ const BlogPost1 = () => {
               But we're not just talking about simple task routing. Modern automation tools are becoming increasingly intelligent. Platforms like Bardeen.ai use artificial intelligence to learn from your behaviors, suggesting and creating automation sequences that you might not have even considered.
             </p>
             
-            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 font-poppins">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-6 font-poppins">
               Choosing the Right Automation Strategy
             </h2>
             
@@ -97,7 +97,7 @@ const BlogPost1 = () => {
               <li>Focus on creating value, not just reducing work</li>
             </ul>
             
-            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 font-poppins">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-6 font-poppins">
               A Word of Caution
             </h2>
             
@@ -111,7 +111,7 @@ const BlogPost1 = () => {
               <li>Willingness to experiment and refine</li>
             </ul>
             
-            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 font-poppins">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-6 font-poppins">
               The Competitive Edge
             </h2>
             
@@ -136,16 +136,13 @@ const BlogPost1 = () => {
         
         {/* Call to Action */}
         <div className="max-w-3xl mx-auto mt-16 text-center">
-          <h3 className="text-2xl font-bold mb-6 font-poppins">
-            Ready to transform your business with AI?
-          </h3>
           <Link to="/booking">
             <Button 
               variant="outline" 
-              className="bg-white text-[#5271FF] hover:bg-[#5271FF]/5 border-[#5271FF] rounded-full px-8 py-6 text-lg group hover:scale-105 transition-all duration-300 animate-pulse-subtle"
+              className="bg-white text-[#5271FF] hover:bg-[#5271FF]/5 border-[#5271FF] rounded-full px-8 py-6 text-lg group hover:scale-110 transition-all duration-300 animate-bounce"
             >
               Book a Consultation
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </Button>
           </Link>
         </div>

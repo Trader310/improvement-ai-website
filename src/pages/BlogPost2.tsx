@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -55,7 +56,7 @@ const BlogPost2 = () => {
               But this isn't about replacing human workers – it's about augmentation. The most successful businesses view AI agents as collaborative partners, tools that amplify human creativity and strategic thinking. They free up talented professionals from repetitive tasks, allowing them to focus on high-value, creative problem-solving that truly drives business innovation.
             </p>
             
-            <h2 className="text-2xl font-bold text-gray-900 mt-10 mb-6 font-poppins">
+            <h2 className="text-2xl font-semibold text-gray-900 mt-10 mb-6 font-poppins">
               Key Strategic Considerations:
             </h2>
             
@@ -99,16 +100,13 @@ const BlogPost2 = () => {
         
         {/* Call to Action */}
         <div className="max-w-3xl mx-auto mt-16 text-center">
-          <h3 className="text-2xl font-bold mb-6 font-poppins">
-            Ready to implement AI agents in your business?
-          </h3>
           <Link to="/booking">
             <Button 
               variant="outline" 
-              className="bg-white text-[#5271FF] hover:bg-[#5271FF]/5 border-[#5271FF] rounded-full px-8 py-6 text-lg group hover:scale-105 transition-all duration-300 animate-pulse-subtle"
+              className="bg-white text-[#5271FF] hover:bg-[#5271FF]/5 border-[#5271FF] rounded-full px-8 py-6 text-lg group hover:scale-110 transition-all duration-300 animate-bounce"
             >
               Book a Consultation
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </Button>
           </Link>
         </div>
