@@ -1,8 +1,6 @@
 
-import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
 import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
 import { Drawer, DrawerContent, DrawerTrigger } from './ui/drawer';
 import { useMediaQuery } from '@/hooks/use-mobile';
@@ -21,53 +19,37 @@ const HeroSection = () => {
     
     return () => clearTimeout(timer);
   }, []);
-  
-  const scrollToBooking = () => {
-    const bookingSection = document.getElementById('booking');
-    if (bookingSection) {
-      bookingSection.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  };
-  
-  const scrollToServices = () => {
-    const servicesSection = document.getElementById('services');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  };
 
-  const openCalendlyNewTab = () => {
-    window.open(calendlyUrl, '_blank');
-  };
-  
-  return <section id="home" className="relative min-h-screen flex items-center justify-center pt-40 pb-16 px-4 md:px-8 overflow-hidden bg-[#e8f0fe]">
-      {/* Gradient Background - Updated with smooth transition to white */}
+  return (
+    <section id="home" className="relative min-h-screen flex items-center justify-center pt-40 pb-16 px-4 md:px-8 overflow-hidden bg-[#e8f0fe]">
+      {/* Gradient Background - Smooth transition to white */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[#e8f0fe] via-[#e8f0fe] to-white"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center">
-        <div className="text-center lg:text-left w-full mb-10 lg:mb-0">
+      <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center">
+        <div className="w-full mb-10">
           <h1 
-            className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-montserrat transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+            className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-poppins transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
           >
             <span className="text-[#5271FF]">Make your work </span>
             <span className="text-slate-950">effortless</span>
             <span className="text-[#5271FF]"> with AI solutions</span>
           </h1>
           
-          <p className={`mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto lg:mx-0 transition-all duration-1000 delay-300 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <p className={`mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto transition-all duration-1000 delay-300 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             Leverage AI technology to automate processes and transform your business operations.
           </p>
           
-          <div className={`mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 transition-all duration-1000 delay-500 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className={`mt-10 flex justify-center transition-all duration-1000 delay-500 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             {isMobile ? <Drawer>
                 <DrawerTrigger asChild>
-                  <Button className={cn("bg-[#5271FF] text-white hover:bg-[#3A5BFF]", "rounded-full px-8 py-6 text-lg transition-all duration-300", "group relative overflow-hidden hover:shadow-lg")}>
+                  <Button className={cn(
+                    "bg-[#5271FF] text-white hover:bg-[#3A5BFF]", 
+                    "rounded-full px-8 py-6 text-lg transition-all duration-300", 
+                    "group relative overflow-hidden hover:shadow-lg",
+                    "animate-pulse-subtle"
+                  )}>
                     <span className="relative z-10">Let's Talk</span>
                     <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   </Button>
@@ -79,7 +61,12 @@ const HeroSection = () => {
                 </DrawerContent>
               </Drawer> : <Dialog>
                 <DialogTrigger asChild>
-                  <Button className={cn("bg-[#5271FF] text-white hover:bg-[#3A5BFF]", "rounded-full px-8 py-6 text-lg transition-all duration-300", "group relative overflow-hidden hover:shadow-lg")}>
+                  <Button className={cn(
+                    "bg-[#5271FF] text-white hover:bg-[#3A5BFF]", 
+                    "rounded-full px-8 py-6 text-lg transition-all duration-300", 
+                    "group relative overflow-hidden hover:shadow-lg",
+                    "animate-pulse-subtle"
+                  )}>
                     <span className="relative z-10">Let's Talk</span>
                     <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   </Button>
@@ -88,17 +75,11 @@ const HeroSection = () => {
                   <CalendlyEmbed url={calendlyUrl} className="h-[85vh]" />
                 </DialogContent>
               </Dialog>}
-            
-            <Link to="/services">
-              <Button variant="outline" className="rounded-full border-[#5271FF] text-[#5271FF] hover:bg-[#5271FF]/10 px-8 py-6 text-lg group">
-                Our Services
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 
 export default HeroSection;

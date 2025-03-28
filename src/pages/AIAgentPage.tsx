@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import CTABanner from '@/components/CTABanner';
 
 const AIAgentPage = () => {
   const benefits = [
@@ -132,21 +133,11 @@ const AIAgentPage = () => {
         </div>
       </section>
       
-      {/* CTA Section */}
-      <section className="py-20 px-4 md:px-8 bg-agency-blue text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Ready to Build Your Custom AI Agent?</h2>
-          <p className="text-xl opacity-90 mb-8">
-            Let's discuss how a tailored AI solution can transform your customer interactions.
-          </p>
-          <Link to="/booking">
-            <Button className="bg-white text-agency-blue hover:bg-gray-100 px-8 py-6 text-lg">
-              Book Your Free Consultation
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </Link>
-        </div>
-      </section>
+      {/* CTA Banner */}
+      <CTABanner 
+        title="Ready to Build Your Custom AI Agent?" 
+        description="Let's discuss how a tailored AI solution can transform your customer interactions."
+      />
       
       <Footer />
     </div>

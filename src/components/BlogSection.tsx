@@ -1,107 +1,96 @@
 
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
-import { cn } from '@/lib/utils';
 import { Link } from 'react-router-dom';
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "Unlocking Business Potential: The Revolution of AI Automation",
-    excerpt: "Discover how AI-powered automation tools are transforming business operations and creating new opportunities for growth and innovation.",
-    category: "AI Automation",
-    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-    link: "/blog/automation-tools"
-  },
-  {
-    id: 2,
-    title: "AI Agents: Revolutionizing Business Intelligence",
-    excerpt: "Explore how AI agents are becoming essential tools for business intelligence, providing insights and capabilities that were previously unimaginable.",
-    category: "AI Agents",
-    imageUrl: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-    link: "/blog/ai-agents"
-  },
-  {
-    id: 3,
-    title: "Intelligent Growth: AI Solutions That Empower Every Business",
-    excerpt: "Learn how AI solutions are empowering businesses of all sizes to grow more efficiently and effectively in today's competitive landscape.",
-    category: "AI Solutions",
-    imageUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
-    link: "/blog/intelligent-growth"
-  }
-];
+const BlogSection = ({ showViewAllButton = true }) => {
+  const blogPosts = [
+    {
+      id: 1,
+      title: "Top 5 AI Automation Tools for Businesses in 2025",
+      description: "Discover the most effective AI automation tools that are transforming business operations and driving efficiency.",
+      imageUrl: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+      date: "Apr 15, 2025",
+      readTime: "5 min read",
+      slug: "automation-tools"
+    },
+    {
+      id: 2,
+      title: "How AI Agents are Revolutionizing Customer Service",
+      description: "Learn how intelligent AI agents are providing 24/7 support and transforming the customer experience landscape.",
+      imageUrl: "https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+      date: "Mar 28, 2025",
+      readTime: "6 min read",
+      slug: "ai-agents"
+    },
+    {
+      id: 3,
+      title: "The Future of Business Growth: AI-Driven Intelligence",
+      description: "Explore how AI-powered analytics and insights are enabling businesses to make smarter decisions and achieve sustainable growth.",
+      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+      date: "Mar 10, 2025",
+      readTime: "8 min read",
+      slug: "intelligent-growth"
+    }
+  ];
 
-const BlogSection = () => {
   return (
     <section id="blog" className="py-20 px-4 md:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
+          <span className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
             OUR BLOG
+          </span>
+          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6 font-poppins">
+            Latest Articles
           </h2>
-          <h3 className="text-3xl md:text-4xl font-medium text-gray-900 mb-6 font-poppins">
-            Latest Insights on AI and Automation
-          </h3>
-          <p className="max-w-2xl mx-auto text-gray-600">
-            Stay updated with the latest trends, best practices, and success stories in AI implementation and business automation.
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            Insights, strategies, and case studies on how AI is transforming businesses across industries.
           </p>
         </div>
 
         {/* Blog Posts Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {blogPosts.map((post) => (
-            <Link to={post.link} key={post.id} className="block">
-              <div 
-                className={cn(
-                  "group rounded-xl overflow-hidden transition-all duration-300",
-                  "bg-white border border-gray-200 hover:border-agency-blue/30",
-                  "hover:shadow-xl hover:shadow-agency-blue/10"
-                )}
-              >
-                {/* Image Container */}
-                <div className="relative h-52 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
-                  <div 
-                    className="absolute inset-0 bg-cover bg-center transform transition-transform duration-700 group-hover:scale-110"
-                    style={{ backgroundImage: `url(${post.imageUrl})` }}
-                  ></div>
-                  <div className="absolute bottom-4 left-4 z-20">
-                    <span className="px-3 py-1 text-xs font-medium bg-agency-blue text-white rounded-full">
-                      {post.category}
-                    </span>
-                  </div>
+            <div key={post.id} className="group">
+              <Link to={`/blog/${post.slug}`} className="block">
+                <div className="overflow-hidden rounded-xl mb-5">
+                  <img 
+                    src={post.imageUrl}
+                    alt={post.title}
+                    className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
-                
-                {/* Content */}
-                <div className="p-6">
-                  <h4 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-agency-blue transition-colors font-poppins">
-                    {post.title}
-                  </h4>
-                  <p className="text-gray-600 mb-5">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center text-agency-blue font-medium font-poppins">
-                    Read More <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                </div>
+              </Link>
+              <div className="flex items-center text-sm text-gray-500 mb-3">
+                <span>{post.date}</span>
+                <span className="mx-2">•</span>
+                <span>{post.readTime}</span>
               </div>
-            </Link>
+              <Link to={`/blog/${post.slug}`} className="block group-hover:text-agency-blue">
+                <h3 className="text-xl font-semibold mb-3 font-poppins">{post.title}</h3>
+              </Link>
+              <p className="text-gray-600 mb-4 line-clamp-2">{post.description}</p>
+              <Link to={`/blog/${post.slug}`} className="inline-flex items-center text-agency-blue font-medium">
+                Read More
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
           ))}
         </div>
-        
-        {/* View All Button */}
-        <div className="text-center mt-12">
-          <Link to="/blog">
-            <Button 
-              variant="outline" 
-              className="rounded-full border-agency-blue text-agency-blue hover:bg-agency-blue hover:text-white px-8 py-6 text-lg font-poppins"
-            >
-              View All Articles
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </Link>
-        </div>
+
+        {/* View All Button - Only show if showViewAllButton is true */}
+        {showViewAllButton && (
+          <div className="text-center">
+            <Link to="/blog">
+              <Button variant="outline" className="border-agency-blue text-agency-blue hover:bg-agency-blue/10 px-8 py-6 rounded-full text-lg">
+                View All Articles
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );

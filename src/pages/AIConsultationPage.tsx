@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2, Clock, FileText, Lightbulb } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
+import CTABanner from '@/components/CTABanner';
 
 const AIConsultationPage = () => {
   const processSteps = [
@@ -122,21 +123,11 @@ const AIConsultationPage = () => {
         </div>
       </section>
       
-      {/* CTA Section */}
-      <section className="py-20 px-4 md:px-8 bg-agency-blue/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Start Your AI Journey?</h2>
-          <p className="text-xl text-gray-700 mb-8">
-            Book a free 30-minute consultation to discuss your business needs and explore AI opportunities.
-          </p>
-          <Link to="/booking">
-            <Button className="bg-agency-blue text-white hover:bg-agency-blue/90 px-8 py-6 text-lg">
-              Book Your Free Consultation
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </Link>
-        </div>
-      </section>
+      {/* CTA Banner */}
+      <CTABanner 
+        title="Ready to Start Your AI Journey?" 
+        description="Book a free 30-minute consultation to discuss your business needs and explore AI opportunities."
+      />
       
       <Footer />
     </div>

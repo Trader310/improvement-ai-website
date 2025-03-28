@@ -66,7 +66,7 @@ const Index = () => {
       </div>
       
       <AnimateOnScroll animation="slide-in-bottom" delay={100}>
-        <BlogSection />
+        <BlogSection showViewAllButton={true} />
       </AnimateOnScroll>
       
       <AnimateOnScroll animation="slide-in-bottom" delay={100}>
