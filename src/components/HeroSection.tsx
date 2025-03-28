@@ -30,7 +30,7 @@ const HeroSection = () => {
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center">
         <div className="w-full mb-10">
           <h1 
-            className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-poppins transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+            className={`text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-montserrat transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
           >
             <span className="text-[#5271FF]">Make your work </span>
             <span className="text-slate-950">effortless</span>

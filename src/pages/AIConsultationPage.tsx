@@ -123,10 +123,11 @@ const AIConsultationPage = () => {
         </div>
       </section>
       
-      {/* CTA Banner */}
+      {/* CTA Banner with a different variant */}
       <CTABanner 
         title="Ready to Start Your AI Journey?" 
         description="Book a free 30-minute consultation to discuss your business needs and explore AI opportunities."
+        variant="consultation"
       />
       
       <Footer />

@@ -133,10 +133,11 @@ const AIAgentPage = () => {
         </div>
       </section>
       
-      {/* CTA Banner */}
+      {/* CTA Banner with enhanced gradient */}
       <CTABanner 
         title="Ready to Build Your Custom AI Agent?" 
         description="Let's discuss how a tailored AI solution can transform your customer interactions."
+        variant="agent"
       />
       
       <Footer />

@@ -97,10 +97,11 @@ const AIImplementationPage = () => {
         </div>
       </section>
       
-      {/* CTA Banner */}
+      {/* CTA Banner with enhanced gradient */}
       <CTABanner 
         title="Ready to Transform Your Business with AI?" 
         description="Let's discuss how AI implementation can streamline your operations and drive growth."
+        variant="implementation"
       />
       
       <Footer />
