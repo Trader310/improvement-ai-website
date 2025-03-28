@@ -16,7 +16,7 @@ const BlogSection = ({ showViewAllButton = true }) => {
       id: 2,
       title: "AI Agents: Revolutionizing Business Intelligence",
       description: "Explore how AI agents are becoming essential tools for business intelligence, providing insights and capabilities that were previously unimaginable.",
-      imageUrl: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
       category: "AI Agents",
       slug: "ai-agents"
     },
