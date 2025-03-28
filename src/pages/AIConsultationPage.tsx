@@ -108,21 +108,6 @@ const AIConsultationPage = () => {
         </div>
       </section>
       
-      {/* Testimonial Section */}
-      <section className="py-20 px-4 md:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-agency-blue p-8 md:p-12 rounded-2xl text-white">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-3xl font-bold mb-8">What Our Clients Say</h2>
-              <blockquote className="text-2xl italic mb-8">
-                "We needed a smarter way to qualify leads, and their AI agent nailed it. It filters and prioritizes prospects automatically, saving our sales team hours every day."
-              </blockquote>
-              <p className="font-medium">- Sales Director, Tech Startup</p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
       {/* CTA Banner with a different variant */}
       <CTABanner 
         title="Ready to Start Your AI Journey?" 
@@ -130,7 +115,7 @@ const AIConsultationPage = () => {
         variant="consultation"
       />
       
-      <Footer />
+      <Footer className="bg-gradient-to-r from-[#4d76fd]/90 via-[#6a8fff] to-[#88a8ff]" />
     </div>
   );
 };

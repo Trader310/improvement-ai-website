@@ -140,7 +140,7 @@ const AIAgentPage = () => {
         variant="agent"
       />
       
-      <Footer />
+      <Footer className="bg-gradient-to-r from-[#1133cc]/90 via-[#3a5bff] to-[#8aa3ff]" />
     </div>
   );
 };

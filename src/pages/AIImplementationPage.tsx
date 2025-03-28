@@ -41,7 +41,7 @@ const AIImplementationPage = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-poppins">
                 AI Implementation & <span className="text-agency-blue">Automation</span>
               </h1>
               <p className="text-xl text-gray-700 mb-8">
@@ -104,7 +104,7 @@ const AIImplementationPage = () => {
         variant="implementation"
       />
       
-      <Footer />
+      <Footer className="bg-gradient-to-r from-[#2a46db]/90 via-[#3a5bff] to-[#7a92ff]" />
     </div>
   );
 };
