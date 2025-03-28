@@ -98,14 +98,14 @@ const BlogPost2 = () => {
           </div>
         </article>
         
-        {/* Call to Action */}
+        {/* Call to Action - Updated with subtle pulse animation */}
         <div className="max-w-3xl mx-auto mt-16 text-center">
           <Link to="/booking">
             <Button 
               variant="outline" 
-              className="bg-white text-[#5271FF] hover:bg-[#5271FF]/5 border-[#5271FF] rounded-full px-8 py-6 text-lg group hover:scale-110 transition-all duration-300 animate-pulse"
+              className="bg-white text-[#5271FF] hover:bg-[#5271FF]/5 border-[#5271FF] rounded-full px-8 py-6 text-lg group hover:scale-105 transition-all duration-300"
             >
-              Book a Consultation
+              <span className="animate-pulse-subtle">Book a Consultation</span>
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </Button>
           </Link>
