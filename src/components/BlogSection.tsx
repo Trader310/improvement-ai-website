@@ -16,7 +16,7 @@ const BlogSection = ({ showViewAllButton = true }) => {
       id: 2,
       title: "AI Agents: Revolutionizing Business Intelligence",
       description: "Explore how AI agents are becoming essential tools for business intelligence, providing insights and capabilities that were previously unimaginable.",
-      imageUrl: "/lovable-uploads/080bff78-d351-464e-9143-658300f6597e.png",
+      imageUrl: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
       category: "AI Agents",
       slug: "ai-agents"
     },
@@ -24,7 +24,7 @@ const BlogSection = ({ showViewAllButton = true }) => {
       id: 3,
       title: "Intelligent Growth: AI Solutions That Empower Every Business",
       description: "Learn how AI solutions are empowering businesses of all sizes to grow more efficiently and effectively in today's competitive landscape.",
-      imageUrl: "/lovable-uploads/6a9db782-c347-4b71-a1b5-87d67d0ff962.png",
+      imageUrl: "https://images.unsplash.com/photo-1679403766669-95b5b0a18718?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80",
       category: "AI Solutions",
       slug: "intelligent-growth"
     }
