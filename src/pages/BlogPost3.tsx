@@ -128,15 +128,16 @@ const BlogPost3 = () => {
           </div>
         </article>
         
-        {/* Call to Action - Updated with the same animation as "Let's Connect" button */}
+        {/* Call to Action - Updated with enhanced animation */}
         <div className="max-w-3xl mx-auto mt-16 text-center">
           <Link to="/booking">
             <Button 
               variant="outline" 
-              className="bg-white text-[#5271FF] hover:bg-[#5271FF]/5 border-[#5271FF] rounded-full px-8 py-6 text-lg group hover:scale-105 transition-all duration-300"
+              className="bg-white text-[#5271FF] hover:bg-[#5271FF]/5 border-[#5271FF] rounded-full px-8 py-6 text-lg group transition-all duration-300 animate-pulse-subtle hover:shadow-lg relative overflow-hidden"
             >
-              <span className="animate-pulse-subtle">Book a Consultation</span>
+              <span className="relative z-10">Book a Consultation</span>
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-2 transition-transform" />
+              <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF]/10 to-[#3A5BFF]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </Button>
           </Link>
         </div>

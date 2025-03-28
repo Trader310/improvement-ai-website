@@ -11,64 +11,83 @@ const HeroSection = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
   const calendlyUrl = 'https://calendly.com/dropstrader/improvement-ai-consultation';
   const [isVisible, setIsVisible] = useState(false);
-  const [typedText1, setTypedText1] = useState("");
-  const [typedText2, setTypedText2] = useState("");
-  const [typedText3, setTypedText3] = useState("");
-  const [typingComplete, setTypingComplete] = useState(false);
+  const [typedText, setTypedText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [showCursor, setShowCursor] = useState(true);
+  const [textComplete, setTextComplete] = useState(false);
+  
+  // The phrases that will be animated
+  const phrases = [
+    "Make your work effortless with AI solutions",
+    "Transform your business with intelligent automation", 
+    "Elevate productivity with AI-powered tools"
+  ];
   
   useEffect(() => {
+    // Show the hero section with a fade-in effect
     const timer = setTimeout(() => {
       setIsVisible(true);
     }, 300);
     
-    // Text typing animation for the three parts of the header
-    const text1 = "Make your work ";
-    const text2 = "effortless";
-    const text3 = " with AI solutions";
+    // Text animation with typewriter effect and rotating phrases
+    let typingInterval;
+    let cursorInterval;
     
-    let i = 0, j = 0, k = 0;
+    // Cursor blinking animation
+    cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
     
-    // First part typing
-    const typeText1 = () => {
-      if (i < text1.length) {
-        setTypedText1(prev => prev + text1.charAt(i));
-        i++;
-        setTimeout(typeText1, 80);
-      } else {
-        // Start second part after first completes
-        setTimeout(typeText2, 100);
-      }
+    // Typing animation function
+    const typeText = () => {
+      const currentPhrase = phrases[currentIndex];
+      
+      typingInterval = setInterval(() => {
+        setTypedText(prev => {
+          if (prev.length < currentPhrase.length) {
+            return currentPhrase.substring(0, prev.length + 1);
+          } else {
+            clearInterval(typingInterval);
+            
+            // Wait and then clear the text to start the next phrase
+            setTimeout(() => {
+              // Erase text function
+              const eraseInterval = setInterval(() => {
+                setTypedText(prev => {
+                  if (prev.length > 0) {
+                    return prev.substring(0, prev.length - 1);
+                  } else {
+                    clearInterval(eraseInterval);
+                    
+                    // Move to next phrase after erasing
+                    setCurrentIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+                    
+                    // Start typing again after a pause
+                    setTimeout(typeText, 500);
+                    return "";
+                  }
+                });
+              }, 30);
+            }, 2000);
+            
+            return prev;
+          }
+        });
+      }, 80);
     };
     
-    // Second part typing
-    const typeText2 = () => {
-      if (j < text2.length) {
-        setTypedText2(prev => prev + text2.charAt(j));
-        j++;
-        setTimeout(typeText2, 80);
-      } else {
-        // Start third part after second completes
-        setTimeout(typeText3, 100);
-      }
+    // Start the typing effect
+    setTimeout(() => {
+      typeText();
+      setTimeout(() => setTextComplete(true), 2000);
+    }, 500);
+    
+    return () => {
+      clearTimeout(timer);
+      clearInterval(typingInterval);
+      clearInterval(cursorInterval);
     };
-    
-    // Third part typing
-    const typeText3 = () => {
-      if (k < text3.length) {
-        setTypedText3(prev => prev + text3.charAt(k));
-        k++;
-        setTimeout(typeText3, 80);
-      } else {
-        // Mark typing as complete
-        setTypingComplete(true);
-      }
-    };
-    
-    // Start the sequence
-    setTimeout(typeText1, 800);
-    
-    return () => clearTimeout(timer);
-  }, []);
+  }, [currentIndex]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-40 pb-16 px-4 md:px-8 overflow-hidden bg-[#e8f0fe]">
@@ -79,17 +98,18 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center">
         <div className="w-full mb-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-montserrat">
-            <span className="text-[#5271FF] inline-block min-h-[1.5em]">{typedText1}</span>
-            <span className="text-slate-950 inline-block min-h-[1.5em]">{typedText2}</span>
-            <span className="text-[#5271FF] inline-block min-h-[1.5em]">{typedText3}</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-montserrat text-[#5271FF]">
+            <span className="inline-block min-h-[3em] md:min-h-[2em]">
+              {typedText}
+              <span className={`text-slate-950 ${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>
+            </span>
           </h1>
           
-          <p className={`mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto transition-all duration-1000 delay-300 ease-out transform ${typingComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <p className={`mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto transition-all duration-1000 delay-300 ease-out transform ${textComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             Leverage AI technology to automate processes and transform your business operations.
           </p>
           
-          <div className={`mt-10 flex justify-center transition-all duration-1000 delay-500 ease-out transform ${typingComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className={`mt-10 flex justify-center transition-all duration-1000 delay-500 ease-out transform ${textComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             {isMobile ? <Drawer>
                 <DrawerTrigger asChild>
                   <Button className={cn(
