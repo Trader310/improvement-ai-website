@@ -57,7 +57,7 @@ const HeroSection = () => {
           </h1>
           
           <p className={`mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto transition-all duration-1000 delay-300 ease-out transform ${textComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            Leverage intelligent AI technology to automate processes, enhance productivity, and transform your business operations for optimal performance.
+            Use intelligent AI to automate processes, boost productivity, and transform your business operations for peak performance.
           </p>
           
           <div className={`mt-10 flex justify-center transition-all duration-1000 delay-500 ease-out transform ${textComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
