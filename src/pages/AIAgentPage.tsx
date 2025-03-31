@@ -47,10 +47,10 @@ const AIAgentPage = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-montserrat">
+              <h1 className="text-4xl md:text-5xl font-poppins text-gray-900 mb-6">
                 AI Agent <span className="text-agency-blue">Development</span>
               </h1>
-              <p className="text-xl text-gray-700 mb-8">
+              <p className="text-xl text-gray-700 mb-8 font-poppins">
                 Custom intelligent AI assistants that deeply understand your business context, engage with customers naturally, and drive measurable improvements in conversion rates, customer satisfaction, and revenue growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
