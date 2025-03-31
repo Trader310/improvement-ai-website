@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -47,7 +46,7 @@ const AIAgentPage = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-poppins text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-5xl font-poppins font-semibold text-gray-900 mb-6">
                 AI Agent <span className="text-agency-blue">Development</span>
               </h1>
               <p className="text-xl text-gray-700 mb-8 font-poppins">

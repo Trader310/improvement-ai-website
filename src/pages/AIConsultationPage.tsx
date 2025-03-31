@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -51,10 +50,10 @@ const AIConsultationPage = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl md:text-5xl font-poppins font-semibold text-gray-900 mb-6">
                 AI <span className="text-agency-blue">Consultation</span> Services
               </h1>
-              <p className="text-xl text-gray-700 mb-8">
+              <p className="text-xl text-gray-700 mb-8 font-poppins">
                 Strategic guidance from experienced AI experts who evaluate your specific business challenges and develop tailored AI solutions that align perfectly with your growth objectives and technical infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
