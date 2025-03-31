@@ -47,10 +47,10 @@ const AIImplementationPage = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-poppins">
+              <h1 className="text-4xl md:text-5xl font-poppins text-gray-900 mb-6">
                 AI Implementation & <span className="text-agency-blue">Automation</span>
               </h1>
-              <p className="text-xl text-gray-700 mb-8">
+              <p className="text-xl text-gray-700 mb-8 font-poppins">
                 Seamlessly integrate advanced AI technologies into your existing systems to automate repetitive tasks, optimize complex workflows, and make data-driven decisions with unprecedented speed and accuracy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
