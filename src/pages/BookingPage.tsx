@@ -3,12 +3,20 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CalendlyEmbed from '@/components/CalendlyEmbed';
 import { Clock, Calendar, Users } from 'lucide-react';
+import SEOMetaTags from '@/components/SEOMetaTags';
 
 const BookingPage = () => {
   const calendlyUrl = 'https://calendly.com/dropstrader/improvement-ai-consultation';
   
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#f8faff] to-white overflow-x-hidden">
+      <SEOMetaTags 
+        title="Book Your AI Consultation | IMPROVEMENT AI"
+        description="Schedule a free consultation with IMPROVEMENT AI's experts to discuss how artificial intelligence can transform your business operations and drive growth."
+        keywords="AI consultation, book AI meeting, artificial intelligence expert consultation, AI business transformation, free AI consultation, business automation consultation"
+        canonicalUrl="https://improvementai.com/booking"
+      />
+      
       <Header />
       <div className="pt-24 pb-20 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">

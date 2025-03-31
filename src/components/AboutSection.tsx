@@ -67,7 +67,7 @@ const AboutSection = () => {
             
             <div className="text-gray-600 space-y-4 mb-8">
               <p>
-                At Morningside AI, we believe in the transformative power of artificial intelligence to revolutionize how businesses operate. Our team of AI experts combines deep technical knowledge with practical business experience to deliver solutions that drive real results.
+                At IMPROVEMENT AI, we believe in the transformative power of artificial intelligence to revolutionize how businesses operate. Our team of AI experts combines deep technical knowledge with practical business experience to deliver solutions that drive real results.
               </p>
               <p>
                 We don't just implement technology – we partner with you to understand your unique challenges and create custom AI solutions that align perfectly with your business objectives.

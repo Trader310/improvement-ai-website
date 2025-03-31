@@ -10,7 +10,9 @@ const AboutPage = () => {
       <Helmet>
         <title>About Our AI Automation Experts | IMPROVEMENT AI</title>
         <meta name="description" content="Learn about IMPROVEMENT AI's expert team of AI automation specialists dedicated to transforming your business processes with intelligent AI solutions." />
-        <meta name="keywords" content="AI automation experts, business process automation, AI consultation, intelligent automation, AI technology solutions" />
+        <meta name="keywords" content="AI automation experts, business process automation, AI consultation, intelligent automation, AI technology solutions, artificial intelligence specialists, business transformation, digital workflow optimization" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://improvementai.com/about" />
       </Helmet>
       <Header />
       <div className="pt-24">
