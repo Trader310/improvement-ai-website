@@ -5,34 +5,40 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import CTABanner from '@/components/CTABanner';
+import { Helmet } from 'react-helmet-async';
 
 const AIImplementationPage = () => {
   const benefits = [
-    "Automate repetitive tasks and processes",
-    "Integrate AI with your existing systems",
-    "Increase operational efficiency by up to 40%",
-    "Reduce manual errors and improve accuracy",
-    "Scale operations without increasing headcount",
-    "Customize solutions to your specific business needs"
+    "Automate repetitive tasks and streamline complex business processes",
+    "Seamlessly integrate AI solutions with your existing business systems",
+    "Increase operational efficiency and productivity by up to 40%",
+    "Dramatically reduce manual errors and improve data accuracy",
+    "Scale operations intelligently without increasing workforce overhead",
+    "Implement customized AI solutions tailored to your specific business requirements"
   ];
 
   const useCases = [
     {
-      title: "Document Processing",
-      description: "Automatically extract, classify, and process information from invoices, receipts, and contracts."
+      title: "Intelligent Document Processing",
+      description: "Automatically extract, classify, and process critical information from invoices, receipts, contracts and other business documents with high accuracy."
     },
     {
-      title: "Customer Data Analysis",
-      description: "Analyze customer behavior patterns to identify trends, preferences, and potential opportunities."
+      title: "Advanced Customer Data Analysis",
+      description: "Leverage AI to analyze customer behavior patterns, identifying valuable trends, preferences, and potential growth opportunities."
     },
     {
-      title: "Workflow Automation",
-      description: "Create intelligent workflows that adapt and improve based on real-time data and feedback."
+      title: "Smart Workflow Automation",
+      description: "Implement intelligent workflows that continuously adapt and improve based on real-time data inputs and feedback mechanisms."
     }
   ];
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
+      <Helmet>
+        <title>AI Implementation & Automation Services | IMPROVEMENT AI</title>
+        <meta name="description" content="Transform your business with our expert AI implementation and automation services. Streamline processes, reduce costs, and boost efficiency with customized AI solutions." />
+        <meta name="keywords" content="AI implementation, business automation, workflow optimization, intelligent document processing, AI integration, business efficiency" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}
@@ -45,7 +51,7 @@ const AIImplementationPage = () => {
                 AI Implementation & <span className="text-agency-blue">Automation</span>
               </h1>
               <p className="text-xl text-gray-700 mb-8">
-                Seamlessly integrate AI into your existing systems to automate repetitive tasks, optimize workflows, and make data-driven decisions with unprecedented speed and accuracy.
+                Seamlessly integrate advanced AI technologies into your existing systems to automate repetitive tasks, optimize complex workflows, and make data-driven decisions with unprecedented speed and accuracy.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/booking">
@@ -59,7 +65,7 @@ const AIImplementationPage = () => {
             <div className="rounded-xl overflow-hidden shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-                alt="AI Implementation & Automation"
+                alt="AI Implementation & Automation Solutions"
                 className="w-full h-auto"
               />
             </div>
@@ -85,7 +91,7 @@ const AIImplementationPage = () => {
       {/* Use Cases Section */}
       <section className="py-20 px-4 md:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Common Use Cases</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Strategic AI Implementation Use Cases</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-md">
@@ -99,8 +105,8 @@ const AIImplementationPage = () => {
       
       {/* CTA Banner with enhanced gradient */}
       <CTABanner 
-        title="Ready to Transform Your Business with AI?" 
-        description="Let's discuss how AI implementation can streamline your operations and drive growth."
+        title="Ready to Transform Your Business with AI Automation?" 
+        description="Let's discuss how our AI implementation services can streamline your operations and drive sustainable business growth."
         variant="implementation"
       />
       

@@ -10,6 +10,7 @@ import BookingSection from '@/components/BookingSection';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import AnimateOnScroll from '@/components/AnimateOnScroll';
+import { Helmet } from 'react-helmet-async';
 
 const Index = () => {
   // Enhanced Intersection Observer for smooth scroll animations
@@ -47,6 +48,11 @@ const Index = () => {
 
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <Helmet>
+        <title>IMPROVEMENT AI | AI Automation & Implementation Solutions</title>
+        <meta name="description" content="Transform your business with AI automation, custom AI agents, and strategic implementation services that boost efficiency and drive sustainable growth." />
+        <meta name="keywords" content="AI automation, business process optimization, artificial intelligence solutions, AI implementation, AI agents, workflow automation" />
+      </Helmet>
       <Header />
       
       <div className="bg-[#e8f0fe]">

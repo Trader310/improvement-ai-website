@@ -12,6 +12,9 @@ const HeroSection = () => {
   const calendlyUrl = 'https://calendly.com/dropstrader/improvement-ai-consultation';
   const [isVisible, setIsVisible] = useState(false);
   const [textComplete, setTextComplete] = useState(false);
+  const [heading1Visible, setHeading1Visible] = useState(false);
+  const [heading2Visible, setHeading2Visible] = useState(false);
+  const [heading3Visible, setHeading3Visible] = useState(false);
   
   useEffect(() => {
     // Show the hero section with a fade-in effect
@@ -19,8 +22,13 @@ const HeroSection = () => {
       setIsVisible(true);
     }, 300);
     
-    // Set text complete for animations that depend on it
-    setTimeout(() => setTextComplete(true), 500);
+    // Staged animation for hero text elements
+    setTimeout(() => setHeading1Visible(true), 500);
+    setTimeout(() => setHeading2Visible(true), 800);
+    setTimeout(() => setHeading3Visible(true), 1100);
+    
+    // Set text complete for description and button animations
+    setTimeout(() => setTextComplete(true), 1400);
     
     return () => {
       clearTimeout(timer);
@@ -36,12 +44,20 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center text-center">
         <div className="w-full mb-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-montserrat text-[#5271FF]">
-            Make your work <span className="text-black">effortless</span> with AI solutions
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-tight lg:leading-tight tracking-wide font-montserrat overflow-hidden">
+            <span className={`text-[#5271FF] inline-block transition-transform duration-700 ease-out ${heading1Visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+              Make your work 
+            </span>{" "}
+            <span className={`text-black inline-block transition-transform duration-700 ease-out ${heading2Visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+              effortless
+            </span>{" "}
+            <span className={`text-[#5271FF] inline-block transition-transform duration-700 ease-out ${heading3Visible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+              with AI solutions
+            </span>
           </h1>
           
           <p className={`mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto transition-all duration-1000 delay-300 ease-out transform ${textComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            Leverage AI technology to automate processes and transform your business operations.
+            Leverage intelligent AI technology to automate processes, enhance productivity, and transform your business operations for optimal performance.
           </p>
           
           <div className={`mt-10 flex justify-center transition-all duration-1000 delay-500 ease-out transform ${textComplete ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>

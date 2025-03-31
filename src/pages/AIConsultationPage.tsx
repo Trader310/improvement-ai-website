@@ -6,37 +6,43 @@ import { ArrowRight, CheckCircle2, Clock, FileText, Lightbulb } from 'lucide-rea
 import { Link } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
 import CTABanner from '@/components/CTABanner';
+import { Helmet } from 'react-helmet-async';
 
 const AIConsultationPage = () => {
   const processSteps = [
     {
       icon: <FileText className="h-8 w-8 text-agency-blue" />,
-      title: "Discovery",
-      description: "We assess your current operations, identify pain points, and understand your business goals."
+      title: "Comprehensive Discovery",
+      description: "We thoroughly assess your current operations, identify process inefficiencies, and understand your strategic business objectives."
     },
     {
       icon: <Lightbulb className="h-8 w-8 text-agency-blue" />,
-      title: "Strategy Development",
-      description: "We create a customized AI implementation plan tailored to your specific needs and objectives."
+      title: "AI Strategy Development",
+      description: "We create a customized AI implementation roadmap precisely tailored to your specific business needs and growth objectives."
     },
     {
       icon: <Clock className="h-8 w-8 text-agency-blue" />,
-      title: "Implementation Roadmap",
-      description: "We provide a detailed timeline, resource requirements, and ROI projections for your AI transformation."
+      title: "Implementation Planning",
+      description: "We provide a detailed timeline, resource requirements, and projected ROI analysis for your AI transformation journey."
     }
   ];
 
   const benefits = [
-    "Expert guidance on AI technology selection",
-    "Unbiased recommendations tailored to your business",
-    "Clear implementation roadmap with timeline and costs",
-    "Identification of quick wins and long-term strategies",
-    "Risk assessment and mitigation planning",
-    "Training and change management recommendations"
+    "Expert guidance on selecting the optimal AI technologies for your business needs",
+    "Unbiased, vendor-neutral recommendations tailored to your specific industry challenges",
+    "Comprehensive implementation roadmap with clear timelines and cost projections",
+    "Strategic identification of quick-win opportunities and long-term AI adoption strategies",
+    "Thorough risk assessment and practical mitigation planning for smooth implementation",
+    "Customized training programs and change management recommendations for team adoption"
   ];
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
+      <Helmet>
+        <title>AI Consultation Services | Expert AI Strategy | IMPROVEMENT AI</title>
+        <meta name="description" content="Get expert AI consultation services to develop a strategic roadmap for implementing AI solutions that drive business growth and operational efficiency." />
+        <meta name="keywords" content="AI consultation, AI strategy development, artificial intelligence experts, business process optimization, AI transformation, technology consulting" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}
@@ -49,7 +55,7 @@ const AIConsultationPage = () => {
                 AI <span className="text-agency-blue">Consultation</span> Services
               </h1>
               <p className="text-xl text-gray-700 mb-8">
-                Strategic guidance from AI experts who evaluate your specific business needs and develop tailored AI solutions that align with your growth objectives and technical requirements.
+                Strategic guidance from experienced AI experts who evaluate your specific business challenges and develop tailored AI solutions that align perfectly with your growth objectives and technical infrastructure.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/booking">
@@ -63,7 +69,7 @@ const AIConsultationPage = () => {
             <div className="rounded-xl overflow-hidden shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-                alt="AI Consultation"
+                alt="Strategic AI Consultation Services"
                 className="w-full h-auto"
               />
             </div>
@@ -74,7 +80,7 @@ const AIConsultationPage = () => {
       {/* Process Section */}
       <section className="py-20 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Consultation Process</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Our Proven AI Consultation Process</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {processSteps.map((step, index) => (
               <Card key={index} className="border-none shadow-lg">
@@ -96,7 +102,7 @@ const AIConsultationPage = () => {
       {/* Benefits Section */}
       <section className="py-20 px-4 md:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Benefits of Our AI Consultation</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Strategic Benefits of Our AI Consultation</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start p-6 bg-white rounded-lg border border-gray-100 shadow-sm">
@@ -110,8 +116,8 @@ const AIConsultationPage = () => {
       
       {/* CTA Banner with a different variant */}
       <CTABanner 
-        title="Ready to Start Your AI Journey?" 
-        description="Book a free 30-minute consultation to discuss your business needs and explore AI opportunities."
+        title="Ready to Start Your AI Transformation Journey?" 
+        description="Book a free 30-minute strategic consultation to discuss your business challenges and explore tailored AI opportunities."
         variant="consultation"
       />
       

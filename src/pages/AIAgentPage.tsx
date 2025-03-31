@@ -5,34 +5,40 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import CTABanner from '@/components/CTABanner';
+import { Helmet } from 'react-helmet-async';
 
 const AIAgentPage = () => {
   const benefits = [
-    "Provide 24/7 customer support without human intervention",
-    "Reduce response time from hours to seconds",
-    "Handle multiple inquiries simultaneously",
-    "Maintain consistent quality in every interaction",
-    "Scale your customer service without hiring more staff",
-    "Generate valuable customer insights and analytics"
+    "Deliver seamless 24/7 customer support without human intervention",
+    "Dramatically reduce response times from hours to mere seconds",
+    "Efficiently handle multiple complex inquiries simultaneously",
+    "Maintain consistent quality and accuracy in every customer interaction",
+    "Strategically scale your customer service without expanding staff",
+    "Generate valuable customer insights and actionable analytics"
   ];
 
   const features = [
     {
-      title: "Natural Language Understanding",
-      description: "Our AI agents comprehend customer inquiries with human-like understanding, even with complex language and context."
+      title: "Advanced Natural Language Understanding",
+      description: "Our AI agents comprehend complex customer inquiries with human-like understanding, processing nuanced language and contextual information."
     },
     {
-      title: "Knowledge Integration",
-      description: "Seamlessly connects with your company's knowledge base to provide accurate, consistent information."
+      title: "Seamless Knowledge Integration",
+      description: "Intelligently connects with your company's knowledge base to provide accurate, consistent information across all customer touchpoints."
     },
     {
-      title: "Multi-channel Support",
-      description: "Works across your website, messaging apps, social media, and other communication channels."
+      title: "Omnichannel Support Capabilities",
+      description: "Works cohesively across your website, messaging platforms, social media channels, and other critical communication interfaces."
     }
   ];
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
+      <Helmet>
+        <title>Custom AI Agent Development | Intelligent Assistants | IMPROVEMENT AI</title>
+        <meta name="description" content="Build custom AI agents and virtual assistants that understand your business context and engage with customers naturally while improving conversion rates and satisfaction." />
+        <meta name="keywords" content="AI agents, virtual assistants, conversational AI, customer service automation, intelligent chatbots, natural language processing" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}
@@ -45,7 +51,7 @@ const AIAgentPage = () => {
                 AI Agent <span className="text-agency-blue">Development</span>
               </h1>
               <p className="text-xl text-gray-700 mb-8">
-                Custom AI assistants that understand your business context, engage with customers naturally, and drive measurable improvements in conversions, satisfaction, and revenue.
+                Custom intelligent AI assistants that deeply understand your business context, engage with customers naturally, and drive measurable improvements in conversion rates, customer satisfaction, and revenue growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/booking">
@@ -59,7 +65,7 @@ const AIAgentPage = () => {
             <div className="rounded-xl overflow-hidden shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80"
-                alt="AI Agent Development"
+                alt="Advanced AI Agent Development Solutions"
                 className="w-full h-auto"
               />
             </div>
@@ -70,7 +76,7 @@ const AIAgentPage = () => {
       {/* Benefits Section */}
       <section className="py-20 px-4 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Benefits of Custom AI Agents</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Strategic Benefits of Custom AI Agents</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start p-6 rounded-lg border border-gray-100 shadow-sm">
@@ -85,7 +91,7 @@ const AIAgentPage = () => {
       {/* Features Section */}
       <section className="py-20 px-4 md:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Key Features</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Key AI Agent Capabilities</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-md">
@@ -103,27 +109,27 @@ const AIAgentPage = () => {
           <div className="bg-agency-blue/5 p-8 md:p-12 rounded-2xl">
             <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="md:w-1/2">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Success Story</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Client Success Story</h2>
                 <blockquote className="text-lg text-gray-700 mb-6">
-                  "Their AI consultation was incredibly valuable. They quickly identified automation opportunities, and the custom AI agent they built now handles 70% of our inbound inquiries."
+                  "Their AI consultation was incredibly valuable. They quickly identified key automation opportunities, and the custom AI agent they developed now efficiently handles 70% of our inbound customer inquiries."
                 </blockquote>
-                <p className="font-medium text-agency-blue">- Marketing Director, SaaS Company</p>
+                <p className="font-medium text-agency-blue">- Senior Marketing Director, Leading SaaS Company</p>
               </div>
               <div className="md:w-1/2">
                 <div className="bg-white p-6 rounded-xl shadow-md">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">Results Achieved</h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Measurable Results Achieved</h3>
                   <ul className="space-y-3">
                     <li className="flex items-center">
                       <CheckCircle2 className="text-green-500 mr-3 flex-shrink-0" />
-                      <span>70% reduction in support ticket volume</span>
+                      <span>70% reduction in customer support ticket volume</span>
                     </li>
                     <li className="flex items-center">
                       <CheckCircle2 className="text-green-500 mr-3 flex-shrink-0" />
-                      <span>93% customer satisfaction rate</span>
+                      <span>93% customer satisfaction rating with AI interactions</span>
                     </li>
                     <li className="flex items-center">
                       <CheckCircle2 className="text-green-500 mr-3 flex-shrink-0" />
-                      <span>30% increase in lead conversion</span>
+                      <span>30% increase in qualified lead conversion rate</span>
                     </li>
                   </ul>
                 </div>
@@ -135,8 +141,8 @@ const AIAgentPage = () => {
       
       {/* CTA Banner with enhanced gradient */}
       <CTABanner 
-        title="Ready to Build Your Custom AI Agent?" 
-        description="Let's discuss how a tailored AI solution can transform your customer interactions."
+        title="Ready to Build Your Intelligent AI Agent Solution?" 
+        description="Let's discuss how a tailored AI agent can transform your customer interactions and drive business growth."
         variant="agent"
       />
       
