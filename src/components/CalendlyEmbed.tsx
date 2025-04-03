@@ -25,13 +25,17 @@ const CalendlyEmbed = ({
     script.async = true;
     document.body.appendChild(script);
 
-    // Add CSS to hide Calendly's internal scrollbar
+    // Add CSS to hide Calendly's internal scrollbar and adjust height
     const style = document.createElement('style');
     style.textContent = `
+      .calendly-inline-widget {
+        overflow: hidden !important;
+      }
       .calendly-inline-widget iframe {
         height: 100% !important;
-        min-height: 1000px !important;
+        min-height: 1200px !important;
         overflow: hidden !important;
+        border: none !important;
       }
       .calendly-inline-widget iframe::-webkit-scrollbar {
         display: none !important;
