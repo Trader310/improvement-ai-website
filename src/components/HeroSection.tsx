@@ -1,7 +1,7 @@
 
 import { Button } from './ui/button';
 import { cn } from '@/lib/utils';
-import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
+import { Dialog, DialogContent, DialogTitle, DialogTrigger, DialogDescription } from './ui/dialog';
 import { Drawer, DrawerContent, DrawerTrigger } from './ui/drawer';
 import { useMediaQuery } from '@/hooks/use-mobile';
 import CalendlyEmbed from './CalendlyEmbed';
@@ -73,7 +73,7 @@ const HeroSection = () => {
                     <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   </Button>
                 </DrawerTrigger>
-                <DrawerContent className="h-[90vh]">
+                <DrawerContent className="h-[90vh] overflow-y-auto">
                   <div className="px-4 pt-4">
                     <CalendlyEmbed url={calendlyUrl} className="h-[85vh]" />
                   </div>
@@ -90,7 +90,9 @@ const HeroSection = () => {
                     <span className="absolute inset-0 bg-gradient-to-r from-[#5271FF] to-[#3A5BFF] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   </Button>
                 </DialogTrigger>
-                <DialogContent className="max-w-4xl h-[90vh]">
+                <DialogContent className="max-w-4xl h-[90vh] overflow-y-auto">
+                  <DialogTitle className="sr-only">Schedule a Meeting</DialogTitle>
+                  <DialogDescription className="sr-only">Use the calendar to book a consultation</DialogDescription>
                   <CalendlyEmbed url={calendlyUrl} className="h-[85vh]" />
                 </DialogContent>
               </Dialog>}

@@ -29,21 +29,14 @@ const CalendlyEmbed = ({
     const style = document.createElement('style');
     style.textContent = `
       .calendly-inline-widget {
-        overflow: hidden !important;
+        overflow: visible !important;
+        height: 100% !important;
       }
       .calendly-inline-widget iframe {
         height: 100% !important;
         min-height: 1200px !important;
-        overflow: hidden !important;
+        overflow: visible !important;
         border: none !important;
-      }
-      .calendly-inline-widget iframe::-webkit-scrollbar {
-        display: none !important;
-        width: 0 !important;
-      }
-      .calendly-inline-widget iframe {
-        -ms-overflow-style: none !important;
-        scrollbar-width: none !important;
       }
       .calendly-spinner {
         display: none !important;
@@ -84,7 +77,7 @@ const CalendlyEmbed = ({
     <div 
       className={`calendly-inline-widget ${className}`} 
       data-url={getCalendlyUrl()}
-      style={{ minWidth: '320px', height: '100%', overflow: 'hidden' }}
+      style={{ minWidth: '320px', height: '100%' }}
     ></div>
   );
 };
