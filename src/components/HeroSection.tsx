@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 
 const HeroSection = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
-  const calendlyUrl = 'https://calendly.com/dropstrader/improvement-ai-consultation';
+  const calendlyUrl = 'https://calendly.com/contact-improvementai/30min';
   const [isVisible, setIsVisible] = useState(false);
   const [textComplete, setTextComplete] = useState(false);
   const [heading1Visible, setHeading1Visible] = useState(false);

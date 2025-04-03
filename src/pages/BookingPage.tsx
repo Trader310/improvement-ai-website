@@ -6,7 +6,7 @@ import { Clock, Calendar, Users } from 'lucide-react';
 import SEOMetaTags from '@/components/SEOMetaTags';
 
 const BookingPage = () => {
-  const calendlyUrl = 'https://calendly.com/dropstrader/improvement-ai-consultation';
+  const calendlyUrl = 'https://calendly.com/contact-improvementai/30min';
   
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#f8faff] to-white overflow-x-hidden">

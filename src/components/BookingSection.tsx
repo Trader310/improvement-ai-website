@@ -5,7 +5,7 @@ import { useMediaQuery } from '@/hooks/use-mobile';
 
 const BookingSection = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
-  const calendlyUrl = 'https://calendly.com/dropstrader/improvement-ai-consultation';
+  const calendlyUrl = 'https://calendly.com/contact-improvementai/30min';
 
   return (
     <section id="booking" className="py-20 px-4 md:px-8 bg-white relative overflow-hidden">
