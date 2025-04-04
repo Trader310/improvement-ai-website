@@ -34,7 +34,7 @@ const BookingPage = () => {
           </div>
           
           {/* Full Width Calendly Embed - Without background styling */}
-          <div className="w-full mb-4"> {/* Reduced margin bottom */}
+          <div className="w-full mb-0"> {/* Reduced margin bottom to zero */}
             <CalendlyEmbed 
               url={calendlyUrl} 
               className="min-h-[1200px] w-full"
@@ -47,7 +47,7 @@ const BookingPage = () => {
           </div>
           
           {/* Information Boxes - Below the Calendly Embed */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-2"> {/* Changed to 3 columns and reduced margin */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0"> {/* Reduced margin top to zero */}
             {/* Meeting Details */}
             <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
               <div className="space-y-5">

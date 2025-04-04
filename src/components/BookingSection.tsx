@@ -47,7 +47,7 @@ const BookingSection = () => {
         />
         
         {/* Information Boxes - Below the Calendly Embed with reduced spacing */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6"> {/* Reduced top margin, changed to 3 equal columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0"> {/* Reduced top margin to zero */}
           {/* Meeting Details */}
           <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
             <div className="space-y-5">
