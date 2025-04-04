@@ -22,14 +22,14 @@ const BookingSection = () => {
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-10">
+        <div className="text-center mb-6">
           <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
             GET STARTED
           </h2>
-          <h3 className="text-3xl md:text-4xl font-medium text-gray-900 mb-6">
+          <h3 className="text-3xl md:text-4xl font-medium text-gray-900 mb-4">
             Book Your AI Consultation
           </h3>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-4">
             Select a time for your free 30-minute AI consultation with our experts and discover 
             how AI can transform your business.
           </p>
@@ -38,7 +38,7 @@ const BookingSection = () => {
         {/* Full-width Calendly embed without background */}
         <CalendlyEmbed 
           url={calendlyUrl} 
-          className="w-full h-[1200px]"
+          className="w-full h-[700px]"
           prefill={{
             customAnswers: {
               'Source': isHomePage ? 'Homepage Booking Widget' : 'Booking Page Widget'
@@ -47,7 +47,7 @@ const BookingSection = () => {
         />
         
         {/* Information Boxes - Below the Calendly Embed with reduced spacing */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 -mt-6">
           {/* Meeting Details */}
           <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
             <div className="space-y-5">

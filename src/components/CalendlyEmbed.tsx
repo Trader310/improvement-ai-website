@@ -44,6 +44,15 @@ const CalendlyEmbed = ({
       body .calendly-overlay {
         overflow: hidden !important;
       }
+      /* Additional styling to remove all scrollbars */
+      .calendly-inline-widget iframe::-webkit-scrollbar {
+        display: none !important;
+        width: 0 !important;
+      }
+      .calendly-inline-widget iframe {
+        scrollbar-width: none !important;
+        -ms-overflow-style: none !important;
+      }
     `;
     document.head.appendChild(style);
 

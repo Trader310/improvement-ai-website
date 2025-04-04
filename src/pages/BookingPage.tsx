@@ -20,15 +20,15 @@ const BookingPage = () => {
       <Header />
       <div className="pt-24 pb-8 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          {/* Header Section */}
-          <div className="mb-6">
+          {/* Header Section - Centered */}
+          <div className="mb-6 text-center">
             <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
               SCHEDULE A MEETING
             </h2>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               AI Consultation Session
             </h1>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Discover how AI can transform your business operations during a complimentary 30-minute consultation with our experts.
             </p>
           </div>
@@ -37,7 +37,7 @@ const BookingPage = () => {
           <div className="w-full mb-0">
             <CalendlyEmbed 
               url={calendlyUrl} 
-              className="min-h-[1200px] w-full"
+              className="min-h-[700px] w-full"
               prefill={{
                 customAnswers: {
                   'Source': 'Website Direct Booking'
@@ -46,8 +46,8 @@ const BookingPage = () => {
             />
           </div>
           
-          {/* Information Boxes - Below the Calendly Embed */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0">
+          {/* Information Boxes - Below the Calendly Embed with reduced spacing */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 -mt-6">
             {/* Meeting Details */}
             <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
               <div className="space-y-5">
