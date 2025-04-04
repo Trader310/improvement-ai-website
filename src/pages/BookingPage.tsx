@@ -2,7 +2,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CalendlyEmbed from '@/components/CalendlyEmbed';
-import { Clock, Calendar, Users, Target, Lightbulb, CheckCircle, MessageSquare } from 'lucide-react';
+import { Clock, Calendar, Users } from 'lucide-react';
 import SEOMetaTags from '@/components/SEOMetaTags';
 
 const BookingPage = () => {
@@ -18,10 +18,10 @@ const BookingPage = () => {
       />
       
       <Header />
-      <div className="pt-24 pb-4 px-4 md:px-8"> {/* Further reduced bottom padding */}
+      <div className="pt-24 pb-4 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Header Section - Now centered */}
-          <div className="mb-4 text-center"> {/* Reduced margin and centered */}
+          <div className="mb-4 text-center">
             <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
               SCHEDULE A MEETING
             </h2>
@@ -34,10 +34,10 @@ const BookingPage = () => {
           </div>
           
           {/* Full Width Calendly Embed - Without background styling */}
-          <div className="w-full mb-0"> {/* Keeping zero margin */}
+          <div className="w-full mb-0">
             <CalendlyEmbed 
               url={calendlyUrl} 
-              className="min-h-[650px] w-full" {/* Reduced height */}
+              className="min-h-[650px] w-full"
               prefill={{
                 customAnswers: {
                   'Source': 'Website Direct Booking'
@@ -47,7 +47,7 @@ const BookingPage = () => {
           </div>
           
           {/* Information Boxes - Below the Calendly Embed */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0"> {/* Keeping zero margin */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0">
             {/* Meeting Details */}
             <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
               <div className="space-y-5">
