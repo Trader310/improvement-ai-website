@@ -29,17 +29,20 @@ const CalendlyEmbed = ({
     const style = document.createElement('style');
     style.textContent = `
       .calendly-inline-widget {
-        overflow: visible !important;
+        overflow: hidden !important;
         height: 100% !important;
       }
       .calendly-inline-widget iframe {
         height: 100% !important;
-        min-height: 1200px !important;
-        overflow: visible !important;
+        min-height: 1000px !important;
+        overflow: hidden !important;
         border: none !important;
       }
       .calendly-spinner {
         display: none !important;
+      }
+      body .calendly-overlay {
+        overflow: hidden !important;
       }
     `;
     document.head.appendChild(style);
