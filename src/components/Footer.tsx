@@ -36,20 +36,20 @@ const Footer = ({ className }: FooterProps) => {
             </ul>
           </div>
           
-          {/* Contact Info */}
+          {/* Contact Info - Updated with new email and phone */}
           <div className="lg:col-span-1">
             <h3 className="text-lg font-semibold mb-6">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 flex-shrink-0" />
-                <a href="mailto:info@improvementai.com" className="text-white/80 hover:text-white transition-colors">
-                  info@improvementai.com
+                <a href="mailto:wiktor@improvementai.agency" className="text-white/80 hover:text-white transition-colors">
+                  wiktor@improvementai.agency
                 </a>
               </li>
               <li className="flex items-center">
                 <Phone className="w-5 h-5 mr-3 flex-shrink-0" />
-                <a href="tel:+12345678901" className="text-white/80 hover:text-white transition-colors">
-                  +1 (234) 567-8901
+                <a href="tel:+48888333117" className="text-white/80 hover:text-white transition-colors">
+                  +48 888 333 117
                 </a>
               </li>
             </ul>
