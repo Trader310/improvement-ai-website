@@ -29,13 +29,13 @@ const CalendlyEmbed = ({
     const style = document.createElement('style');
     style.textContent = `
       .calendly-inline-widget {
-        overflow: hidden !important;
+        overflow: visible !important;
         height: 100% !important;
       }
       .calendly-inline-widget iframe {
         height: 100% !important;
-        min-height: 630px !important;
-        overflow: hidden !important;
+        min-height: 650px !important;
+        overflow: visible !important;
         border: none !important;
       }
       .calendly-spinner {
