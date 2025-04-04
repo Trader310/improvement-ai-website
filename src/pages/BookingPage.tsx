@@ -18,26 +18,26 @@ const BookingPage = () => {
       />
       
       <Header />
-      <div className="pt-24 pb-8 px-4 md:px-8"> {/* Reduced bottom padding */}
+      <div className="pt-24 pb-4 px-4 md:px-8"> {/* Further reduced bottom padding */}
         <div className="max-w-7xl mx-auto">
-          {/* Header Section */}
-          <div className="mb-6"> {/* Reduced margin */}
+          {/* Header Section - Now centered */}
+          <div className="mb-4 text-center"> {/* Reduced margin and centered */}
             <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
               SCHEDULE A MEETING
             </h2>
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               AI Consultation Session
             </h1>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Discover how AI can transform your business operations during a complimentary 30-minute consultation with our experts.
             </p>
           </div>
           
           {/* Full Width Calendly Embed - Without background styling */}
-          <div className="w-full mb-0"> {/* Reduced margin bottom to zero */}
+          <div className="w-full mb-0"> {/* Keeping zero margin */}
             <CalendlyEmbed 
               url={calendlyUrl} 
-              className="min-h-[1200px] w-full"
+              className="min-h-[650px] w-full" {/* Reduced height */}
               prefill={{
                 customAnswers: {
                   'Source': 'Website Direct Booking'
@@ -47,7 +47,7 @@ const BookingPage = () => {
           </div>
           
           {/* Information Boxes - Below the Calendly Embed */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0"> {/* Reduced margin top to zero */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0"> {/* Keeping zero margin */}
             {/* Meeting Details */}
             <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
               <div className="space-y-5">
@@ -94,11 +94,14 @@ const BookingPage = () => {
               </div>
             </div>
             
-            {/* What to Expect - Made more concise to match other boxes */}
+            {/* What to Expect - Made content match height of other boxes */}
             <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">What to Expect</h3>
               <p className="text-gray-700 mb-3">
                 During our consultation, we'll explore AI solutions tailored to your business needs and goals.
+              </p>
+              <p className="text-gray-700 mb-3">
+                You'll get personalized recommendations from our experts.
               </p>
               <div className="text-agency-blue font-medium">
                 Ready to transform your business with AI!
