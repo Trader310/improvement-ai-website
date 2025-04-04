@@ -13,7 +13,7 @@ const BookingSection = () => {
   const isHomePage = location.pathname === '/';
 
   return (
-    <section id="booking" className="py-12 px-4 md:px-8 bg-white relative overflow-hidden">
+    <section id="booking" className="py-20 px-4 md:px-8 bg-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-agency-blue/5 [mask-image:radial-gradient(ellipse_at_center,transparent_70%,black)]"></div>
@@ -22,14 +22,14 @@ const BookingSection = () => {
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-6"> {/* Further reduced margin */}
+        <div className="text-center mb-10"> {/* Slightly reduced margin */}
           <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
             GET STARTED
           </h2>
-          <h3 className="text-3xl md:text-4xl font-medium text-gray-900 mb-4">
+          <h3 className="text-3xl md:text-4xl font-medium text-gray-900 mb-6 font-poppins">
             Book Your AI Consultation
           </h3>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-4"> {/* Further reduced margin */}
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6"> {/* Reduced margin */}
             Select a time for your free 30-minute AI consultation with our experts and discover 
             how AI can transform your business.
           </p>
@@ -38,7 +38,7 @@ const BookingSection = () => {
         {/* Full-width Calendly embed without background */}
         <CalendlyEmbed 
           url={calendlyUrl} 
-          className="w-full h-[650px]" {/* Reduced height */}
+          className="w-full h-[1200px]"
           prefill={{
             customAnswers: {
               'Source': isHomePage ? 'Homepage Booking Widget' : 'Booking Page Widget'
@@ -46,8 +46,8 @@ const BookingSection = () => {
           }}
         />
         
-        {/* Information Boxes - Below the Calendly Embed with no spacing */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0"> {/* Maintaining zero margin */}
+        {/* Information Boxes - Below the Calendly Embed with reduced spacing */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0"> {/* Reduced top margin to zero */}
           {/* Meeting Details */}
           <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
             <div className="space-y-5">
@@ -94,14 +94,11 @@ const BookingSection = () => {
             </div>
           </div>
 
-          {/* What to Expect - Made content match height of other boxes */}
+          {/* What to Expect - Simplified to match other boxes' height */}
           <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
             <h3 className="text-xl font-medium text-gray-900 mb-3 font-poppins">What to Expect</h3>
             <p className="text-gray-700 mb-3">
               During our consultation, we'll explore AI solutions tailored to your business needs and goals.
-            </p>
-            <p className="text-gray-700 mb-3">
-              You'll get personalized recommendations from our experts.
             </p>
             <div className="text-agency-blue font-medium">
               Ready to transform your business with AI!
