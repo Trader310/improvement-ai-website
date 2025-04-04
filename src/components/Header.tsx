@@ -8,6 +8,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Header = () => {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
+  const isBookingPage = location.pathname === '/booking';
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -33,9 +34,15 @@ const Header = () => {
     setMobileMenuOpen(false);
   };
 
-  const headerBgClass = isHomePage 
-    ? (isScrolled ? 'bg-[#e8f0fe] shadow-md' : 'bg-[#e8f0fe]')
-    : (isScrolled ? 'bg-white shadow-md' : 'bg-white');
+  // Determine header background color based on page and scroll position
+  let headerBgClass = '';
+  if (isHomePage) {
+    headerBgClass = isScrolled ? 'bg-[#e8f0fe] shadow-md' : 'bg-[#e8f0fe]';
+  } else if (isBookingPage) {
+    headerBgClass = isScrolled ? 'bg-gradient-to-b from-[#f8faff] to-white shadow-md' : 'bg-gradient-to-b from-[#f8faff] to-white';
+  } else {
+    headerBgClass = isScrolled ? 'bg-white shadow-md' : 'bg-white';
+  }
 
   return <header className={cn('fixed top-0 left-0 w-full z-50 transition-all duration-300 px-4 md:px-8 lg:px-12', isScrolled ? 'py-2' : 'py-6', headerBgClass)}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">

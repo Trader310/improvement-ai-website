@@ -22,23 +22,23 @@ const BookingSection = () => {
       </div>
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-12">
+        <div className="text-center mb-10"> {/* Slightly reduced margin */}
           <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
             GET STARTED
           </h2>
           <h3 className="text-3xl md:text-4xl font-medium text-gray-900 mb-6 font-poppins">
             Book Your AI Consultation
           </h3>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6"> {/* Reduced margin */}
             Select a time for your free 30-minute AI consultation with our experts and discover 
             how AI can transform your business.
           </p>
         </div>
         
-        {/* Full-width Calendly embed for both homepage and other pages */}
+        {/* Full-width Calendly embed without background */}
         <CalendlyEmbed 
           url={calendlyUrl} 
-          className="w-full h-[1200px] rounded-xl"
+          className="w-full h-[1200px]"
           prefill={{
             customAnswers: {
               'Source': isHomePage ? 'Homepage Booking Widget' : 'Booking Page Widget'
@@ -46,11 +46,11 @@ const BookingSection = () => {
           }}
         />
         
-        {/* Information Boxes - Below the Calendly Embed on homepage */}
-        {isHomePage && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            {/* Meeting Details */}
-            <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 space-y-5">
+        {/* Information Boxes - Below the Calendly Embed with reduced spacing */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6"> {/* Reduced top margin, changed to 3 equal columns */}
+          {/* Meeting Details */}
+          <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
+            <div className="space-y-5">
               <div className="flex items-start">
                 <div className="w-10 h-10 rounded-full bg-agency-blue/10 flex items-center justify-center flex-shrink-0">
                   <Clock className="w-5 h-5 text-agency-blue" />
@@ -81,66 +81,30 @@ const BookingSection = () => {
                 </div>
               </div>
             </div>
-            
-            {/* Meeting Goal */}
-            <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
-              <h3 className="text-xl font-medium text-gray-900 mb-3 font-poppins">Meeting Goal</h3>
-              <p className="text-gray-700">
-                The goal of this call is to discover how AI can help you increase revenue & profit while decreasing your workload & cost.
-              </p>
-              <div className="mt-4 text-agency-blue font-medium">
-                I'm excited to talk with you!
-              </div>
-            </div>
-
-            {/* What to Expect */}
-            <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100">
-              <h3 className="text-xl font-medium text-gray-900 mb-4 font-poppins">What to Expect</h3>
-              
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="w-8 h-8 rounded-full bg-agency-blue/10 flex items-center justify-center flex-shrink-0">
-                    <Target className="w-4 h-4 text-agency-blue" />
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="font-medium text-gray-900 font-poppins">Needs Assessment</h4>
-                    <p className="text-gray-600 text-sm">We'll discuss your business goals and challenges</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-8 h-8 rounded-full bg-agency-blue/10 flex items-center justify-center flex-shrink-0">
-                    <Lightbulb className="w-4 h-4 text-agency-blue" />
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="font-medium text-gray-900 font-poppins">AI Opportunities</h4>
-                    <p className="text-gray-600 text-sm">Discover specific AI applications for your business</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-8 h-8 rounded-full bg-agency-blue/10 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-4 h-4 text-agency-blue" />
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="font-medium text-gray-900 font-poppins">Action Plan</h4>
-                    <p className="text-gray-600 text-sm">Get a customized roadmap for implementation</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="w-8 h-8 rounded-full bg-agency-blue/10 flex items-center justify-center flex-shrink-0">
-                    <MessageSquare className="w-4 h-4 text-agency-blue" />
-                  </div>
-                  <div className="ml-3">
-                    <h4 className="font-medium text-gray-900 font-poppins">Q&A Session</h4>
-                    <p className="text-gray-600 text-sm">Get answers to all your AI-related questions</p>
-                  </div>
-                </div>
-              </div>
+          </div>
+          
+          {/* Meeting Goal */}
+          <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
+            <h3 className="text-xl font-medium text-gray-900 mb-3 font-poppins">Meeting Goal</h3>
+            <p className="text-gray-700">
+              The goal of this call is to discover how AI can help you increase revenue & profit while decreasing your workload & cost.
+            </p>
+            <div className="mt-4 text-agency-blue font-medium">
+              I'm excited to talk with you!
             </div>
           </div>
-        )}
+
+          {/* What to Expect - Simplified to match other boxes' height */}
+          <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
+            <h3 className="text-xl font-medium text-gray-900 mb-3 font-poppins">What to Expect</h3>
+            <p className="text-gray-700 mb-3">
+              During our consultation, we'll explore AI solutions tailored to your business needs and goals.
+            </p>
+            <div className="text-agency-blue font-medium">
+              Ready to transform your business with AI!
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
