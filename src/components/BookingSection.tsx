@@ -38,7 +38,7 @@ const BookingSection = () => {
         {/* Full-width Calendly embed without background */}
         <CalendlyEmbed 
           url={calendlyUrl} 
-          className="w-full h-[650px]"
+          className="w-full h-[630px]"
           prefill={{
             customAnswers: {
               'Source': isHomePage ? 'Homepage Booking Widget' : 'Booking Page Widget'
@@ -46,8 +46,8 @@ const BookingSection = () => {
           }}
         />
         
-        {/* Information Boxes - Below the Calendly Embed with no spacing */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0">
+        {/* Information Boxes - Below the Calendly Embed with minimal spacing */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-[-5px]">
           {/* Meeting Details */}
           <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
             <div className="space-y-5">
@@ -94,7 +94,7 @@ const BookingSection = () => {
             </div>
           </div>
 
-          {/* What to Expect - Made content match height of other boxes */}
+          {/* What to Expect - Reverted to original content */}
           <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
             <h3 className="text-xl font-medium text-gray-900 mb-3 font-poppins">What to Expect</h3>
             <p className="text-gray-700 mb-3">

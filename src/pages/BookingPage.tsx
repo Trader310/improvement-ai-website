@@ -37,7 +37,7 @@ const BookingPage = () => {
           <div className="w-full mb-0">
             <CalendlyEmbed 
               url={calendlyUrl} 
-              className="min-h-[650px] w-full"
+              className="min-h-[630px] w-full"
               prefill={{
                 customAnswers: {
                   'Source': 'Website Direct Booking'
@@ -46,8 +46,8 @@ const BookingPage = () => {
             />
           </div>
           
-          {/* Information Boxes - Below the Calendly Embed */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-0">
+          {/* Information Boxes - Below the Calendly Embed with minimal spacing */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-[-5px]">
             {/* Meeting Details */}
             <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
               <div className="space-y-5">
@@ -94,7 +94,7 @@ const BookingPage = () => {
               </div>
             </div>
             
-            {/* What to Expect - Made content match height of other boxes */}
+            {/* What to Expect - Kept content as it was before */}
             <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">What to Expect</h3>
               <p className="text-gray-700 mb-3">
