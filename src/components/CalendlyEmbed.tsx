@@ -62,15 +62,22 @@ const CalendlyEmbed = ({
         overflow-y: auto !important;
         height: auto !important;
         overflow-x: hidden !important;
+        position: static !important;
       }
       body.calendly-open {
         overflow-y: auto !important;
         overflow-x: hidden !important;
         height: auto !important;
+        position: static !important;
       }
       .calendly-popup-content, .calendly-popup-content iframe {
         max-height: none !important;
         overflow: hidden !important;
+      }
+      /* Ensure the full calendar is visible */
+      .calendly-iframe {
+        height: auto !important;
+        min-height: 100vh !important;
       }
     `;
     document.head.appendChild(style);
