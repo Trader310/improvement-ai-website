@@ -9,7 +9,7 @@ const BookingPage = () => {
   const calendlyUrl = 'https://calendly.com/contact-improvementai/30min';
   
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#f8faff] to-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#e8f0fe] overflow-x-hidden">
       <SEOMetaTags 
         title="Book Your AI Consultation | IMPROVEMENT AI"
         description="Schedule a free consultation with IMPROVEMENT AI's experts to discuss how artificial intelligence can transform your business operations and drive growth."

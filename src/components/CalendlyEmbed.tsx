@@ -29,20 +29,20 @@ const CalendlyEmbed = ({
     const style = document.createElement('style');
     style.textContent = `
       .calendly-inline-widget {
-        overflow: hidden !important;
+        overflow: visible !important;
         height: 100% !important;
       }
       .calendly-inline-widget iframe {
         height: 100% !important;
         min-height: 1000px !important;
-        overflow: hidden !important;
+        overflow: visible !important;
         border: none !important;
       }
       .calendly-spinner {
         display: none !important;
       }
       body .calendly-overlay {
-        overflow: hidden !important;
+        overflow: visible !important;
       }
       /* Additional styling to remove all scrollbars */
       .calendly-inline-widget iframe::-webkit-scrollbar {
@@ -52,6 +52,17 @@ const CalendlyEmbed = ({
       .calendly-inline-widget iframe {
         scrollbar-width: none !important;
         -ms-overflow-style: none !important;
+      }
+      /* Fix for full-height calendly */
+      html, body {
+        overflow-y: auto !important;
+      }
+      body.calendly-open {
+        overflow-y: auto !important;
+      }
+      .calendly-popup-content, .calendly-popup-content iframe {
+        max-height: none !important;
+        overflow: visible !important;
       }
     `;
     document.head.appendChild(style);
