@@ -34,10 +34,11 @@ const Header = () => {
     setMobileMenuOpen(false);
   };
 
-  // Determine header background color based on page and scroll position
-  // Apply the same bg-[#e8f0fe] for both HomePage and BookingPage
+  // Always use the light blue background for the booking page
   let headerBgClass = '';
-  if (isHomePage || isBookingPage) {
+  if (isBookingPage) {
+    headerBgClass = 'bg-[#e8f0fe]';
+  } else if (isHomePage) {
     headerBgClass = isScrolled ? 'bg-[#e8f0fe] shadow-md' : 'bg-[#e8f0fe]';
   } else {
     headerBgClass = isScrolled ? 'bg-white shadow-md' : 'bg-white';
@@ -83,7 +84,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && <div className={`md:hidden absolute top-full left-0 w-full ${isHomePage || isBookingPage ? 'bg-[#e8f0fe]' : 'bg-white'} shadow-lg py-4 px-6 animate-fade-in`}>
+      {mobileMenuOpen && <div className={`md:hidden absolute top-full left-0 w-full ${isBookingPage || isHomePage ? 'bg-[#e8f0fe]' : 'bg-white'} shadow-lg py-4 px-6 animate-fade-in`}>
           <nav className="flex flex-col space-y-4">
             <Link to="/" className="text-gray-800 font-medium py-2 font-poppins">
               Home

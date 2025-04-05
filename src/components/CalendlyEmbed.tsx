@@ -53,13 +53,15 @@ const CalendlyEmbed = ({
         scrollbar-width: none !important;
         -ms-overflow-style: none !important;
       }
-      /* Fix for full-height calendly without double scrollbars */
+      /* Fix for page scrolling without double scrollbars */
       html, body {
         overflow-y: auto !important;
+        height: auto !important;
       }
       body.calendly-open {
         overflow-y: auto !important;
         overflow-x: hidden !important;
+        height: auto !important;
       }
       .calendly-popup-content, .calendly-popup-content iframe {
         max-height: none !important;
