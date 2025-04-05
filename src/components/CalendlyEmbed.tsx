@@ -44,7 +44,7 @@ const CalendlyEmbed = ({
       body .calendly-overlay {
         overflow: hidden !important;
       }
-      /* Additional styling to remove all scrollbars */
+      /* Additional styling to completely remove all scrollbars from the embed */
       .calendly-inline-widget iframe::-webkit-scrollbar {
         display: none !important;
         width: 0 !important;
@@ -53,15 +53,20 @@ const CalendlyEmbed = ({
         scrollbar-width: none !important;
         -ms-overflow-style: none !important;
       }
-      /* Fix for page scrolling without double scrollbars */
-      html, body {
+      /* Fix page-level scrolling */
+      html {
         overflow-y: auto !important;
-        height: auto !important;
+        scroll-behavior: smooth !important;
+      }
+      body {
+        overflow-y: auto !important;
+        height: 100% !important;
+        overflow-x: hidden !important;
       }
       body.calendly-open {
         overflow-y: auto !important;
         overflow-x: hidden !important;
-        height: auto !important;
+        height: 100% !important;
       }
       .calendly-popup-content, .calendly-popup-content iframe {
         max-height: none !important;
