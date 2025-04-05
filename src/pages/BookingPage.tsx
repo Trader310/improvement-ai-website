@@ -18,7 +18,7 @@ const BookingPage = () => {
       />
       
       <Header />
-      <div className="pt-36 pb-4 px-4 md:px-8 booking-page-container overflow-visible">
+      <div className="pt-36 pb-2 px-4 md:px-8 booking-page-container overflow-visible">
         <div className="max-w-7xl mx-auto">
           {/* Header Section - Updated font to match homepage */}
           <div className="mb-8 text-center">
@@ -46,8 +46,8 @@ const BookingPage = () => {
             />
           </div>
           
-          {/* Information Boxes - Below the Calendly Embed with additional spacing */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 pb-2">
+          {/* Information Boxes - Below the Calendly Embed with minimal spacing */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 pb-0">
             {/* Meeting Details */}
             <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
               <div className="space-y-5">

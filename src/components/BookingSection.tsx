@@ -13,7 +13,7 @@ const BookingSection = () => {
   const isHomePage = location.pathname === '/';
 
   return (
-    <section id="booking" className="py-8 px-4 md:px-8 bg-white relative overflow-visible">
+    <section id="booking" className="py-6 px-4 md:px-8 bg-white relative overflow-visible">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-agency-blue/5 [mask-image:radial-gradient(ellipse_at_center,transparent_70%,black)]"></div>
@@ -48,8 +48,8 @@ const BookingSection = () => {
           />
         </div>
         
-        {/* Information Boxes - Below the Calendly Embed with reduced spacing */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 mb-2">
+        {/* Information Boxes - Below the Calendly Embed with further reduced spacing */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4 mb-0">
           {/* Meeting Details */}
           <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
             <div className="space-y-5">
