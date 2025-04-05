@@ -25,26 +25,29 @@ const CalendlyEmbed = ({
     script.async = true;
     document.body.appendChild(script);
 
-    // Add CSS to hide Calendly's internal scrollbar and adjust height
+    // Add CSS to fix scrolling issues
     const style = document.createElement('style');
     style.textContent = `
       .calendly-inline-widget {
-        overflow: hidden !important;
+        overflow: visible !important;
         height: 100% !important;
+        min-height: 800px !important;
       }
       .calendly-inline-widget iframe {
         height: 100% !important;
-        min-height: 1000px !important;
-        overflow: hidden !important;
+        min-height: 900px !important;
+        overflow: visible !important;
         border: none !important;
       }
       .calendly-spinner {
         display: none !important;
       }
+      /* Remove all Calendly-imposed overflow restrictions */
       body .calendly-overlay {
-        overflow: hidden !important;
+        overflow: visible !important;
+        position: static !important;
       }
-      /* Additional styling to completely remove all scrollbars from the embed */
+      /* Additional styling to remove scrollbars from the embed */
       .calendly-inline-widget iframe::-webkit-scrollbar {
         display: none !important;
         width: 0 !important;
@@ -53,31 +56,50 @@ const CalendlyEmbed = ({
         scrollbar-width: none !important;
         -ms-overflow-style: none !important;
       }
-      /* Fix page-level scrolling */
+      /* Ensure page-level scrolling works correctly */
       html {
         overflow-y: auto !important;
         scroll-behavior: smooth !important;
+        height: auto !important;
       }
       body {
         overflow-y: auto !important;
         height: auto !important;
         overflow-x: hidden !important;
         position: static !important;
+        min-height: 100% !important;
       }
       body.calendly-open {
         overflow-y: auto !important;
         overflow-x: hidden !important;
         height: auto !important;
         position: static !important;
+        min-height: 100% !important;
       }
       .calendly-popup-content, .calendly-popup-content iframe {
         max-height: none !important;
-        overflow: hidden !important;
+        overflow: visible !important;
       }
       /* Ensure the full calendar is visible */
       .calendly-iframe {
         height: auto !important;
         min-height: 100vh !important;
+        overflow: visible !important;
+      }
+      /* Fix for modal dialogs */
+      .calendly-overlay .calendly-popup {
+        height: auto !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        overflow: visible !important;
+      }
+      /* Make sure booking section has room to scroll */
+      #booking, .booking-page-container {
+        min-height: auto !important;
+        overflow: visible !important;
+        padding-bottom: 200px !important;
       }
     `;
     document.head.appendChild(style);
@@ -115,7 +137,7 @@ const CalendlyEmbed = ({
     <div 
       className={`calendly-inline-widget ${className}`} 
       data-url={getCalendlyUrl()}
-      style={{ minWidth: '320px', height: '100%' }}
+      style={{ minWidth: '320px', height: '100%', minHeight: '900px', overflow: 'visible' }}
     ></div>
   );
 };

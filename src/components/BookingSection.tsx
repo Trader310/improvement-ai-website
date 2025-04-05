@@ -13,7 +13,7 @@ const BookingSection = () => {
   const isHomePage = location.pathname === '/';
 
   return (
-    <section id="booking" className="py-20 px-4 md:px-8 bg-white relative overflow-hidden">
+    <section id="booking" className="py-20 px-4 md:px-8 bg-white relative overflow-visible">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-0 w-full h-full bg-agency-blue/5 [mask-image:radial-gradient(ellipse_at_center,transparent_70%,black)]"></div>
@@ -36,18 +36,20 @@ const BookingSection = () => {
         </div>
         
         {/* Full-width Calendly embed without background */}
-        <CalendlyEmbed 
-          url={calendlyUrl} 
-          className="w-full h-[700px]"
-          prefill={{
-            customAnswers: {
-              'Source': isHomePage ? 'Homepage Booking Widget' : 'Booking Page Widget'
-            }
-          }}
-        />
+        <div className="overflow-visible w-full">
+          <CalendlyEmbed 
+            url={calendlyUrl} 
+            className="w-full h-[700px] overflow-visible"
+            prefill={{
+              customAnswers: {
+                'Source': isHomePage ? 'Homepage Booking Widget' : 'Booking Page Widget'
+              }
+            }}
+          />
+        </div>
         
         {/* Information Boxes - Below the Calendly Embed with reduced spacing */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 -mt-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 mb-12">
           {/* Meeting Details */}
           <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 h-full">
             <div className="space-y-5">
