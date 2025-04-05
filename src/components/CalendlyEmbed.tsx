@@ -60,13 +60,13 @@ const CalendlyEmbed = ({
       }
       body {
         overflow-y: auto !important;
-        height: 100% !important;
+        height: auto !important;
         overflow-x: hidden !important;
       }
       body.calendly-open {
         overflow-y: auto !important;
         overflow-x: hidden !important;
-        height: 100% !important;
+        height: auto !important;
       }
       .calendly-popup-content, .calendly-popup-content iframe {
         max-height: none !important;

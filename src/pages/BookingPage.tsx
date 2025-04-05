@@ -18,14 +18,14 @@ const BookingPage = () => {
       />
       
       <Header />
-      <div className="pt-32 pb-8 px-4 md:px-8">
+      <div className="pt-36 pb-8 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          {/* Header Section - Centered with increased padding */}
+          {/* Header Section - Updated font to match homepage */}
           <div className="mb-8 text-center">
             <h2 className="inline-block text-sm font-semibold text-agency-blue px-4 py-1.5 rounded-full bg-agency-blue/10 mb-4">
               SCHEDULE A MEETING
             </h2>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-poppins">
               AI Consultation Session
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
