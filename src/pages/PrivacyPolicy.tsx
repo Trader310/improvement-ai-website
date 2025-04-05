@@ -26,10 +26,10 @@ const PrivacyPolicy = () => {
           
           <hr className="my-6" />
           
-          <h2 className="text-2xl font-semibold mt-8">1. Who We Are</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">1. Who We Are</h2>
           <p>Improvement AI ("Company," "we," "us," or "our") is a technology and AI automation agency based in Poland, serving clients globally, with a focus on the United States. This Privacy Policy applies to all information collected through our Website and any related services, communications, or events.</p>
           
-          <h2 className="text-2xl font-semibold mt-8">2. Definitions</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">2. Definitions</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Personal Data:</strong> Information that can identify an individual, directly or indirectly.</li>
             <li><strong>Usage Data:</strong> Automatically collected information on how users interact with the Website.</li>
@@ -39,8 +39,8 @@ const PrivacyPolicy = () => {
             <li><strong>Service Provider:</strong> Third-party vendors and partners that process data on our behalf.</li>
           </ul>
           
-          <h2 className="text-2xl font-semibold mt-8">3. What Information We Collect</h2>
-          <h3 className="text-xl font-semibold mt-6">a. Information You Provide Directly</h3>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">3. What Information We Collect</h2>
+          <h3 className="text-xl font-semibold mt-6 mb-3">a. Information You Provide Directly</h3>
           <p>We may collect personal data when you:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Fill out a contact form or lead form</li>
@@ -54,7 +54,7 @@ const PrivacyPolicy = () => {
             <li>Phone Number</li>
           </ul>
           
-          <h3 className="text-xl font-semibold mt-6">b. Information Collected Automatically</h3>
+          <h3 className="text-xl font-semibold mt-6 mb-3">b. Information Collected Automatically</h3>
           <p>When you access the Website, we automatically collect certain information through cookies and analytics tools:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>IP address</li>
@@ -65,7 +65,7 @@ const PrivacyPolicy = () => {
             <li>Referring/exit pages</li>
           </ul>
           
-          <h2 className="text-2xl font-semibold mt-8">4. Legal Bases for Processing (GDPR)</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">4. Legal Bases for Processing (GDPR)</h2>
           <p>If you are located in the European Economic Area (EEA), we process your personal data based on the following legal grounds:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Consent</strong> – When you opt-in for communications or cookies</li>
@@ -74,7 +74,7 @@ const PrivacyPolicy = () => {
             <li><strong>Legitimate Interests</strong> – To improve our services and security (unless overridden by your rights)</li>
           </ul>
           
-          <h2 className="text-2xl font-semibold mt-8">5. How We Use Your Information</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">5. How We Use Your Information</h2>
           <p>We use your data to:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Operate, maintain, and optimize the Website</li>
@@ -86,7 +86,7 @@ const PrivacyPolicy = () => {
           </ul>
           <p>We do not use your personal data for automated decision-making or profiling without your consent.</p>
           
-          <h2 className="text-2xl font-semibold mt-8">6. Cookies and Tracking Technologies</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">6. Cookies and Tracking Technologies</h2>
           <p>We use cookies and similar technologies (e.g., pixels, beacons) to:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Maintain website functionality and security</li>
@@ -129,7 +129,7 @@ const PrivacyPolicy = () => {
           
           <p>You may adjust cookie settings via your browser or use our Cookie Consent banner.</p>
           
-          <h2 className="text-2xl font-semibold mt-8">7. Sharing of Information</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">7. Sharing of Information</h2>
           <p>We may share your data with:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Service Providers (e.g., hosting, analytics, CRM platforms like Calendly)</li>
@@ -141,7 +141,7 @@ const PrivacyPolicy = () => {
           </ul>
           <p>We do not sell, trade, or rent your personal information.</p>
           
-          <h2 className="text-2xl font-semibold mt-8">8. International Transfers</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">8. International Transfers</h2>
           <p>We may transfer your data to countries outside your jurisdiction, including to the United States or other countries that may not offer the same data protection standards. When doing so, we:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Use Standard Contractual Clauses approved by the EU</li>
@@ -149,7 +149,7 @@ const PrivacyPolicy = () => {
             <li>Ensure appropriate technical and organizational safeguards are in place</li>
           </ul>
           
-          <h2 className="text-2xl font-semibold mt-8">9. Data Retention and Security</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">9. Data Retention and Security</h2>
           <p>We retain your personal data only for as long as necessary for:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>The purposes stated in this policy</li>
@@ -162,7 +162,7 @@ const PrivacyPolicy = () => {
             <li>Although we strive to protect your data, no method of online transmission is completely secure.</li>
           </ul>
           
-          <h2 className="text-2xl font-semibold mt-8">10. Your Privacy Rights</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">10. Your Privacy Rights</h2>
           <p>Depending on your location, you may have the right to:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Access the personal data we hold about you</li>
@@ -174,10 +174,10 @@ const PrivacyPolicy = () => {
           </ul>
           <p>To exercise your rights, please email: wiktor@improvementai.agency</p>
           
-          <h2 className="text-2xl font-semibold mt-8">11. Children's Privacy</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">11. Children's Privacy</h2>
           <p>Our Website is not intended for children under 13 (or under 16 in some jurisdictions). We do not knowingly collect data from minors. If you believe a child has provided us data, please contact us for immediate removal.</p>
           
-          <h2 className="text-2xl font-semibold mt-8">12. Third-Party Websites and Tools</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">12. Third-Party Websites and Tools</h2>
           <p>Our Website may contain links to third-party websites, tools, or platforms. We are not responsible for their privacy practices. Please read their policies before submitting data.</p>
           <p>Examples include:</p>
           <ul className="list-disc pl-6 space-y-2">
@@ -185,7 +185,7 @@ const PrivacyPolicy = () => {
             <li>Calendly</li>
           </ul>
           
-          <h2 className="text-2xl font-semibold mt-8">13. Changes to This Privacy Policy</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">13. Changes to This Privacy Policy</h2>
           <p>We reserve the right to modify this Privacy Policy at any time. When we make changes, we will:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Update the "Last updated" at the top</li>
@@ -193,7 +193,7 @@ const PrivacyPolicy = () => {
           </ul>
           <p>We encourage you to review this page periodically.</p>
           
-          <h2 className="text-2xl font-semibold mt-8">14. Contact Us</h2>
+          <h2 className="text-2xl font-semibold mt-8 mb-4">14. Contact Us</h2>
           <p>For questions, concerns, or privacy-related requests, please contact us:</p>
           <p>Email: wiktor@improvementai.agency</p>
         </div>
