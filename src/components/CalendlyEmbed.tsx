@@ -65,16 +65,14 @@ const CalendlyEmbed = ({
       body {
         overflow-y: auto !important;
         height: auto !important;
-        overflow-x: hidden !important;
         position: static !important;
-        min-height: 100% !important;
+        overflow-x: hidden !important;
       }
       body.calendly-open {
         overflow-y: auto !important;
-        overflow-x: hidden !important;
-        height: auto !important;
         position: static !important;
-        min-height: 100% !important;
+        height: auto !important;
+        overflow-x: hidden !important;
       }
       .calendly-popup-content, .calendly-popup-content iframe {
         max-height: none !important;
