@@ -67,7 +67,7 @@ const Index = () => {
         </AnimateOnScroll>
       </div>
       
-      <div className="mt-16">
+      <div className="mt-8">
         <AnimateOnScroll animation="slide-in-bottom" delay={100}>
           <AboutSection />
         </AnimateOnScroll>
