@@ -1,5 +1,6 @@
 
 import { Mail, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface FooterProps {
   className?: string;
@@ -64,9 +65,8 @@ const Footer = ({ className }: FooterProps) => {
             © 2025 Improvement AI. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Terms of Service</a>
-            <a href="#" className="text-white/60 hover:text-white text-sm transition-colors">Cookie Policy</a>
+            <Link to="/privacy-policy" className="text-white/60 hover:text-white text-sm transition-colors">Privacy Policy</Link>
+            <Link to="/terms-of-service" className="text-white/60 hover:text-white text-sm transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

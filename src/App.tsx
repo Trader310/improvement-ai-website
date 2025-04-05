@@ -18,6 +18,8 @@ import AIConsultationPage from "./pages/AIConsultationPage";
 import BlogPost1 from "./pages/BlogPost1";
 import BlogPost2 from "./pages/BlogPost2";
 import BlogPost3 from "./pages/BlogPost3";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +45,10 @@ const App = () => (
             <Route path="/blog/automation-tools" element={<BlogPost1 />} />
             <Route path="/blog/ai-agents" element={<BlogPost2 />} />
             <Route path="/blog/intelligent-growth" element={<BlogPost3 />} />
+            
+            {/* Legal Pages */}
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-of-service" element={<TermsOfService />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
