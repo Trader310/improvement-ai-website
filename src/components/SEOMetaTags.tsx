@@ -24,6 +24,7 @@ const SEOMetaTags = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="robots" content="index, follow" />
+      <link rel="icon" href="/lovable-uploads/90c115c6-37f6-4f7a-b387-18145e4d6655.png" type="image/png" />
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Open Graph / Social Media Meta Tags */}
